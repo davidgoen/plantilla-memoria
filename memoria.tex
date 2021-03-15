@@ -32,9 +32,12 @@
 \usepackage{latexsym}  %% Logo LaTeX
 
 \title{Memoria del Proyecto}
-\author{Nombre del autor}
+\author{David González Endrinal}
 
 \renewcommand{\baselinestretch}{1.5}  %% Interlineado
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
 
 \begin{document}
 
@@ -51,16 +54,16 @@
 \vspace{1.75cm}
 
 \Large
-TITULACIÓN EN MAYÚSCULAS
+GRADO EN INGENIERIA EN TELEMATICA
 
 \vspace{0.4cm}
 
 \large
-Curso Académico 202X/202X
+Curso Académico 2021/2022
 
 \vspace{0.8cm}
 
-Trabajo Fin de Grado/Máster
+Trabajo Fin de Grado
 
 \vspace{2.5cm}
 
@@ -70,8 +73,8 @@ TÍTULO DEL TRABAJO EN MAYÚSCULAS
 \vspace{4cm}
 
 \large
-Autor : Nombre del Alumno/a \\
-Tutor : Dr. Nombre del Profesor/a
+Autor : David González Endrinal \\
+Tutor : Dr. Gregorio Robles Martínez
 \end{center}
 \end{titlepage}
 
@@ -89,7 +92,7 @@ Tutor : Dr. Nombre del Profesor/a
 \vspace{-4cm}
 \begin{center}
 \LARGE
-\textbf{Trabajo Fin de Grado/Máster}
+\textbf{Trabajo Fin de Grado}
 
 \vspace{1cm}
 \large
@@ -97,8 +100,8 @@ Título del Trabajo con Letras Capitales para Sustantivos y Adjetivos
 
 \vspace{1cm}
 \large
-\textbf{Autor :} Nombre del Alumno/a \\
-\textbf{Tutor :} Dr. Nombre del Profesor/a
+\textbf{Autor :} David González Endrinal \\
+\textbf{Tutor :} Dr. Gregorio Robles Martínez
 
 \end{center}
 
@@ -155,17 +158,10 @@ Además, la pareja quizás no sea para siempre, pero tu madre sí.
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
-Aquí viene un resumen del proyecto.
-Ha de constar de tres o cuatro párrafos, donde se presente de manera clara y concisa de qué va el proyecto. 
-Han de quedar respondidas las siguientes preguntas:
-
-\begin{itemize}
-  \item ¿De qué va este proyecto? ¿Cuál es su objetivo principal?
-  \item ¿Cómo se ha realizado? ¿Qué tecnologías están involucradas?
-  \item ¿En qué contexto se ha realizado el proyecto? ¿Es un proyecto dentro de un marco general?
-\end{itemize}
-
-Lo mejor es escribir el resumen al final.
+	Este proyecto consiste en la realización de una Aplicación de Web Progresiva (PWA) que ayudará y facilitará a los docentes el proceso de ofrecer a los alumnos los cursos/seminarios y jornadas tecnológicas que se impartirán en la Universidad durante el curso.
+	Esta aplicación y todo su desarrollo se enmarca dentro del modelo cliente-servidor, donde por un lado tendremos por parte del cliente la PWA y por parte del servidor toda la administración y gestión de los contenidos que contendrá dicha aplicación.
+	Para el desarrollo de la parte servidor se han utilizado diferentes entornos y lenguajes, destacando Python, Node y MongoDB para la gestión y almacenamiento en bases de datos.
+	Con la creación de esta aplicación se intenta, por el lado docente, buscar una eficiencia a la hora de repartir y adjudicar las distintas aulas de las que se dispone para la realización de los distintos cursos y seminarios, por otro lado, por el lado de los alumnos, se busca tener un entorno de fácil manejo y simpleza a la hora de informarse, apuntarse y obtener los créditos correspondientes de dichos cursos y seminarios.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen en inglés
@@ -174,9 +170,10 @@ Lo mejor es escribir el resumen al final.
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-Here comes a translation of the ``Resumen'' into English. 
-Please, double check it for correct grammar and spelling.
-As it is the translation of the ``Resumen'', which is supposed to be written at the end, this as well should be filled out just before submitting.
+This project consists of the realization of a Progressive Web Application (PWA) that will help and facilitate the teachers the process of offering the students the courses / seminars and technological conferences that will be taught at the University during the course.
+This application and all its development is framed within the client-server model, where, on the one hand, we will have the PWA on the part of the client and on the part of the server all the administration and management of the contents that said application will contain.
+For the development of the server part, different environments and languages ​​have been used, highlighting Python, Node and MongoDB for management and storage in databases.
+With the creation of this application, an attempt is made, on the teaching side, to seek efficiency when distributing and allocating the different classrooms available to carry out the different courses and seminars, on the other hand, on the side of The students seek to have an environment that is easy to use and simple when it comes to obtaining information, signing up and obtaining the corresponding credits for said courses and seminars.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -210,22 +207,14 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 \label{sec:intro} % etiqueta para poder referenciar luego en el texto con ~\ref{sec:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
 
-En este capítulo se introduce el proyecto.
-Debería tener información general sobre el mismo, dando la información sobre el contexto en el que se ha desarrollado.
+El siguiente trabajo consta de la realización de una aplicación web progresiva (PWA) que ayudará y facilitara a los docentes el proceso de ofrecer a los alumnos los cursos/seminarios y jornadas tecnológicas que se impartirán en la Universidad durante el curso.
 
-No te olvides de echarle un ojo a la página con los cinco errores de escritura más frecuentes\footnote{\url{http://www.tallerdeescritores.com/errores-de-escritura-frecuentes}}.
 
-Aconsejo a todo el mundo que mire y se inspire en memorias pasadas.
-Las memorias de los proyectos que he llevado yo están (casi) todas almacenadas en mi web del GSyC\footnote{\url{https://gsyc.urjc.es/~grex/pfcs/}}.
+\section{Contexto}
+\label{sec:contexto}
 
-\section{Sección}
-\label{sec:seccion}
-
-Esto es una sección, que es una estructura menor que un capítulo. 
-
-Por cierto, a veces me comentáis que no os compila por las tildes.
-Eso es un problema de codificación.
-Al guardar el archivo, guardad la codificación de ``ISO-Latin-1'' a ``UTF-8'' (o viceversa) y funcionará.
+En cuanto a la parte web, para los alumnos, supondrá una herramienta de fácil manejo donde ver estos horarios, apuntarse a ellos y obtener los creditos correspondientes por acudir a estas charlas, agilizando y quitando carga de trabajo al docente encargado de atender a las peticiones y facilitar el documento que certifica que ese alumno acudió a esas charlas dándole los créditos que le corresponden por ello.
+La aplicación, en su parte backend, destaca en la optimización de gestionar las salas disponibles en la universidad en función de los alumnos apunados a cada uno de estos seminarios, quitando así una gran carga de trabajo al docente encargado de gestionar y modificar las salas y sus horarios de forma manual para que todos los alumnos apuntados a un seminario puedan acudir a el con total comodidad y garantizando un sitio a cada uno de ellos.
 
 \subsection{Estilo}
 \label{subsec:estilo}
@@ -246,13 +235,6 @@ Nota que hay unas comillas de inicio (``) y otras de cierre (''), y que son dife
 Volviendo a las referencias, nota que al compilar, la primera vez se crea un diccionario con las referencias, y en la segunda compilación se ``rellenan'' estas referencias. 
 Por eso hay que compilar dos veces tu memoria.
 Si no, no se crearán las referencias.
-
- \begin{figure}
-    \centering
-    \includegraphics[bb=0 0 800 600, width=12cm, keepaspectratio]{img/foro1}
-    \caption{Página con enlaces a hilos}
-    \label{figura:foro_hilos}
- \end{figure}
 
 A continuación un bloque ``verbatim'', que se utiliza para mostrar texto tal cual.
 Se puede utilizar para ofrecer el contenido de correos electrónicos, código, entre otras cosas.
@@ -320,17 +302,18 @@ Así:
 \section{Objetivo general} % título de sección (se muestra)
 \label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)
 
-Aquí vendría el objetivo general en una frase:
-Mi trabajo fin de grado consiste en crear de una herramienta de análisis de los comentarios jocosos en repositorios de software libre alojados en la plataforma GitHub.
-
-Recuerda que los objetivos siempre vienen en infinitivo.
+La realización de este trabajo de fin de frado consiste en crear una Aplicación Web Progresiva o PWA que proporcionara a alumnos y a docentes una herramienta de fácil manejo con la que estar informado y gestionar los distintos cursos/seminarios y jornadas tecnológicas que se impartirán en la Universidad durante el curso.
 
 
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
 
-Los objetivos específicos se pueden entender como las tareas en las que se ha desglosado el objetivo general.
-Y, sí, también vienen en infinitivo.
+\begin{itemize}
+  \item Automatizar el reparto de las aulas durante los días y las horas disponibles
+  \item Informar al docente o administrador de la aplicación del número de alumnos apuntados a los distintos cursos/seminarios y jornadas
+  \item Informar a los alumnos del horario de los distintos cursos/seminarios y jornadas tecnológicas
+  \item Gestionar (apuntado y borrando) a los alumnos interesados en los seminarios disponibles
+\end{itemize}
 
 
 \section{Planificación temporal}
@@ -350,70 +333,119 @@ Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6
 \chapter{Estado del arte}
 \label{chap:estado}
 
-Descripción de las tecnologías que utilizas en tu trabajo. 
-Con dos o tres párrafos por cada tecnología, vale. 
-Se supone que aquí viene todo lo que no has hecho tú.
-
-Puedes citar libros, como el de Bonabeau et al., sobre procesos estigmérgicos~\cite{bonabeau:_swarm}. 
-Me encantan los procesos estigmérgicos.
-Deberías leer más sobre ellos.
-Pero quizás no ahora, que tenemos que terminar la memoria para sacarnos por fin el título.
-Nota que el \~ \ añade un espacio en blanco, pero no deja que exista un salto de línea. 
-Imprescindible ponerlo para las citas.
-
-Citar es importantísimo en textos científico-técnicos. 
-Porque no partimos de cero.
-Es más, partir de cero es de tontos; lo suyo es aprovecharse de lo ya existente para construir encima y hacer cosas más sofisticadas.
-¿Dónde puedo encontrar textos científicos que referenciar?
-Un buen sitio es Google Scholar\footnote{\url{http://scholar.google.com}}.
-Por ejemplo, si buscas por ``stigmergy libre software'' para encontrar trabajo sobre software libre y el concepto de \emph{estigmergia} (¿te he comentado que me gusta el concepto de estigmergia ya?), encontrarás un artículo que escribí hace tiempo cuyo título es ``Self-organized development in libre software: a model based on the stigmergy concept''.
-Si pulsas sobre las comillas dobles (entre la estrella y el ``citado por ...'', justo debajo del extracto del resumen del artículo, te saldrá una ventana emergente con cómo citar.
-Abajo a la derecha, aparece un enlace BibTeX.
-Púlsalo y encontrarás la referencia en formato BibTeX, tal que así:
-
-{\footnotesize
-\begin{verbatim}
-@inproceedings{robles2005self,
-  title={Self-organized development in libre software:
-         a model based on the stigmergy concept},
-  author={Robles, Gregorio and Merelo, Juan Juli\'an 
-          and Gonz\'alez-Barahona, Jes\'us M.},
-  booktitle={ProSim'05},
-  year={2005}
-}
-\end{verbatim}
-}
-
-Copia el texto en BibTeX y pégalo en el fichero \texttt{memoria.bib}, que es donde están las referencias bibliográficas.
-Para incluir la referencia en el texto de la memoria, deberás citarlo, como hemos hecho antes con~\cite{bonabeau:_swarm}, lo que pasa es que en vez de el identificador de la cita anterior (bonabeau:\_swarm), tendrás que poner el nuevo (robles2005self).
-Compila el fichero \texttt{memoria.tex} (\texttt{pdflatex memoria.tex}), añade la bibliografía (\texttt{bibtex memoria.aux}) y vuelve a compilar \texttt{memoria.tex} (\texttt{pdflatex memoria.tex})\ldots y \emph{voilà} ¡tenemos una nueva cita~\cite{robles2005self}!
-
-También existe la posibilidad de poner notas al pie de página, por ejemplo, una para indicarte que visite la página del GSyC\footnote{\url{http://gsyc.es}}.
+A continuacion se detallan las tecnologías utilizadas en el desarrollo del proyecto.
 
 
 
-\section{Sección 1} 
-\label{sec:seccion1}
+\section{Angular} 
+\label{sec:Angular}
+Angular es un framework para aplicaciones web desarrollado en TypeScript (lenguaje del que hablaremos más adelante), de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página. Su objetivo es aumentar las aplicaciones basadas en navegador con capacidad de Modelo Vista Controlador (MVC), en un esfuerzo para hacer que el desarrollo y las pruebas sean más fáciles.
 
-Hemos hablado de cómo incluir figuras.
-Pero no hemos dicho nada de tablas.
-A mí me gustan las tablas.
-Mucho.
-Aquí un ejemplo de tabla, la Tabla~\ref{tabla:ejemplo} (siento ser pesado, pero nota cómo he puesto la referencia).
+Entre sus virtudes se destacan:
+\begin{itemize}
+\item La posibilidad de utilizar templates declarativos, aplicar inyecciones de dependencias y crear componentes reutilizables.
 
-\begin{table}
- \begin{center}
-  \begin{tabular}{ | l | c | r |} % tenemos tres colummnas, la primera alineada a la izquierda (l), la segunda al centro (c) y la tercera a la derecha (r). El | indica que entre las columnas habrá una línea separadora.
-    \hline
-    Uno & 2 & 3 \\ \hline % el hline nos da una línea vertical
-    Cuatro & 5 & 6 \\ \hline
-    Siete & 8 & 9 \\
-    \hline
-  \end{tabular}
-  \label{tabla:ejemplo}
-  \caption{Ejemplo de tabla. Aquí viene una pequeña descripción (el \emph{caption}) del contenido de la tabla. Si la tabla no es autoexplicativa, siempre viene bien aclararla aquí.}
- \end{center}
-\end{table}
+\item Es modular, por lo cual se basa en un core y en módulos que permiten acceder a más características cuando es necesario. Permite crear componentes, razón por la cual se destaca en la reutilización de los elementos.
+
+
+\item Ejecuta la primera vista de tu aplicación en node.js, .NET, PHP, y otros servidores para renderizado de forma casi instantánea obteniendo solo HTML y CSS. También abre posibilidades para la optimización del SEO del sitio, incluyendo configuración.
+
+\item Son aplicaciones que cargan rápidamente gracias al nuevo enrutador de componentes. Este ofrece una división automática de códigos para que los usuarios solo carguen el código necesario para procesar la vista que solicitan.
+
+\item Por último, dentro de las cosas que debemos tener en cuenta de Angular, es que nuestros proyectos deben ser compilados para traducirlos en una aplicación Web que podamos publicar. Este compilador ha sido mejorado a partir de Angular 5, permitiendo ahora compilación incremental y logrando como resultado que los re-build sean más rápidos.
+\end{itemize}
+
+A continuación destacamos dos paquetes npm que son importantes y sobre los que gira gran parte de este proyecto de fin de grado:
+
+\subsection{@zxing/ngx-scanner v.3.0.0}
+\label{subsec:@zxing/ngx-scanner}
+Paquete con el que por medio de una simple linea de código permite a nuestra aplicación angular (PWA) activar la cámara de nuestro dispositivo y pudiendo leer códigos QR o Códigos de barras simples obteniendo información de los mismos. 
+	En este proyecto daremos uso a este paquete a la hora de validar nuestra presencia en cualquiera de las charlas o seminarios en los que estemos inscritos y así poder certificar que hemos asistido a ellos para más tarde poder pedir el certificado con los créditos correspondientes.
+
+\subsection{@angular/pwa v.0.1101.1}
+\label{subsec:@angular/pwa}
+Es el paquete principal que usaremos para convertir nuestra aplicación Angular en una Aplicación de Web Progresiva (PWA), mediante el comando \textit{ng add @angular/pwa} se añadirán una serie de archivos y se modificarán otros existentes para poder realizar este cambio, dichas modificaciones son:
+
+\begin{enumerate}
+\item Se agregará el paquete \textit{@angular/service-workerpaquete} al proyecto
+
+\item Habilita la compatibilidad con la compilación del trabajador de servicios en la CLI.
+
+\item Importa y registra al trabajador del servicio en el módulo de la aplicación.
+
+\item Actualiza el archivo \textit{index.html} incluyendo un enlace para agregar el archivo \textit{manifest.webmanifest}.
+
+\item Instala archivos de iconos para admitir la aplicación web progresiva (PWA) instalada.
+
+\item Crea el archivo de configuración del service worker \textit{llamado ngsw-config.json}, que especifica los comportamientos de almacenamiento en caché y otras configuraciones.
+\end{enumerate}
+
+
+\section{Typescript}
+\label{sec:Typescript}
+Typescript es un superset de JavaScript, decimos que una tecnología es un superset de un lenguaje de programación, cuando puede ejecutar programas de la tecnología, Typescript en este caso, y del lenguaje del que es el superset, JavaScript en este mismo ejemplo.
+
+	Esto permite que se pueda integrar Typescript en proyectos existentes de JavaScript sin tener que reimplementar todo el código del proyecto en Typescript, de hecho, es común que existan proyectos que introduzcan tanto Typescript como JavaScript.
+	
+	La principal característica de Typescript es el tipado estático, decimos que un lenguaje es de tipado estático cuando no es necesario definir las variables antes de su uso. Esto implica que la tipificación estática tiene que ver con la declaración explícita (o inicialización) de las variables antes de que se empleen.
+
+
+\section{HTML}
+\label{sec:HTML}
+HTML son las siglas de HyperText Markup Language, se trata del lenguaje estándar utilizado para la creación de páginas web. Fue creado por Tim Berners-Lee en los años ochenta. Es un lenguaje de marcas, esto quiere decir que para indicar la estructura del documento se utilizan etiquetas. Al ser un estándar, todos los navegadores leen e interpretan el lenguaje HTML y lo presentan de un modo similar.
+
+\section{CSS}
+\label{sec:CSS}
+CSS son las siglas de Cascading Style Sheets, es un lenguaje que permite establecer la apariencia de un documento escrito mediante un lenguaje de marcas. CSS permite asociar reglas a los elementos que aparecen en una página web, las reglas indican como debe representarse el contenido de esos elementos.
+
+\section{Bootstrap}
+\label{sec:Bootstrap}
+Bootstrap es un framework front-end que permite la construcción de páginas web adaptativas. Se trata de un software de código abierto creado en el año 2011 por Mark Otto y Jacob Thornton, empleados de Twitter.
+
+	Bootstrap ha evolucionado desde ser un proyecto enteramente basado en CSS hasta incluir múltiples plugins JavaScript e iconos junto con formularios y botones. Presenta una cuadrícula de doce columnas y 940px de ancho.
+
+	La creación de páginas web mediante Bootstrap se simplifica al disponer de elementos pre-definidos fácilmente incluibles en cualquier página web, tales como menús desplegables, botones, iconos, ventanas emergentes, etc.
+
+\section{Node} 
+\label{sec:Node}
+	Node.js es un entorno JavaScript que nos permite ejecutar en el servidor, de manera asíncrona, con una arquitectura orientada a eventos y basado en el motor V8 de Google.
+	
+	El motor V8 de Google compila Javascript en código máquina nativo en vez de interpretarlo en el navegador, consiguiendo así una velocidad mucho más alta, además de la alta velocidad de ejecución, Node.js dispone del Bucle de Eventos (Event Loop), que permitirá gestionar enormes cantidades de clientes de forma asíncrona. Tradicionalmente para trabajar de forma asíncrona las aplicaciones se valían de la programación basada en hilos (programming threaded applications), pero esto supone la utilización (normalmente ineficaz) de un espacio de memoria que va escalando a medida que la cantidad de clientes conectados a nuestra aplicación aumenta.
+	
+	Node.js resuelve este problema cambiando la manera de realizar las conexiones con el servidor. En vez de generar un nuevo hilo E/S para cada cliente, cada conexión dispara la ejecución de un evento dentro del proceso del motor de Node. De este modo, Node permite que un solo servidor que lo ejecute pueda soportar decenas de miles de conexiones. Por lo tanto, si necesitamos gestionar grandes cantidades de conexiones no tendremos que ampliar el número de servidores.
+
+	En conclusión, es una plataforma que agiliza y facilita las conexiones cliente servidor por lo que es una tecnología que avanza muy rápidamente y cada vez está más presente en el mercado.
+
+\section{MongoDB} 
+\label{sec:MongoDB}
+
+Es una de las bases de datos noSQL y orientada a documentos que existen, esto quiere decir que en lugar de guardar los datos en registros, guarda los datos en documentos. Estos documentos son almacenados en BSON, que es una representación binaria de JSON. Una de las diferencias más importantes con respecto a las bases de datos relacionales, es que no es necesario seguir un esquema. Los documentos de una misma colección - concepto similar a una tabla de una base de datos relacional -, pueden tener esquemas diferentes.
+
+	Aunque se suele decir que las bases de datos NoSQL tienen un ámbito de aplicación reducido, MongoDB se puede utilizar en muchos de los proyectos que desarrollamos en la actualidad, dos puntos a tener en cuenta sobre esta base de datos son:
+	
+	No existen las transacciones: Aunque nuestra aplicación puede utilizar alguna técnica para simular las transacciones, MongoDB no tiene esta capacidad. Solo garantiza operaciones atómicas a nivel de documento.
+
+	No existen los JOINS: MongoDB esta destinado a proyectos en los que los datos no tengan que  ser estructurados en tablas y que tampoco tengamos que hacer relaciones entre ellas.
+
+
+\section{Python} 
+\label{sec:Python}
+Python es un lenguaje de scripting desarrollado a principios de los noventa por Guido van Rossum, independiente de plataforma y orientado a objetos, preparado para realizar cualquier tipo de programa, desde aplicaciones Windows a servidores de red o incluso, páginas web. Entre sus muchas características destacamos:
+
+\begin{itemize}
+\item Multiplataforma: Hay versiones disponibles de Python en muchos sistemas informáticos distintos. Originalmente se desarrolló para Unix, aunque cualquier sistema es compatible con el lenguaje siempre y cuando exista un intérprete programado para él.
+
+\item Interpretado: Quiere decir que no se debe compilar el código antes de su ejecución. En ciertos casos, cuando se ejecuta por primera vez un código, se producen unos bytecodes que se guardan en el sistema y que sirven para acelerar la compilación implícita que realiza el intérprete cada vez que se ejecuta el mismo código.
+
+\item Interactivo: Python dispone de un intérprete por línea de comandos en el que se pueden introducir sentencias. Cada sentencia se ejecuta y produce un resultado visible, que puede ayudarnos a entender mejor el lenguaje y probar los resultados de la ejecución de porciones de código rápidamente.
+
+\item Orientado a Objetos: La programación orientada a objetos está soportada en Python y ofrece en muchos casos una manera sencilla de crear programas con componentes reutilizables.
+
+\item Gran cantidad de funciones y librerías: Dispone de muchas funciones incorporadas en el propio lenguaje, para el tratamiento de strings, números, archivos, etc. Además, existen muchas librerías que podemos importar en los programas para tratar temas específicos como la programación de ventanas o sistemas en red o cosas tan interesantes como crear archivos comprimidos en .zip.
+
+\item Sintaxis clara: Por último, destacar que Python tiene una sintaxis muy visual, gracias a una notación identada (con márgenes) de obligado cumplimiento. Para separar las porciones de código en Python se debe tabular hacia dentro, colocando un margen al código que iría dentro de una función o un bucle. Esto ayuda a que todos los programadores adopten unas mismas notaciones y que los programas de cualquier persona tengan un aspecto muy similar.
+\end{itemize}
+
 
 
 
@@ -425,42 +457,319 @@ Aquí un ejemplo de tabla, la Tabla~\ref{tabla:ejemplo} (siento ser pesado, pero
 \cleardoublepage
 \chapter{Diseño e implementación}
 
-Aquí viene todo lo que has hecho tú (tecnológicamente). 
-Puedes entrar hasta el detalle. 
-Es la parte más importante de la memoria, porque describe lo que has hecho tú.
-Eso sí, normalmente aconsejo no poner código, sino diagramas.
+A continuación se detalla el proyecto de Aplicación de Web Progresiva (PWA) del que trata este trabajo de fin de grado
 
 \section{Arquitectura general} 
 \label{sec:arquitectura}
 
-Si tu proyecto es un software, siempre es bueno poner la arquitectura (que es cómo se estructura tu programa a ``vista de pájaro'').
-
-Por ejemplo, puedes verlo en la figura~\ref{fig:arquitectura}.
-\LaTeX \ pone las figuras donde mejor cuadran. 
-Y eso quiere decir que quizás no lo haga donde lo hemos puesto\ldots
-Eso no es malo.
-A veces queda un poco raro, pero es la filosofía de \LaTeX: tú al contenido, que yo me encargo de la maquetación.
-
-\begin{figure}
+Este proyecto gira en torno a la arquitectura software del modelo cliente-servidor, como se detalla en la figura~\ref{fig:arquitectura}. Destacamos la parte del cliente principalmente manejada por Angular y más concretamente la PWA y por otro lado, la parte del servidor controlada en su punto central por NodeJs, con una base de datos MongoDB y un par de programas desarrollados en python que ayudarán a la automatización, optimización y organización de las salas.
+\begin{figure}[H]
   \centering
-  \includegraphics[width=9cm, keepaspectratio]{img/arquitectura.png}
-  \caption{Estructura del parser básico.}\label{fig:arquitectura}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[bb=0 0 800 600, width=12cm, keepaspectratio]{img/foro1}
-    \caption{Página con enlaces a hilos}\label{fig:_arquitectura}
+  \includegraphics[width=10cm, keepaspectratio]{img/arquitectura.png}
+  \caption{Arquitectura general.}\label{fig:arquitectura}
 \end{figure}
 
  
-Recuerda que toda figura que añadas a tu memoria debe ser explicada.
-Sí, aunque te parezca evidente lo que se ve en la figura~\ref{fig:arquitectura}, la figura en sí solamente es un apoyo a tu texto.
-Así que explica lo que se ve en la figura, haciendo referencia a la misma tal y como ves aquí.
-Por ejemplo: En la figura~\ref{fig:arquitectura} se puede ver que la estructura del \emph{parser} básico, que consta de seis componentes diferentes: los datos se obtienen de la red, y según el tipo de dato, se pasará a un \emph{parser} específico y bla, bla, bla\ldots
+\subsection{Cliente}
+	En el lado del cliente tenemos toda la parte desarrollada con Angular, mas concretamete con el paquete \textit{@angular/pwa v.0.1101.1} al tratarse de una PWA y tratar con el framework Bootstrap permite que todas las pantallas de la aplicación sean \textit{responsive}, lo que quiere decir que éstas pantallas se ajustarán automáticamente a la resolución del dispositivo en el que se muestran, centrado principalmente en dispositivos móviles llegándose a asemejar a una app nativa.
+	
+	Debido al uso de la cámara del dispositivo, los server workers proporcionados por el paquete \textit{@angular/pwa v.0.1101.1} y un login inicial de usuario (usuario y claves) es de obligado cumplimiento que la página se muestre con el protocolo seguro de transferencia de hipertexto (en inglés, Hypertext Transfer Protocol Secure o HTTPS)  para garantizar que la transferencia de datos no se vera comprometida en ningún momento y será seguro, esto se consigue con un certificado de clave pública para el servidor web.
+	
+	En las vistas del cliente diferenciamos dos variantes principales una vez que se hace login, para los usuarios que serán generalmente alumnos y para el administrador de la aplicación, éste último tendrá unas vistas propias y unos privilegios por parte del servidor que no tendrá ningún otro usuario. Estos privilegios le permitirá modificar elementos de la base de datos, obtener información de todas las charlas, seminarios y de los alumnos apuntados a cada una de ellas.
 
-Si utilizas una base de datos, no te olvides de incluir también un diagrama de entidad-relación.
+	
+\subsection{Servidor}
+	En el lado del servidor se realiza el desarrollo back-end al completo, desde la recepción de peticiones HTTPS hasta el acceso a datos o la descarga de ellos en formato CSV o PDF.
+	La parte central de este servidor gira en torno a NodeJs y mas concretamente en su framework Express que nos proporciona los mecanismos para poder manejar las peticiones HTTPS (get, post, put y delete) de los distintos usuarios. Una vez recibida una de estas peticiones, por medio del manejador proporcionado por express realizaremos una u otra acción, entre las principales de login, registro, getEvento entre otros, destacaremos dos:
+	
+\begin{itemize}
+	\item \textbf{/getCreditoEventos}: Esta petición en concreto se encarga de recibir como parámetros strings el nombre, apellidos y el DNI del usuario, que por medio de la pestaña de \textit{certificado} y más concretamente apretando el botón \textit{"Recibir Créditos"} rellena una plantilla PDF suministrada por la URJC donde se adjudican al alumno los créditos correspondientes por asistir a una de estas charlas o seminarios que previamente se apuntó
+	
 
+	\item \textbf{/zip}: Esta petición solo es posible recibirla cuando es el administrador el que la requiere, se recibe como parámetros dos elementos, el primero el identificador del evento dentro de la base de datos y el nombre del evento. Esta petición lanzará un python llamado createCSV.py que se encarga de crear el CSV con los datos obtenidos de la base de datos y dejarlo en una ruta específica dentro del servidor, donde más tarde se recojerá y se mandara via HTTPS al usuario administrador.
+
+Esta petición en concreto tiene dos caminos:
+\begin{itemize}
+	\item  Si el administrador quiere un evento en concreto, el id del evento corresponderá a su identificador dentro de la base de datos devolvera un CSV que rellenará con los datos obtenidos de la base de datos en funcion de ese identificador recibido. 
+	\item Si el administrador quiere obtener todos los eventos, el id del evento será 0, cuando obtenemos este identificador el servidor creara un .zip que contendrá varios CSV con los eventos en los que haya más de un alumno inscrito. Estos CSV tendrán el mismo formato y la misma información que el CSV devuelto en el caso anterior.
+\end{itemize}
+\end{itemize}
+
+
+\section{Modelo de datos} 
+\label{sec:modelo de datos}
+
+\subsection{MongoDB}
+	Para el almacenamiento de las distintas aulas disponibles, los alumnos inscritos y los horarios de las distintas charlas y seminarios tenemos los siguientes modelos de datos almacenados en la base da datos de MongoDB:
+	
+\begin{itemize}
+	\item Eventos: En este Modelo de datos tendriamos almacenados JSON del con el formato siguiente:
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=10cm, keepaspectratio]{img/mongoDBEventos.png}
+  	\caption{Modelo Eventos.}\label{fig:mongoDBEventos}
+	\end{figure}
+		\begin{itemize}
+		\item Aula: Nombre correspondiente al aula donde se impartirá la charla o seminario almacenada en el Modelos de datos de \textit{Salas}
+		\item Hora: Hora correspondiente a la que se impartirá la charla o seminario, corresponderá a una hora almacenada en el Modelo de datos de \textit{Horario}
+		\item Nombre\_evento: Nombre correspondiente al Evento que se expondra a la hora y en el aula especificado en los dos puntos anteriores
+		\item Descripcion: Descripcion el evento presentado
+		\item Id\_Evento: Identificador interno del evento presentado
+		\item Id\_qr\_evento: Identificador del QR correspondiente al evento presentado
+		\item Id\_usuarios: Array del mode de datos de \textit{Usuarios} donde se especifica los usuarios apuntados al evento presentado
+		\end{itemize}
+		
+	\item Usuarios: En este Modelo de datos tendriamos almacenados JSON del con el formato siguiente:
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=10cm, keepaspectratio]{img/mongoDBUsuarios.png}
+  	\caption{Modelo Usuarios.}\label{fig:mongoDBUsuarios}
+	\end{figure}
+		\begin{itemize}
+		\item Nick: Nombre correspondiente al alumno reconocido internamente en la URJC
+		\item Password: Contraseña encriptada en AES192
+		\item Id\_usuario: Identificador interno del usuario
+		\item Logueado: Indicador true (conectado) o false(desconectado) del usuario
+		\item Nombre\_apellidos: Nombre y apellidos del Usuario
+		\item DNI: DNI del Usuario
+		\end{itemize}
+	
+	\item Salas En este Modelo de datos tendriamos almacenados JSON del con el formato siguiente:
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=10cm, keepaspectratio]{img/mongoDBSalas.png}
+  	\caption{Modelo Salas.}\label{fig:mongoDBSalas}
+	\end{figure}
+	
+	\begin{itemize}
+		\item Aula: Nombre correspondiente al aula y como se la reconoce internamente en la URJC.
+		\item Tam: Tamaño máximo de la sala.
+		\end{itemize}
+	
+	\item Horario En este Modelo de datos tendriamos almacenados JSON del con el formato siguiente:
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=10cm, keepaspectratio]{img/mongoDBHorario.png}
+  	\caption{Modelo Salas.}\label{fig:mongoDBHorario}
+	\end{figure}
+	\begin{itemize}
+		\item Hora: Horas disponibles para todas la aulas en los dias especificados.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Registros de Alumnos y Eventos}
+	Este apartado solo será visible por parte el administrador de la aplicación o del docente encargado en gestionar la semana cultural donde se impartan estas charlas y seminarios. Como vimos anteriormente, el administrador tiene la posibilidad de descargarse un .CSV con toda la informacion de un Evento o de todos ellos, obteniendo un listado de los alumnos que se han apuntado a un determinado evento y que han validado su asistencia por medio de nuestra aplicación.
+	El formato que tienen estos CSV es el siguiente:
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=10cm, keepaspectratio]{img/CSVAlumnos.png}
+  	\caption{Modelo del archivo CSV.}\label{fig:CSVAlumnos}
+	\end{figure}
+	\begin{itemize}
+		\item Usuario: Corresponde a un string almacenado en la base de datos de MongoDB con el formato de modelo de datos de \textit{Usuarios}
+		\item Id\_usuario: String correspondiente campo id\_usuario del modelo de datos de \textit{Usuarios}
+		\item True o False en el campo "validado" hace referencia a si el alumno ha asistido al evento y ha escaneado el código QR disponible al finalizar el mismo dando constancia así que asistió a él, campo a True, o por el contrario está apuntado pero no asistió a él siendo en este caso False el valor de este campo.
+	\end{itemize}
+	
+
+\subsection{Plantilla documento de obtención créditos}
+	El pdf que obtiene el alumno es un documento oficial de la Universidad Rey Juan Carlos en el que se le otorga un determinado numero de créditos (fijados por el responsable de los seminarios o charlas) por acudir a las los seminarios o charlas que previamente se apuntó mediante la aplicación de la que estamos tratando en este TFG. La obtención de este certificado se hará de forma automática una vez que el alumno haya acudido a un número mínimo de seminarios fijados por el responsable de las mismas. 
+	El formato que tendra el documento para la obteción de los créditos será el siguiente:
+	
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm, keepaspectratio]{img/certificadoCreditos.png}
+  \caption{Plantilla PDF creditos.}\label{fig:pdfcreditos}
+\end{figure}
+
+\begin{itemize}
+		\item 1: Nombre del profesor encargado de los seminarios y charlas
+		\item 2: Nombre del alumno al que se le otorgarán los créditos.
+		\item 3: DNI del alumno
+		\item 4: Fechas correspondentes a los dias en los que tendrán lugar las charlas o seminarios
+		\item 5: Número de créditos que obtendrá el alumno por asistir a los seminarios
+		\item 6: Firma del profesor o responsable encargado de otorgar los créditos al alumno.
+		\end{itemize}
+
+
+\section{Diseño e implementación por funcionalidad } 
+
+\subsection{Cliente}
+
+\subsubsection{Login}
+	La aplicación se integraŕa dentro de las aplicaciones de la Universidad Rey Juan Carlos para el uso tanto de profesores como de alumnos, es por ello por que guarda una estética distintiva de la universidad, con el uso de sus logos y colores.
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/principalHome.png}
+  	\caption{Página Login}\label{fig:principalHome}
+	\end{figure}
+La página de \textit{login} consta de un menú de login donde el usuario ingresará sus credenciales propias de la Universidad Rey Juan Carlos. En ésta pagina destacamos dos puntos claves de por qué esta aplicacion es una PWA.
+	En primer lugar, tal y como se observa en la figura~\ref{fig:principalHome} el navegador tanto en ordenador como en dispositivos móviles nos da la opcion de instalar la aplicación en nuestro dispositivo, creando un acceso directo a ella como si de una aplicacion nativa android (en el caso móvil) o como una extensión chrome (en el caso de utilizar un navegador chrome en el ordenador) se tratase.
+	En segundo lugar, como observamos en la figura~\ref{fig:principalWorker} la aplicación dispone también de un \textit{service worker}.
+	
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/principalWorker.png}
+  	\caption{Página Login}\label{fig:principalWorker}
+	\end{figure}
+
+	Un \emph{service worker} es un script que permite interceptar y controlar los requests de la red y el almacenamiento del cache del navegador. Gracias a los \textit{service workers}, los programadores web pueden crear sitios web con una experiencia offline y utilizar la aplicación sin conexion unicamente con las páginas que previamente se hayan guardado en la caché del dispositivo.
+	
+	Como los \textit{service workers} tienen acceso al manejo de los requests, pueden llegar a ser muy poderosos (y peligrosos), especialmente si son usados con mala intención. Esto es uno de los motivos por lo cuales usar \textit{HTTPS} es muy importante, para prevenir ataques de terceros.
+
+\subsubsection{Usuario}
+	Nada más ingresar en la aplicacion con el nombre de usuario y contraseña, cargará la pagina principal, destacar que durante todas las ventanas de la aplicacion dispondremos de un menu, en el que estaran accesibles las 3 páginas principales de nuestra aplicación (1,2,3) y un botón para hacer \textit{logout} (4) de la misma.
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/menu.png}
+  	\caption{Menú principal de la aplicación}\label{fig:menu}
+	\end{figure}
+	
+\begin{enumerate}
+  \item Página principal: En la siguiente vista dispondremos de la información sobre las charlas y seminarios a los que el alumno se inscribió, en el campo \textbf{Título} se desribe el título en si de la charla o seminario, en el campo \textbf{Aula} se informa del aula dentro de la Universidad Rey Juan Carlos donde tendrá lugar la charla, y por útltimo, el campo \textbf{Hora} que especifica la hora a la que tendrá lugar el evento.
+  Dentro de cada fila del evento en el que estamos apuntados y tenemos previsto ir aparecerá dos botones, "Validar" (1) y "Desapuntarse" (2). El botón validar solo estará accesible una vez el evento haya finalizado para que los alumnos que han podido asistir puedan validar mediante la aplicación que han ido a dicha charla. Una vez validado el evento y habiendo recibido la validacion por parte del servidor, debajo del campo aula aparecerá un icono (3) mostrando que la validación se ha desarrollado con normalidad.
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/inicio.png}
+  	\caption{Página de inicio.}\label{fig:inicio}
+	\end{figure}
+	
+	Una vez presionemos el botón de validar ya que hemos asistido al evento en cuestión y queremos dar fe de ello, la aplicacion nos llevará a la pestaña de validación. 
+	En esta pestaña, la aplicacion utilizará la cámara del dispositivo, ya sea un movil, tabley u ordenador portatil para leer el codigo QR correspondiente al evento que queremos validar.
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/validarQR.png}
+  	\caption{Pestaña de validacion de QR}\label{fig:validarQR}
+	\end{figure}
+
+Para validar el evento, basta con mostrar un QR valido y la aplicacion obtendra un mensaje de aceptación por parte del servidor, si por el contrario mostramos un QR que no correspondería al QR del evento en cuestión, se nos avisará con un mensaje en la pantalla que el QR proporcionado no es válido. En este caso escaneamos un QR correspondiente al evento del BBVA cuando deberia ser el QR del evento Telefónica.
+
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/validarQRFail.png}
+  	\caption{Pestaña de validacion de QR con mensaje de error}\label{fig:validarQRFail}
+	\end{figure}  
+  
+  \item Calendario: En la vista siguiente~\ref{fig:horario} obtenemos un calendario con las principarlas charlas y seminarios disponibles durante las jornadas habilitadas por la Universidad Rey Juan Carlos. 
+
+\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/horario.png}
+  	\caption{Página de calendario}\label{fig:horario}
+	\end{figure}
+  
+  Cada evento ocupa una posición en el calendario, asi mismo cada uno de ellos actua como un botón, en el que presionándolo nos redirige a la pagina de información del mismo. En ésta página de información es donde el alumno se podrá apuntarse, dando click en "Apuntarse" y expresar su intención de asistir a él, también hay una pequeña descripción del evento que estamos viendo.
+  
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/descripEvento.png}
+  	\caption{Página de descripción del evento y botón de apuntarse}\label{fig:descripEvento}
+	\end{figure}
+  
+  \item Certificado: Esta vista se compone de un boton que el alumno tendrá disponible unicamente cuando pueda tener la posibilidad de obtener los creditos que le corresponden por asistir a estos seminarios, el requisito de minimo de asistencia para poder obtar a tener el certificado de los creditos lo impondrá el profesor encargado de ello o en su defecto el administrador que se encargue del mantenimiento de la página y de dichas jornadas propuestas aquí. 
+  
+    \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/recibirCred.png}
+  	\caption{Página para obtener el certificado de créditos}\label{fig:recibirCred}
+	\end{figure}
+  
+  
+  Una vez el alumno tiene disponible el botón de "Recibir Créditos" un pop-up saldrá en pantalla sirviendo una vista previa del pdf que será el certificado que le otorgque los créditos y que el alumno obtendrá para poder justificar los mismos. Estará a su vez disponible un boton de descarga del pdf para poder almacenarlo en su dispositivo.
+  
+      \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/pdfVisual.png}
+  	\caption{Pop-up con la vista del certificado}\label{fig:pdfVisual}
+	\end{figure}
+  
+\end{enumerate}
+
+\subsubsection{Administrador}
+	Una vez iniciado sesion con la cuenta del administrador o de la persona encargada de mantener y administrar la aplicación entraremos en la misma donde veremos dos pestañas claramente diferenciadas:
+\begin{enumerate}	
+	\item Lista de Eventos: En esta pestaña el administrador de la aplicación tendra un listado completo de todos los eventos o seminarios que habrá durante la semana o los dias que duren cada uno de ellos. En ésta primera vista se dará la informacion de: Nombre del evento, aula donde se impartirá y la hora del día a la que tendrá lugar dicho evento.
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/adminListaEventos.png}
+  	\caption{Vista de administrador de la pestaña Lista de Eventos}\label{fig:adminListaEventos}
+	\end{figure}
+
+Destacamos en esta vista el boton de \textit{"Descargar PDF Todos"}, presionandolo eviaremos una peticion al servidor que nos contestará con un .ZIP llamado "Eventos.zip" que contendrá todos los CSV de los Eventos en los que haya apuntada mas de una persona. Este CSV es del mismo formato que el CSV que se descargaría dando uno por uno a cada evento con el boton "Generar CSV" que explicaremos más adelante en el siguiente punto. El .ZIP descargado quedaría de la siguiente manera:
+	
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/AdminEventosZip.png}
+  	\caption{Contenido de Eventos.zip descargado al presionar "Descargar PDF Todos"}\label{fig:AdminEventosZip}
+	\end{figure}
+	
+	 
+	Haciendo click en cada una de las filas correspondientes a cada uno de los eventos entraremos en una ventana donde nos informará más detalladamente sobre el evento en cuestión, con una breve descripción del evento (1), su QR de validación correpondiente (2) y el listado de los usuarios inscritos a él, asi como que usuario ha validado o no la asistencia al evento con el campo \textit{"Validado"} true o false (3). Destacamos de ésta vista el boton \textit{"Generar CSV"} (4) que descargará en nuestro equipo en formato CSV el mismo listado de usuarios que estamos viendo en esta misma página.
+	
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/adminListaEventoTelefonica.png}
+  	\caption{Vista de administrador de la ventana informativa del evento de Telefónica}\label{fig:adminListaEventoTelefonica}
+	\end{figure}
+
+
+	\item Calendario Eventos: En esta pestaña el administrador tendrá de forma visual la informacion de cuando y donde va a tener lugar un evento cualquiera, seguido del nombre del evento, entre parentesis, hay un numero correspondiente al numero de alumnos apuntados a dicho evento.
+	
+	Destacamos varias cosas en esta pestaña, en primer lugar el boton \textit{"Optimizar"}, éste botón envia un mensaje al servidor que lanzará un python de optimización para reubicar los eventos en horarios y aulas de la forma más óptima posible, más adelante, en el siguiente punto, cuando se explique la parte correspondiente al servidor desarrollaré más su funcionamiento. Este boton modificará la posición de todos o la gran mayoria de los eventos dentro del marco horario mostrado en esta pestaña.
+	
+	Por otro lado, es posible modificar de forma individual un evento, para ello bastará con hacer click sobre él, toda su información se volcará en los desplegables que se muestran en la parte inferior de la imagen (1), se podrá modificar tanto el aula como las horas que estén disponibles para todos los eventos, en este caso entre las aulas 321,321, 322 y 324 y en los horarios de 10:00 a 12:00. 
+	
+	Presionando el botón "Modificar" las modificaciones que hayamos hecho en los desplegables serán enviadas al servidor y podremos verlas en esta misma vista.
+	
+		\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/adminCalendario.png}
+  	\caption{Pestaña Calendario Eventos}\label{fig:adminCalendario}
+	\end{figure}
+  
+\end{enumerate}
+
+\subsection{Servidor}
+
+	El servidor está desarrollado en un entorno de trabajo que funiona en tiempo de ejecuccion, de código abierto y multiplataforma, este entorno es \textit{Node}. Añade un soporte para APIs donde se incluye una comunicacion HTTP entre el cliente y él mismo. Por todo esto obtenemos un gran rendimiento de la aplicación y tambien una gran escalabilidad. Dentro de Node el framework mas usado y que uso en este caso es \textbf{Express} cuya libraria se compone de un gran numero de framework populares dándo mecanismos para el manejo de peticiones HTTP y HTTPS (en mi caso) y mantener así una comunicacion segura cliente-servidor. 
+	Los métodos de comunicacion usados en el servidor mediante HTTPs son los típicos usados en este tipo de aplicaciones:
+	\begin{itemize}
+  	\item GET: El método GET  solicita una representación de un recurso específico. Las peticiones que usan el método GET sólo deben recuperar datos.
+  	\item POST: El método POST se utiliza para enviar una entidad a un recurso en específico, causando a menudo un cambio en el estado o efectos secundarios en el servidor.
+  	\item PUT: El modo PUT reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición.
+  	\item DELETE: El método DELETE borra un recurso en específico.
+	\end{itemize}
+
+Al margen ya de la parte Node del servidor, destacamos dos programas desarrollados en python de los que el servidor hace uso cuando el cliente así lo requiere, destacamos que el unico cliente o usuario que puede realizar una peticion al servidor y poder lanzar así estos programas es el usuario bajo el jick de "admin", en los siguientes puntos pasaremos a explicar el funcionamientos de dichos programas:
+
+\begin{enumerate}
+  	\item CreateCSV.py: Cuando el administrador presiona dentro de la pestaña "Lista Eventos" cualquier fila correspondiente a un evento, y dentro de ella el boton "GenerarCSV" o bien en la misma pestaña de "Lista Eventos" presiona el boton "Generar PDF Todos", el servidor dentro de la url \textit{'/zip/:id\_evento/:nombre\_evento'} recibe la peticion del cliente que quiere obtener o bien un CSV o bien un .zip con todos los CSV de los eventos dentro de él. Desde node se lanza el python mediante el comando ./createCSV.py -idevento (el parametro idevento solo se pondrá en el caso en el que se quiera el CSV de un evento en concreto, para obtener el .zip de todos el parametro se omitirá).
+  	
+  	Una vez el programa en python de createCSV.py ha sido lanzado, pasa a buscar en la base de datos mediante un select de idevento o recorriendose todos los eventos que haya obteniendo así una lista de usuarios asociados al evento con el campo validado true o false según corresponda para cada uno de los usuarios.
+  	
+  	Cuando se obtiene esta lista y se finaliza la ejecucion del select, pasamos a volcar los datos obtenidos en un fichero .CSV, cuando terminamos de rellenar el fichero, en el caso de querer uno en concreto la ejecución terminaría aquí y sería devuelto el fichero al cliente que solicitó tal accion al servidor, por otro lado, en el caso de querer todos los eventos se irá completando la acción pasada con todos los eventos en los que haya mas de una persona inscrita en él, y cuando termine pasaŕa a crear un .zip con todos estos .CSV creados. Una vez terminado, como en el caso anterior, le será devuelto al cliente un .zip como requirió con su petición inicial.
+  	
+  	La forma en la que el servidor y el cliente están conectados para poder enviar la informacion en formato .CSV o en formato .ZIP es mediante un \textit{pipe stream.}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=16cm, keepaspectratio]{img/createCSV.png}
+  	caption{Esquema funcionamiento createCSV.py}\label{fig:createCSV}
+\end{figure}  	
+  	
+  	
+  	\item optimizarSalas.py: El siguiente programa se ejecuta cuando el administrador dentro de la pestaña "Calendario Eventos" presiona el boton "Optimizar", este boton lanza un mensaje a la ruta \textit{'/optimizar'} dentro el endpoint donde está escuchando el servidor, que ejecuta el comando \textit{'./optimizarSalas.py'} lanzando el programa en python. 
+  	
+  	Este programa tiene como objetivo la optimización y reubicación de los eventos en funcion de los huecos libres que quedan con respecto a la gente que se ha apuntado al evento o quiere asistir y con los huecos libres que quedan en la sala. Funciona de la siguiente manera:
+  	
+  	El programa, una vez se ejecuta, lee de la base de datos cada uno de los eventos que estan programados que se van a llevar a cabo en los dias que transcurran todos ellos, de cada evento obtiene el numero de alumnos o personas que estan apuntados a él, con este numero calcula los huecos libres que tienen en todas las aulas disponibles, desechando los numeros negativos que se obtienen cuando van a asistir mas personas que huecos libres tiene la sala.
+  	
+  	Una vez tenemos relacionados todos los eventos con las aulas en funcion de los huecos libres que hay, el diccionario se ordena de menor a mayor, teniendo prioridad de posicion los eventos que tengan menor numero de huecos libres en una sala deteminada.
+  	 
+  	La adjudicacion del evento a una sala se va realizando de forma ascendente y ordenada hasta que el aula en cuestion complete todas las horas disponibles que tiene dentro de los dias que estan programados que tengan lugar estos eventos. En nuestro caso, se completara cuando en una sala se haya completado el horario de 10:00 a 12:00, cuando esto ocurre el evento no tendrá la opción de ser colocado en esa aula y pasará a ka siguiente aula donde en funcion del tamaño, las personas que vayan y el numero de huecos disponibles sea el más optimo.
+  	
+  	Si se llega a el caso en el que un evento no encuentra lugar dentro de ningún aula, este evento quedará excluido y no se le adjudicará ningun aula. El evento se mostrara fuera de la matriz de "Calendario Eventos"  y tendrá que ser el administrador quien lo posicione a mano, dentro de un aula en concreto teniendo en cuenta la limitación de aforo mediante el boton "Modificar" que se encuentra en la parte inferior de la pestaña de "Calendario Eventos" y que ya explicamos su funcionamiento en el apartado anterior.
+	\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -470,9 +779,49 @@ Si utilizas una base de datos, no te olvides de incluir también un diagrama de 
 \cleardoublepage
 \chapter{Experimentos y validación}
 
-Este capítulo se introdujo como requisito en 2019. 
-Describe los experimentos y casos de test que tuviste que implementar para validar tus resultados. 
-Incluye también los resultados de validación que permiten afirmar que tus resultados son correctos. 
+El principal objetivo sobre el que gira este proyecto de fin de grado es el de crear una aplicacion web hibrida que funcione tanto en dispositivos moviles como en navegadores web, esto lo hemos conseguido creando una Aplicacion Web Progresiva o PWA. 
+
+Para ver que realmente hemos conseguido que nuestra aplicacion sea una PWA basta con realizar las siguientes pruebas: 
+
+\section{Server Workers}
+Nuestra aplicación contiene \textit{server workers} que son propios del paquete \textit{@angular/pwa v.0.1101.1} para ello basta con mirar en la consola de desarrolladores de Google Chrome o de cualquier navegador, ir al apartado servide workers y ver que está activado y corriendo figura~\ref{fig:principalWorker}
+	
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/principalWorker.png}
+  	\caption{Service Workers funcionando en la PWA}\label{fig:principalWorker}
+	\end{figure}
+	  
+\section{Instalación en un dispositivo móvil}
+Podemos instalar nuestra aplicacion en un dispositivo movil como si de una aplicacion nativa, android o IOS, se tratase. Para ello presionamos el boton "Añadir a pagina de inicio" una vez que estemos navegando con el dispositivo movil en cuestion por nuestra aplicacion.
+	Una vez hayamos aceptado y se haya instalado, nuestra aplicacion PWA se verá como una aplicacion nativa dentro de nuestro dispositivo movil figura~\ref{fig:homeMovil} 
+ 
+	\begin{figure}[H]
+  	\centering
+  	\includegraphics[width=5cm, keepaspectratio]{img/addHomeMovil.png}
+  	\includegraphics[width=5cm, keepaspectratio]{img/homeMovil.png}
+  	\caption{PWA en la pantalla de inicio del dispositivo móvil}\label{fig:homeMovil}
+	\end{figure} 
+ 
+\section{Optimización}
+En cuanto a la parte del servidor, un punto importante a tener en cuenta sobre la validación del proyecto y el buen funcionamiento de éste es que el python encargado de optimizar las salas en funcion al numero de alumnos apuntados y al numero de huecos disponibles funcione correctamente. Para ello podemos lanzar manualmente el propio python encargado de ello con el comando \textit{python optimizarSalas.py} obtendriamos un resultado como vemos a continuación:
+ 
+ \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=16cm, keepaspectratio]{img/terminalOptimizar.png}
+  	\caption{Salida tras ejecutar python optimizarSalas.py}\label{fig:terminalOptimizar}
+	\end{figure}
+ 
+Revisando dichos resultados nos damos cuenta que el programa tiene en cuenta los huecos libres de las aulas, el tamaño de la misma y los usuarios inscritos optimizando su distribución.
+
+
+\section{Seguridad}
+Cabe destacar el uso de HTTPS, (HyperText Transfer Protocol Secure, Protocolo de transferencia de hipertexto) es un protocolo de comunicación de Internet que protege la integridad y la confidencialidad de los datos de los usuarios entre sus ordenadores y el sitio web. En este caso al usar partes vulnerables del movil, como puede se la cámara al leer el código QR o en el momento de autentificar al usuario, es necesario el uso de una capa más de seguridad.
+ 
+ 
+En el caso de la autentificación la contraseña del usuario, viaja cifrada dentro de este protocolo y dentro de la base de datos permanece cifrada también por si ésta base de datos sufre un ataque no se vea comprometida la seguridad de los usuarios de la aplicación.
+El cifrado de la contraseña es del tipo \textit{AES192} (Advanced Encryption Standard) y para validar este cifrado basta con ver la base de datos y el valor del campo "password" dentro de la tabla "Usuarios", en este caso para el usuario \textit{david} el valor del campo es: \textit{4232a5e307a998a3ef2601c7d0a4c704}, un valor esperado para este tipo de cifrados.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -553,10 +902,39 @@ Es un apartado que sirve para dar ideas de cara a futuros TFGs/TFMs.
 \chapter{Manual de usuario}
 \label{app:manual}
 
-Esto es un apéndice.
-Si has creado una aplicación, siempre viene bien tener un manual de usuario.
-Pues ponlo aquí.
 
+\begin{itemize}
+  \item Front: Dentro de ~/TFGDavid/ ejecutamos el proyecto de Angular:
+	\textbf{ng serve --ssl} (si queremos que corra bajo HTTPs) o ng serve en HTPP normal, destacamos que ambos comandos permiten ejecutar el proyecto en angular en modo "desarrollo" en localhost:4200, si queremos ejecutarlo en produccion, como se ejecutaría en un servidor final para verlo en internet, tenemos que realizar dos procedimientos, uno ejecutar \textbf{ng build --prod}, compilará la aplicación Angular en un directorio de salida llamado dist/ y por otro lado, para ejecutar el proyecto compilado en produccion usaremos el comando:
+\begin{verbatim}
+http-server -p 8080 -c-1 ~/dist/TFGDavid
+\end{verbatim}
+
+	
+\item Back: Dentro de ~/backEnd/ para lanzar el servidor: 
+
+	\begin{verbatim}
+	node app.js
+	\end{verbatim}
+
+En el caso de querer lanzar el python de optimizarSalas o createCSV
+	\begin{verbatim}
+	python optimizarSalas.py o python createCSV.py
+	\end{verbatim}
+	
+\item Base de datos MongoDB: Se deberá ejecutar y mantenerse escuchando en \textit{localhost:27017} dirección que por defecto utiliza esta base de datos.
+
+	\begin{verbatim}
+	sudo systemctl start mongod
+	\end{verbatim}
+
+Para comprobar que esta corriendo el proceso podemos usar el comando:
+
+	\begin{verbatim}
+	sudo systemctl status mongod
+	\end{verbatim}
+
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAFIA %
