@@ -136,7 +136,7 @@ Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 202X
 \pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
 \begin{flushright}
 \textit{Dedicado a \\
-mi familia / mi abuelo / mi abuela}
+mis padres, mis hermanas, mi abuelo y mis sobrinos}
 \end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -144,10 +144,19 @@ mi familia / mi abuelo / mi abuela}
 
 \chapter*{Agradecimientos}
 %\addcontentsline{toc}{chapter}{Agradecimientos} % si queremos que aparezca en el índice
-\markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS} % encabezado 
+\markboth {AGRADECIMIENTOS}{AGRADECIMIENTOS}
+En primer lugar quiero dar gracias a mi familia. En especial a mis padres quienes han estado conmigo desde el primer minuto, con un apoyo incondicional en todo momento, dándome ánimos en momentos en los que yo no los encontraba y los que me han dado la oportunidad de formarme durante toda mi vida. A mis hermanas, quienes se han alegrado tanto como yo en los momentos en los que aprobaba, mostraban ilusión por mis logros y las que me han aconsejado siempre buscando lo mejor para mí. A mi abuelo, que siempre ha tenido palabras de ánimo en todo momento que ha durado ésta andadura universitaria.
 
-Aquí vienen los agradecimientos\ldots Aunque está bien acordarse de la pareja, no hay que olvidarse de dar las gracias a tu madre, que aunque a veces no lo parezca disfrutará tanto de tus logros como tú\ldots 
-Además, la pareja quizás no sea para siempre, pero tu madre sí.
+	No hay palabras suficientes de agradecimiento por el apoyo que siempre he sentido y por demostrarme que podía con ello, éste título es, en gran medida, gracias a vosotros.
+
+	También quiero dar las gracias a mi tutor y profesor, Gregorio Robles, por darme la oportunidad de realizar este proyecto, de su ayuda y el interés mostrado durante la realización del mismo.
+A todos los demás profesores que durante todos estos años han contribuido en mi formación.
+
+	Por último, a todos los amigos que durante estos años universitarios han compartido conmigo sus dias, los buenos y los no tan buenos, con los que he podido forjar una gran amistad.
+
+	\vspace{5mm} %5mm vertical space
+	Gracias!
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen
@@ -210,9 +219,15 @@ El siguiente trabajo consta de la realización de una aplicación web progresiva
 
 \section{Contexto}
 \label{sec:contexto}
+La herramienta propuesta en este TFG nace de la necesidad por parte de la Universidad Rey Juan Carlos y más concretamente del administrador/profesor encargado de gestionar todo lo relaccionado con las charlas y seminarios que en ella se ofrecen.
 
-En cuanto a la parte web, para los alumnos, supondrá una herramienta de fácil manejo donde ver estos horarios, apuntarse a ellos y obtener los créditos correspondientes por acudir a estas charlas, agilizando y quitando carga de trabajo al docente encargado de atender a las peticiones y facilitar el documento que certifica que ese alumno acudió a esas charlas dándole los créditos que le corresponden por ello.
-La aplicación, en su parte backend, destaca en la optimización de gestionar las salas disponibles en la universidad en función de los alumnos apuntados a cada uno de estos seminarios, quitando así una gran carga de trabajo al docente encargado de gestionar y modificar las salas y sus horarios de forma manual para que todos los alumnos apuntados a un seminario puedan acudir a el con total comodidad y garantizando un sitio a cada uno de ellos.
+Está principalmente orientada hacia los alumnos, que son en definitiva las personas que más uso harán de la misma, en cuanto a la parte web, supondrá una herramienta de fácil manejo donde ver estos horarios, apuntarse a ellos y obtener los créditos correspondientes por acudir a cada uno de ellos.
+
+Por parte de la Universidad, y más concretamente del administrador o encargado de las charlas, agilizará y le quitará gran carga de trabajo, facilitando la gestión y adjudicación de los certificados que se entregarán a los usuarios finales de la misma.
+
+La motivación para realizar este proyecto es para introducir, más si cabe, las nuevas tecnologías y la agilidad que éstas nos proporcionan dentro del entorno universitario, en su parte backend, destaca en la optimización de la gestión de las salas disponibles en la universidad en función de los alumnos apuntados a cada uno de estos seminarios.
+
+Es un proyecto muy centrado en la automaticación de procesos, guardando la seguridad que se requiere en cuantos asuntos de gestión universitaria se refiere, facilitando y agilizando las gestiones tanto a alumnos como a la propia universidad.
 
 \subsection{Estilo}
 \label{subsec:estilo}
@@ -776,7 +791,7 @@ Al margen ya de la parte Node del servidor, destacamos dos programas desarrollad
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \cleardoublepage
-\chapter{Experimentos y validación}
+\chapter{Pruebas y funcionamiento}
 
 El principal objetivo sobre el que gira este proyecto de fin de grado es el de crear una aplicación web híbrida que funcione tanto en dispositivos móviles como en navegadores web, esto lo hemos conseguido creando una Aplicación Web Progresiva o PWA. 
 
