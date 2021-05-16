@@ -232,77 +232,6 @@ La motivación para realizar este proyecto es para introducir, más si cabe, las
 
 Es un proyecto muy centrado en la automaticación de procesos, guardando la seguridad que se requiere en cuantos asuntos de gestión universitaria se refiere, facilitando y agilizando las gestiones tanto a alumnos como a la propia universidad.
 
-\subsection{Estilo}
-\label{subsec:estilo}
-
-Recomiendo leer los consejos prácticos sobre escribir documentos científicos en \LaTeX \ de Diomidis Spinellis\footnote{\url{https://github.com/dspinellis/latex-advice}}.
-
-Lee sobre el uso de las comas\footnote{\url{http://narrativabreve.com/2015/02/opiniones-de-un-corrector-de-estilo-11-recetas-para-escribir-correctamente-la-coma.html}}. 
-Las comas en español no se ponen al tuntún.
-Y nunca, nunca entre el sujeto y el predicado (p.ej. en ``Yo, hago el TFG'' sobre la coma).
-La coma no debe separar el sujeto del predicado en una oración, pues se cortaría la secuencia natural del discurso.
-No se considera apropiado el uso de la llamada coma respiratoria o \emph{coma criminal}.
-Solamente se suele escribir una coma para marcar el lugar que queda cuando omitimos el verbo de una oración, pero es un caso que se da de manera muy infrecuente al escribir un texto científico (p.ej. ``El Real Madrid, campeón de Europa'').
-
-También habrás tomado nota de cómo se ponen las ``comillas dobles'' para que se muestren correctamente. 
-Nota que hay unas comillas de inicio (``) y otras de cierre (''), y que son diferentes.
-Volviendo a las referencias, nota que al compilar, la primera vez se crea un diccionario con las referencias, y en la segunda compilación se ``rellenan'' estas referencias. 
-Por eso hay que compilar dos veces tu memoria.
-Si no, no se crearán las referencias.
-
-A continuación un bloque ``verbatim'', que se utiliza para mostrar texto tal cual.
-Se puede utilizar para ofrecer el contenido de correos electrónicos, código, entre otras cosas.
-
-{\footnotesize
-\begin{verbatim}
-    From gaurav at gold-solutions.co.uk  Fri Jan 14 14:51:11 2005
-    From: gaurav at gold-solutions.co.uk (gaurav_gold)
-    Date: Fri Jan 14 19:25:51 2005
-    Subject: [Mailman-Users] mailman issues
-    Message-ID: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-
-    Dear Sir/Madam,
-    How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-    Thanks
-
-    From msapiro at value.net  Fri Jan 14 19:48:51 2005
-    From: msapiro at value.net (Mark Sapiro)
-    Date: Fri Jan 14 19:49:04 2005
-    Subject: [Mailman-Users] mailman issues
-    In-Reply-To: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-    Message-ID: <PC173020050114104851057801b04d55@msapiro>
-
-    gaurav_gold wrote:
-    >How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-
-    See the FAQ
-    >Mailman FAQ: http://www.python.org/cgi-bin/faqw-mm.py
-    article 3.11
-\end{verbatim}
-}
-
-\section{Estructura de la memoria}
-\label{sec:estructura}
-
-En esta sección se debería introducir la esctura de la memoria. 
-
-Así:
-
-\begin{itemize}
-  \item En el primer capítulo se hace una intro al proyecto.
-  
-  \item En el capítulo~\ref{chap:objetivos} (ojo, otra referencia automática) se muestran los objetivos del proyecto.
-  
-  \item A continuación se presenta el estado del arte en el capítulo~\ref{chap:estado}.
-  
-  \item \ldots
-\end{itemize}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -848,9 +777,19 @@ El cifrado de la contraseña es del tipo \textit{AES192} (Advanced Encryption St
 \cleardoublepage
 \chapter{Resultados}
 
-En este capítulo se incluyen los resultados de tu trabajo fin de grado.
+El presente proyecto pretendía ofrecer una herramienta de gestión y administración de los eventos o seminarios que se ofrecerán durante la semana cultural, una semana donde los alumnos tienen la oportunidad de interactuar con las distintas empresas del sector en el que están desarrollando su formación universitaria.
 
-Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejemplos de haberla utilizado para que se vea su utilidad.
+La aplicación desarrollada en este proyecto pretende abordar y resolver los objetivos descritos en el punto 2, donde hemos obtenido los siguientes resultados:
+
+\begin{itemize}
+  \item Hemos conseguido, mediante un script desarrollado en python, automatizar el proceso de reparto de las clases/horas para las distintas charlas y seminarios en función de los alumnos que se apuntaron a ellas. Este era un objetivo primordial cuando se abordó este TFG, ya que con la automaticación de este proceso le quitamos mucha carga de trabajo al encargado de tal función, en este caso un docente de la universidad.
+  
+  \item La aplicación está capacitada para crear informes, mediante archivos csv, sobre los alumnos que se han apuntado y han asistido a cada una de las charlas, estos informes serán muy valiosos tanto para la universidad como para las propias empresas que impartirán estas charlas para asi poder enforcarlas en una determinada dirección logrando asi llamar más la atención de los alumnos y conseguir levantar un interés mayor en ellos.
+   
+   \item Para los alumnos: se ha implementado una aplicación de fácil manejo, muy accesible y que permite mantener informado al alumno en todo momento del horario, tipo de charla que se impartirá y el contenido de la misma. También facilita y agiliza el proceso de verificaciñon de la asistencia a a cada una de ellas y por consiguiente, adquirir los créditos correspondientes.
+   
+   \item En cuanto a las tecnelogías usadas, se demuestra que disponemos de herramientas muy potentes para poder desarrollar aplicaciones hibridas, que no son muy conocidas actualmente, pero que en un futuro podrán imponerse frente a las aplicaciones nativas. Con este tipo de desarrollos se podrá optimizar el tiempo que conlleva crear una aplicación de este tipo, reduciendo el número de personal necesario para abarcar un mayor público y tener un mayor abanico de posibilidades a la hora de orientar tu aplicación.
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -861,22 +800,6 @@ Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejem
 \cleardoublepage
 \chapter{Conclusiones}
 \label{chap:conclusiones}
-
-
-\section{Consecución de objetivos}
-\label{sec:consecucion-objetivos}
-
-Esta sección es la sección espejo de las dos primeras del capítulo de objetivos, donde se planteaba el objetivo general y se elaboraban los específicos.
-
-Es aquí donde hay que debatir qué se ha conseguido y qué no. 
-Cuando algo no se ha conseguido, se ha de justificar, en términos de qué problemas se han encontrado y qué medidas se han tomado para mitigar esos problemas.
-
-Y si has llegado hasta aquí, siempre es bueno pasarle el corrector ortográfico, que las erratas quedan fatal en la memoria final.
-Para eso, en Linux tenemos aspell, que se ejecuta de la siguiente manera desde la línea de \emph{shell}:
-
-\begin{verbatim}
-  aspell --lang=es_ES -c memoria.tex
-\end{verbatim}
 
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
@@ -894,20 +817,35 @@ En cuanto a conocimientos y habilidades obtenidas durante todo el Grado de Ingen
 \section{Lecciones aprendidas}
 \label{sec:lecciones_aprendidas}
 
-Aquí viene lo que has aprendido en el Trabajo Fin de Grado/Máster.
+Con este TFG he podido aprender y adquirir conocimientos que si bien en las distintas asignaturas de la universidad he podido tener la primera toma de contacto, aquí he podido desarrollarlos a unos puntos claramente diferenciados:
 
 \begin{enumerate}
-  \item Aquí viene uno.
-  \item Aquí viene otro.
+  \item Desarrollo Web: Es quizás el punto más importante de todos, la aplicacion aún siendo hibrida y teniendo la capacidad de ser instalada en un dispositivo móvil, en esencia, es una aplicación Web desarrollada en Angular que por medio de un módulo le permite ser una aplicacion híbrida. Ésta tecnología en desarrollo web no llegamos a impartirla del todo en la universidad, por lo que por medio de este TFG he teniedo que aprender a manejarla de principio a fin, con todo lo que ello conlleva.
+  
+  \item PWA: Al inicio de este proyecto, cuando tuve la primera reunión con Gregorio, no tenia demasiado conocimientos sobre las aplicaciones híbridas, Gregorio insitió mucho en que la aplicacion tendría que poder instalarse en cualquier dispositivo movil, fué ahi cuando descubrí este tipo de aplicaciones y todos los requisitos que deben cumplir las aplicaciones Angular para poder ser una aplicación de este tipo.
+  
+	\item Módulos Angular, SSL y automatización: Para poder tener una aplicación funcional, de fácil manejo y con un hilo de ejecución automatizado ha sido necesario entender el manejo de estos 3 puntos principales. En cuanto a los modulos de angular he tenido que investigar, aprender e integrar en la aplicación módulos como el lector de QR y generador de QR, unos módulos que tienen gran proyección de futuro y en los que su uso en el futuro será mas que necesario.
+	
+	Automatización de todo el back de la aplicación con librerias en python, con consultas a bases de datos y generador de documentos y estadísticas en funcion de los resultados obtenidos. En cuanto al lenguaje Python tenia una base muy sólida en el, no obstante he tenido que aprender y estudiar cada libreria utilizada para entender su funcionamiento y poder integrarla satisfactoriamente en este proyecto.
+	
+	En cuanto a la seguridad, es la base de la aplicación, para poder desarrollar una PWA y tener acceso a elementos del móvil, cámara en este caso, la aplicación tiene que estar respaldada con una cierta seguridad, todo esto se consigue con herramientas criptográficas de seguridad, con sus determiadas claves públicas y privadas las que te permiten obtener una aplicación web bajo HTTPS. En cuanto a este tipo de seguridad en la carrera he tenido la oportunidad de adquirir unos conocimiento basicos sobre estos conceptos, no obstante, a lo largo de este TFG me he topado con distintos errores, problemas y puntos que tenia que resolver para poder obtener una  aplicación totalmente funcional.
+	
+En resumen, este TFG me ha dado la oportunidad de poder aprender tecnologías punteras, que me apetecian aprender y que muy seguro en un futuro me será de gran ayuda haber podido tener contacto con ellas, en mayor o menor medida.
 \end{enumerate}
 
 
 \section{Trabajos futuros}
 \label{sec:trabajos_futuros}
 
-Ningún proyecto ni software se termina, así que aquí vienen ideas y funcionalidades que estaría bien tener implementadas en el futuro.
+Esta aplicación podrá ser todo lo compleja y podrá abordar todos los puntos necesarios que el administrador o encargado de las charlas que se imparten en la  universidad requiera. 
+En primer lugar, tendrá que poderse integrar en todo el funcionamiento interno de la universidad, esto es, que esté conectada a la base de datos  donde estén todos los alumnos de la misma.
 
-Es un apartado que sirve para dar ideas de cara a futuros TFGs/TFMs.
+Al ser una aplicación que se usará mayoritariamente en dispositivos móviles un objetivo claro que veo es la posibilidad de mandar alertas y notificaciones a los usuarios cuando se acerque un evento en el que está apuntado o tener la posibilidad de sincronizar el calendario interno del móvil a los eventos apuntados.
+
+En cuanto al lado de la seguridad, poner un poco más dificil que el alumno pueda hacer trampas indicando que ha asistido a una charla mediante el QR pero sin haber ido a ella. Esto se podría conseguir teniendo acceso al posicionamiento GPS del dispositivo, para saber que si está leyendo el QR y está en el lugar donde esta disponible el QR para leer, el alumno habrá asistido (muy probablemente) a la charla indicada.
+
+
+La forma de guardar las charlas y eventos en la base de datos, a dia de hoy cuando voy a crear un evento tengo que insertar manualmente el evento en la base de datos, su descripción y todo lo relacionado con él. Esto en un futuro se podría solucionar creando una aplicación web donde las distintas empresas tuvieran acceso a ella y rellenaran todos los campos que a dia de hoy se tienen que insertar a mano.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
