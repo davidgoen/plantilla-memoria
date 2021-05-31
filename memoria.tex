@@ -258,15 +258,10 @@ La realización de este trabajo de fin de grado consiste en crear una Aplicació
   \item Gestionar (apuntado y borrando) a los alumnos interesados en los seminarios disponibles
 \end{itemize}
 
+\clearpage
 
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=16cm, keepaspectratio]{img/diagrama.png}
-  \caption{Diagrama de Gantt del desarrollo del TFG.}\label{fig:diagrama}
-\end{figure}
 
 Antes incluso de saber la temática del TFG o sobre que iba a tratar, tenía claro las tecnologías que quería usar. En esos momentos estaba adentrándome en el mundo front con Angular y el desarrollo de aplicaciones Web.
 
@@ -283,6 +278,17 @@ Durante la redaccion de esta memoria seguí teniendo un contacto muy directo con
 Por último con la  memoría terminada, retoque un poco el código a petición de Gregorio como ha ido haciendo a lo largo de este TFG mostrando una participación en el muy activa y siempre estando dispuesto a colaborar.
 
 Ya estaban terminadas las dos partes principales de este TFG, la aplicacion propiamente programada y la presente memoria, fue aquí cuando decidir hacer una presentación de este TFG de cara a la defensa del mismo.
+
+\vspace{5mm}
+
+A continuación muestro de forma gráfica el diagrama temporal destacando los puntos que anteriormente he desarrollado a lo largo de los meses con respecto a la realización de este TFG.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=16cm, keepaspectratio]{img/diagrama.png}
+  \caption{Diagrama de Gantt del desarrollo del TFG.}\label{fig:diagrama}
+\end{figure}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -355,6 +361,8 @@ Typescript es un superset de JavaScript, decimos que una tecnología es un super
 \label{sec:HTML}
 HTML son las siglas de HyperText Markup Language, se trata del lenguaje estándar utilizado para la creación de páginas web. Fue creado por Tim Berners-Lee en los años ochenta. Es un lenguaje de marcas, esto quiere decir que para indicar la estructura del documento se utilizan etiquetas. Al ser un estándar, todos los navegadores leen e interpretan el lenguaje HTML y lo presentan de un modo similar.
 
+\clearpage
+
 \section{CSS}
 \label{sec:CSS}
 CSS son las siglas de Cascading Style Sheets, es un lenguaje que permite establecer la apariencia de un documento escrito mediante un lenguaje de marcas. CSS permite asociar reglas a los elementos que aparecen en una página web, las reglas indican como debe representarse el contenido de esos elementos.
@@ -408,25 +416,16 @@ Python es un lenguaje de scripting desarrollado a principios de los noventa por 
 \end{itemize}
 
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% DISEÑO E IMPLEMENTACIÓN %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\cleardoublepage
 \chapter{Diseño e implementación}
 
 A continuación se detalla el proyecto de Aplicación de Web Progresiva (PWA) del que trata este trabajo de fin de grado
 
 \section{Arquitectura general} 
 \label{sec:arquitectura}
-
 Este proyecto gira en torno a la arquitectura software del modelo cliente-servidor, como se detalla en la figura~\ref{fig:arquitectura}. Destacamos la parte del cliente principalmente manejada por Angular y más concretamente la PWA y por otro lado, la parte del servidor controlada en su punto central por NodeJs, con una base de datos MongoDB y un par de programas desarrollados en python que ayudarán a la automatización, optimización y organización de las salas.
-\begin{figure}
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=10cm, keepaspectratio]{img/arquitectura.png}
+  \includegraphics[width=7cm, keepaspectratio]{img/arquitectura.png}
   \caption{Arquitectura general.}\label{fig:arquitectura}
 \end{figure}
 
@@ -456,6 +455,7 @@ Esta petición en concreto tiene dos caminos:
 \end{itemize}
 \end{itemize}
 
+\clearpage
 
 \section{Modelo de datos} 
 \label{sec:modelo de datos}
@@ -465,7 +465,7 @@ Esta petición en concreto tiene dos caminos:
 	
 \begin{itemize}
 	\item Eventos: En este Modelo de datos tendríamos almacenados JSON del con el formato que se puede apreciar en la figura~\ref{fig:mongoDBEventos}:
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=10cm, keepaspectratio]{img/mongoDBEventos.png}
   	\caption{Modelo Eventos.}\label{fig:mongoDBEventos}
@@ -481,7 +481,7 @@ Esta petición en concreto tiene dos caminos:
 		\end{itemize}
 		
 	\item Usuarios: En este Modelo de datos tendríamos almacenados JSON del con el formato que se aprecia en la figura~\ref{fig:mongoDBUsuarios}:
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=10cm, keepaspectratio]{img/mongoDBUsuarios.png}
   	\caption{Modelo Usuarios.}\label{fig:mongoDBUsuarios}
@@ -496,7 +496,7 @@ Esta petición en concreto tiene dos caminos:
 		\end{itemize}
 	
 	\item Salas En este Modelo de datos tendríamos almacenados JSON del con el formato que se puede apreciar en la figura~\ref{fig:mongoDBSalas}:
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=10cm, keepaspectratio]{img/mongoDBSalas.png}
   	\caption{Modelo Salas.}\label{fig:mongoDBSalas}
@@ -508,7 +508,7 @@ Esta petición en concreto tiene dos caminos:
 	\end{itemize}
 	
 	\item Horario: En este Modelo de datos tendríamos almacenados JSON del con el formato de la siguiente figura~\ref{fig:mongoDBHorario}:
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=10cm, keepaspectratio]{img/mongoDBHorario.png}
   	\caption{Modelo Salas.}\label{fig:mongoDBHorario}
@@ -521,7 +521,7 @@ Esta petición en concreto tiene dos caminos:
 \subsection{Registros de Alumnos y Eventos}
 	Este apartado solo será visible por parte el administrador de la aplicación o del docente encargado en gestionar la semana cultural donde se impartan estas charlas y seminarios. Como vimos anteriormente, el administrador tiene la posibilidad de descargarse un archivo en formato CSV (comma-separated values, del inglés valores separados por comas) con toda la información de un Evento o de todos ellos, obteniendo un listado de los alumnos que se han apuntado a un determinado evento y que han validado su asistencia por medio de nuestra aplicación.
 	El formato que tienen estos CSV corresponden a la figura~\ref{fig:CSVAlumnos}:
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=10cm, keepaspectratio]{img/CSVAlumnos.png}
   	\caption{Modelo del archivo CSV.}\label{fig:CSVAlumnos}
@@ -535,6 +535,9 @@ Esta petición en concreto tiene dos caminos:
 
 \subsection{Plantilla documento de obtención créditos}
 	El pdf que obtiene el alumno es un documento oficial de la Universidad Rey Juan Carlos en el que se le otorga un determinado número de créditos (fijados por el responsable de los seminarios o charlas) por acudir a las los seminarios o charlas que previamente se apuntó mediante la aplicación de la que estamos tratando en este TFG. La obtención de este certificado se hará de forma automática una vez que el alumno haya acudido a un número mínimo de seminarios fijados por el responsable de las mismas. 
+
+\clearpage
+
 	El formato que tendra el documento para la obteción de los créditos será el indicado en la siguiente figura~\ref{fig:pdfcreditos}:
 	
 \begin{figure}
@@ -559,16 +562,21 @@ Esta petición en concreto tiene dos caminos:
 
 \subsubsection{Login}
 	La aplicación se integraŕa dentro de las aplicaciones de la Universidad Rey Juan Carlos para el uso tanto de profesores como de alumnos, es por ello por que guarda una estética distintiva de la universidad, con el uso de sus logos y colores, como podemos apreciar en la figura~\ref{fig:principalHome}:
-	\begin{figure}
+	
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/principalHome.png}
   	\caption{Página Login}\label{fig:principalHome}
 	\end{figure}
+	
 La página de \textit{login} consta de un menú de login donde el usuario ingresará sus credenciales propias de la Universidad Rey Juan Carlos. En esta página destacamos dos puntos claves de por qué esta aplicación es una PWA.
+	
 	En primer lugar, tal y como se observa en la figura~\ref{fig:principalHome} el navegador tanto en ordenador como en dispositivos móviles nos da la opción de instalar la aplicación en nuestro dispositivo, creando un acceso directo a ella como si de una aplicación nativa android (en el caso móvil) o como una extensión chrome (en el caso de utilizar un navegador chrome en el ordenador) se tratase.
+
+\clearpage
 	En segundo lugar, como observamos en la figura~\ref{fig:principalWorker} la aplicación dispone también de un \textit{service worker}.
 	
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/principalWorker.png}
   	\caption{Página Login}\label{fig:principalWorker}
@@ -578,9 +586,11 @@ La página de \textit{login} consta de un menú de login donde el usuario ingres
 	
 	Como los \textit{service workers} tienen acceso al manejo de los requests, pueden llegar a ser muy poderosos (y peligrosos), especialmente si son usados con mala intención. Esto es uno de los motivos por lo cuales usar \textit{HTTPS} es muy importante, para prevenir ataques de terceros.
 
+\clearpage
+
 \subsubsection{Usuario}
 	Nada más ingresar en la aplicación con el nombre de usuario y contraseña, cargará la pagina principal, destacar que durante todas las ventanas de la aplicación dispondremos de un menú, en el que estarán accesibles las 3 páginas principales de nuestra aplicación (1,2,3) y un botón para hacer \textit{logout} (4) de la misma, como observamos en la figura~\ref{fig:menu}:
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/menu.png}
   	\caption{Menú principal de la aplicación}\label{fig:menu}
@@ -588,32 +598,36 @@ La página de \textit{login} consta de un menú de login donde el usuario ingres
 	
 \begin{enumerate}
   \item Página principal: En la siguiente vista dispondremos de la información sobre las charlas y seminarios a los que el alumno se inscribió, en el campo \textbf{Título} se describe el título en si de la charla o seminario, en el campo \textbf{Aula} se informa del aula dentro de la Universidad Rey Juan Carlos donde tendrá lugar la charla, y por ultimo, el campo \textbf{Hora} que especifica la hora a la que tendrá lugar el evento.
-  Dentro de cada fila del evento en el que estamos apuntados y tenemos previsto ir aparecerán dos botones, ``Validar'' (1) y ``Desapuntarse'' (2). El botón validar solo estará accesible una vez el evento haya finalizado para que los alumnos que han podido asistir puedan validar mediante la aplicación que han ido a dicha charla. Una vez validado el evento y habiendo recibido la validación por parte del servidor, debajo del campo aula aparecerá un icono (3) mostrando que la validación se ha desarrollado con normalidad. En la siguiente figura~\ref{fig:inicio} podemos observar cada uno de los botones previamente indicados:
-  \begin{figure}
+  
+    \begin{figure}[h!]
   	\centering
-  	\includegraphics[width=16cm, keepaspectratio]{img/inicio.png}
+  	\includegraphics[width=13cm, keepaspectratio]{img/inicio.png}
   	\caption{Página de inicio.}\label{fig:inicio}
 	\end{figure}
 	
+  Dentro de cada fila del evento en el que estamos apuntados y tenemos previsto ir aparecerán dos botones, ``Validar'' (1) y ``Desapuntarse'' (2). El botón validar solo estará accesible una vez el evento haya finalizado para que los alumnos que han podido asistir puedan validar mediante la aplicación que han ido a dicha charla. Una vez validado el evento y habiendo recibido la validación por parte del servidor, debajo del campo aula aparecerá un icono (3) mostrando que la validación se ha desarrollado con normalidad. En la siguiente figura~\ref{fig:inicio} podemos observar cada uno de los botones previamente indicados:
+
+
 	Una vez presionemos el botón de validar ya que hemos asistido al evento en cuestión y queremos dar fe de ello, la aplicación nos llevará a la pestaña de validación, figura~\ref{fig:validarQR}
 	En esta pestaña, la aplicación utilizará la cámara del dispositivo, ya sea un móvil, tabley u ordenador portatil para leer el código QR correspondiente al evento que queremos validar.
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
-  	\includegraphics[width=16cm, keepaspectratio]{img/validarQR.png}
+  	\includegraphics[width=12cm, keepaspectratio]{img/validarQR.png}
   	\caption{Pestaña de validación de QR}\label{fig:validarQR}
 	\end{figure}
 
 Para validar el evento, basta con mostrar un QR valido y la aplicación obtendrá un mensaje de aceptación por parte del servidor, si por el contrario mostramos un QR que no correspondería al QR del evento en cuestión, se nos avisará con un mensaje en la pantalla que el QR proporcionado no es válido. En este caso figura~\ref{fig:validarQRFail}, escaneamos un QR correspondiente al evento del BBVA cuando debería ser el QR del evento Telefónica.
 
-	\begin{figure}
+	\begin{figure}[!h]
   	\centering
-  	\includegraphics[width=16cm, keepaspectratio]{img/validarQRFail.png}
+  	\includegraphics[width=12cm, keepaspectratio]{img/validarQRFail.png}
   	\caption{Pestaña de validación de QR con mensaje de error}\label{fig:validarQRFail}
 	\end{figure}  
-  
+ 
+ \vspace{12cm}
   \item Calendario: En la vista siguiente~\ref{fig:horario} obtenemos un calendario con las principales charlas y seminarios disponibles durante las jornadas habilitadas por la Universidad Rey Juan Carlos. 
 
-\begin{figure}
+\begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/horario.png}
   	\caption{Página de calendario}\label{fig:horario}
@@ -621,7 +635,7 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
   
   Cada evento ocupa una posición en el calendario, así mismo cada uno de ellos actúa como un botón, en el que presionándolo nos redirige a la pagina de información del mismo, figura~\ref{fig:descripEvento}. En esta página de información es donde el alumno se podrá apuntarse, dando click en ``Apuntarse'' y expresar su intención de asistir a él, también hay una pequeña descripción del evento que estamos viendo.
   
-  \begin{figure}
+  \begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/descripEvento.png}
   	\caption{Página de descripción del evento y botón de apuntarse}\label{fig:descripEvento}
@@ -629,7 +643,7 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
   
   \item Certificado: Esta vista, figura~\ref{fig:recibirCred}, se compone de un botón que el alumno tendrá disponible únicamente cuando pueda tener la posibilidad de obtener los créditos que le corresponden por asistir a estos seminarios, el requisito de mínimo de asistencia para poder optar a tener el certificado de los créditos lo impondrá el profesor encargado de ello o en su defecto el administrador que se encargue del mantenimiento de la página y de dichas jornadas propuestas aquí. 
   
-    \begin{figure}
+    \begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/recibirCred.png}
   	\caption{Página para obtener el certificado de créditos}\label{fig:recibirCred}
@@ -638,7 +652,7 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
   
   Una vez el alumno tiene disponible el botón de ``Recibir Créditos'' un pop-up saldrá en pantalla sirviendo una vista previa del pdf que será el certificado que le otorgue los créditos y que el alumno obtendrá para poder justificar los mismos, como se puede observar en la figura~\ref{fig:pdfVisual}. Estará a su vez disponible un botón de descarga del pdf para poder almacenarlo en su dispositivo.
   
-      \begin{figure}
+      \begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/pdfVisual.png}
   	\caption{Pop-up con la vista del certificado}\label{fig:pdfVisual}
@@ -650,15 +664,18 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
 	Una vez iniciado sesión con la cuenta del administrador o de la persona encargada de mantener y administrar la aplicación entraremos en la misma donde veremos dos pestañas claramente diferenciadas:
 \begin{enumerate}	
 	\item Lista de Eventos: En esta pestaña representada en la figura~\ref{fig:adminListaEventos}, el administrador de la aplicación tendra un listado completo de todos los eventos o seminarios que habrá durante la semana o los días que duren cada uno de ellos. En esta primera vista se dará la información de: Nombre del evento, aula donde se impartirá y la hora del día a la que tendrá lugar dicho evento.
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/adminListaEventos.png}
   	\caption{Vista de administrador de la pestaña Lista de Eventos}\label{fig:adminListaEventos}
 	\end{figure}
+	
+\vspace{6cm}
+
 
 Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Descargar PDF Todos''}, presionándolo enviaremos una petición al servidor que nos contestará con un archivo comprimido en formato ZIP llamado ``Eventos.zip'' que contendrá todos los CSV de los Eventos en los que haya apuntada mas de una persona. Este CSV es del mismo formato que el CSV que se descargaría dando uno por uno a cada evento con el botón ``Generar CSV'' que explicaremos más adelante en el siguiente punto. El archivo comprimido en formato ZIP descargado quedaría de la siguiente manera:
 	
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/AdminEventosZip.png}
   	\caption{Contenido de Eventos.zip descargado al presionar \textit{Descargar PDF Todos}}\label{fig:AdminEventosZip}
@@ -667,7 +684,7 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
 	 
 	Haciendo click en cada una de las filas correspondientes a cada uno de los eventos entraremos en una ventana representada en la figura~\ref{fig:adminListaEventoTelefonica}, donde nos informará más detalladamente sobre el evento en cuestión, con una breve descripción del evento (1), su QR de validación correspondiente (2) y el listado de los usuarios inscritos a él, así como que usuario ha validado o no la asistencia al evento con el campo \textit{``Validado''} true o false (3). Destacamos de esta vista el botón \textit{``Generar CSV''} (4) que descargará en nuestro equipo en formato CSV el mismo listado de usuarios que estamos viendo en esta misma página.
 	
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/adminListaEventoTelefonica.png}
   	\caption{Vista de administrador de la ventana informativa del evento de Telefónica}\label{fig:adminListaEventoTelefonica}
@@ -682,7 +699,7 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
 	
 	Presionando el botón ``Modificar'' las modificaciones que hayamos hecho en los desplegables serán enviadas al servidor y podremos verlas en esta misma vista.
 	
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/adminCalendario.png}
   	\caption{Pestaña Calendario Eventos}\label{fig:adminCalendario}
@@ -691,7 +708,7 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
 
 \item Estadística: En esta pestaña, el administrador tendra de forma rápida y visual un resumen de lo que están siendo las jornadas culturales durante el dia o los dias que duren los eventos.
 
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/adminEstadisticas.png}
   	\caption{Pestaña Estadística}\label{fig:adminEstadisticas}
@@ -736,7 +753,7 @@ Al margen ya de la parte Node del servidor, destacamos dos programas desarrollad
   	
   	La funcionalidad y el esquema de dicho funcionamiento quedan representadas en la figura~\ref{fig:createCSV}.
 
-\begin{figure}
+\begin{figure}[h!]
   \centering
   \includegraphics[width=16cm, keepaspectratio]{img/createCSV.png}
   	\caption{Esquema funcionamiento createCSV.py}\label{fig:createCSV}
@@ -771,7 +788,7 @@ Para ver que realmente hemos conseguido que nuestra aplicación sea una PWA bast
 \section{Server Workers}
 Nuestra aplicación contiene \textit{server workers} que son propios del paquete \textit{@angular/pwa v.0.1101.1} para ello basta con mirar en la consola de desarrolladores de Google Chrome o de cualquier navegador, ir al apartado service workers y ver que está activado y corriendo como observamos en la figura~\ref{fig:serviceWorker}
 	
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/principalWorker.png}
   	\caption{Service Workers funcionando en la PWA}\label{fig:serviceWorker}
@@ -781,7 +798,7 @@ Nuestra aplicación contiene \textit{server workers} que son propios del paquete
 Podemos instalar nuestra aplicación en un dispositivo móvil como si de una aplicación nativa, android o IOS, se tratase. Para ello presionamos el botón ``Añadir a pagina de inicio'' una vez que estemos navegando con el dispositivo móvil en cuestión por nuestra aplicación.
 	Una vez hayamos aceptado y se haya instalado, nuestra aplicación PWA se verá como una aplicación nativa dentro de nuestro dispositivo móvil como podemos observar en la figura~\ref{fig:homeMovil} 
  
-	\begin{figure}
+	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=5cm, keepaspectratio]{img/addHomeMovil.png}
   	\includegraphics[width=5cm, keepaspectratio]{img/homeMovil.png}
@@ -791,7 +808,7 @@ Podemos instalar nuestra aplicación en un dispositivo móvil como si de una apl
 \section{Optimización}
 En cuanto a la parte del servidor, un punto importante a tener en cuenta sobre la validación del proyecto y el buen funcionamiento de este es que el python encargado de optimizar las salas en función al número de alumnos apuntados y al número de huecos disponibles funcione correctamente. Para ello podemos lanzar manualmente el propio python encargado de ello con el comando \textit{python optimizarSalas.py} obtendríamos un resultado como vemos a continuación en la figura~\ref{fig:terminalOptimizar}:
  
- \begin{figure}
+ \begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/terminalOptimizar.png}
   	\caption{Salida tras ejecutar python optimizarSalas.py}\label{fig:terminalOptimizar}
