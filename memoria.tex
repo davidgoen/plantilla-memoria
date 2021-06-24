@@ -165,10 +165,25 @@ También a todos los demás profesores que durante todos estos años han contrib
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
-	Este proyecto consiste en la realización de una Aplicación de Web Progresiva (PWA en inglés, \emph{Progressive Web Applications}) que facilite los docentes el proceso de ofrecer a los alumnos los cursos/seminarios y jornadas tecnológicas que se imparten o tienen lugar en la Universidad durante el curso académico.
+	Este proyecto consiste en el desarrollo de una Aplicación de Web Progresiva (PWA en inglés, \emph{Progressive Web Applications}) que facilite los docentes el proceso de ofrecer a los alumnos los cursos/seminarios y jornadas tecnológicas que se imparten o tienen lugar en la Universidad durante el curso académico.
 	
-	Esta aplicación y todo su desarrollo se enmarca dentro del modelo cliente-servidor, donde por un lado tendremos por parte del cliente la PWA y por parte del servidor toda la administración y gestión de los contenidos que contendrá dicha aplicación.
+	Esta aplicación y todo su desarrollo se enmarca dentro del modelo cliente-servidor, es un modelo de diseño de software en el que las tareas se reparten entre los proveedores (servidores) y los demandantes(clientes). En este caso, un cliente, nuestra PWA desarrollada en este proyecto realiza peticiones al servidor que será el encargado de toda la administración y gestión de los contenidos que contendrá dicha aplicación. Según los tipos de arquitectura de cliente-servidor este proyecto se enmarcaria dentro de la arquitectura de dos capas, esta arquitectura se utiliza para describir los sistemas cliente servidor donde el cliente solicita recursos y el servidor responde directamente a la solicitud con sus propios recursos, esto significa que el servidor no requiere de una aplicación extra para proporcionar parte del servicio.
 	
+	Este tipo de modelo presenta una serie de ventajas y desventajas, en cuanto a las ventajas:
+	\begin{itemize}
+  \item Administración centrada en el servidor. Los clientes tienen poca trascendencia en el esquema y sus necesidades de administración son menores.
+  \item Centralización de los recursos. Los recursos comunes a todos los usuarios se administran en el servidor. Así se evitan situaciones como la redundancia o inconsistencia de información en las bases de datos.
+  \item Mejora de la seguridad. Al disponer de un mecanismo central de autenticación, las posibilidades de acceso indebido se reducen considerablemente.
+  \item Escalabilidad de la instalación. Se pueden añadir o suprimir clientes sin que el funcionamiento de la red se vea afectado.
+\end{itemize}
+
+	Y por otro lado los siguientes inconvenientes:
+	\begin{itemize}
+  \item Coste elevado. Tanto la instalación como el mantenimiento son más elevados debido al perfil muy técnico del lado servidor.
+  \item Dependencia del servidor. Toda la red está construida al rededor del servidor y si éste deja de funcionar o lo hace con un rendimiento inadecuado, afectará a toda la infraestructura.
+\end{itemize}
+	
+
 	Para el desarrollo de la parte servidor se han utilizado diferentes entornos y lenguajes, destacando Python, Node y MongoDB para la gestión y almacenamiento en bases de datos.
 	
 	Con la creación de esta aplicación se intenta, por el lado docente, buscar una eficiencia a la hora de repartir y adjudicar las distintas aulas de las que se dispone para la realización de los distintos cursos y seminarios, por otro lado, por el lado de los alumnos, se busca tener un entorno de fácil manejo y simpleza a la hora de informarse, apuntarse y obtener los créditos correspondientes de dichos cursos y seminarios.
@@ -180,10 +195,28 @@ También a todos los demás profesores que durante todos estos años han contrib
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-This project consists of the realization of a Progressive Web Application (PWA) that will help and facilitate the teachers the process of offering the students the courses / seminars and technological conferences that will be taught at the University during the course.
-This application and all its development is framed within the client-server model, where, on the one hand, we will have the PWA on the part of the client and on the part of the server all the administration and management of the contents that said application will contain.
-For the development of the server part, different environments and languages have been used, highlighting Python, Node and MongoDB for management and storage in databases.
-With the creation of this application, an attempt is made, on the teaching side, to seek efficiency when distributing and allocating the different classrooms available to carry out the different courses and seminars, on the other hand, on the side of The students seek to have an environment that is easy to use and simple when it comes to obtaining information, signing up and obtaining the corresponding credits for said courses and seminars.
+	This project consists of the development of a Progressive Web Application (PWA in English, \ emph {Progressive Web Applications}) that facilitates teachers the process of offering students courses / seminars and technological conferences that are taught or take place in the University during the academic year.
+
+	This application and all its development is framed within the client-server model, it is a software design model in which the tasks are shared between the providers (servers) and the applicants (clients). In this case, a client, our PWA developed in this project, makes requests to the server that will be in charge of all the administration and management of the content that said application will contain. According to the types of client-server architecture, this project would be framed within a two-tier architecture, this architecture is used to describe client-server systems where the client requests resources and the server responds directly to the request with its own resources, this it means that the server does not require an extra application to provide part of the service.
+	
+	This type of model has a number of advantages and disadvantages, in terms of advantages:
+	\begin{itemize}
+  	\item Server-centric administration. Clients are of little consequence in the scheme and their management needs are less.
+  	\item Centralization of resources. The resources common to all users are managed on the server. In this way, situations such as redundancy or inconsistency of information in the databases are avoided.
+  	\item Improved security. By having a central authentication mechanism, the chances of improper access are greatly reduced.
+  	\item Scalability of the installation. Clients can be added or deleted without affecting the operation of the network.
+	\end{itemize}
+	
+	And on the other hand the following drawbacks:
+	\begin{itemize}
+  	\item High cost. Both installation and maintenance are higher due to the highly technical profile on the server side.
+  	\item Server dependency. The entire network is built around the server and if it stops working or does so with inadequate performance, it will affect the entire infrastructure.
+	\end{itemize}
+
+
+	For the development of the server part, different environments and languages ​​have been used, highlighting Python, Node and MongoDB for management and storage in databases.
+
+	With the creation of this application, an attempt is made, on the teaching side, to seek efficiency when it comes to distributing and allocating the different classrooms that are available for the different courses and seminars, on the other hand, on the side of The students seek to have an environment of easy handling and simplicity when it comes to information, signing up and obtaining the corresponding credits of said courses and seminars.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -217,20 +250,20 @@ With the creation of this application, an attempt is made, on the teaching side,
 \label{sec:intro} % etiqueta para poder referenciar luego en el texto con~\ref{sec:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
 
-El siguiente trabajo consta de la realización de una aplicación web progresiva (PWA) que ayudará y facilitara a los docentes el proceso de ofrecer a los alumnos los cursos/seminarios y jornadas tecnológicas que se impartirán en la Universidad durante el curso.
+En el presente trabajo consta la realización de una aplicación web progresiva (PWA) que ayudará y facilitara a los docentes el proceso de ofrecer a los alumnos los cursos/seminarios y jornadas tecnológicas que se impartirán en la Universidad durante el curso.
 
 
 \section{Contexto}
 \label{sec:contexto}
-La herramienta propuesta en este TFG nace de la necesidad por parte de la Universidad Rey Juan Carlos y más concretamente del administrador/profesor encargado de gestionar todo lo relacionado con las charlas y seminarios que en ella se ofrecen.
+La herramienta propuesta en este TFG nace de la necesidad por parte de la Universidad Rey Juan Carlos, y más concretamente del administrador/profesor encargado de gestionar todo lo relacionado con las charlas y seminarios que en ella se ofrecen.
 
-Está principalmente orientada hacia los alumnos, que son en definitiva las personas que más uso harán de la misma, en cuanto a la parte web, supondrá una herramienta de fácil manejo donde ver estos horarios, apuntarse a ellos y obtener los créditos correspondientes por acudir a cada uno de ellos.
+Está principalmente orientada hacia los alumnos, que son en definitiva las personas que más uso harán de la misma. En cuanto a la parte web, supondrá una herramienta de fácil manejo donde ver estos horarios, apuntarse a ellos y obtener los créditos correspondientes por acudir a cada uno de ellos.
 
-Por parte de la Universidad, y más concretamente del administrador o encargado de las charlas, agilizará y le quitará gran carga de trabajo, facilitando la gestión y adjudicación de los certificados que se entregarán a los usuarios finales de la misma.
+Por parte de la Universidad, y más concretamente del administrador o encargado de las charlas, agilizará y le quitará gran carga de trabajo, facilitando la gestión y adjudicación de los certificados que se entregarán a los usuarios finales de las mismas.
 
-La motivación para realizar este proyecto es para introducir, más si cabe, las nuevas tecnologías y la agilidad que éstas nos proporcionan dentro del entorno universitario, en su parte backend, destaca en la optimización de la gestión de las salas disponibles en la universidad en función de los alumnos apuntados a cada uno de estos seminarios.
+La motivación para realizar este proyecto es introducir, más si cabe, las nuevas tecnologías y la agilidad que éstas nos proporcionan dentro del entorno universitario, en su parte backend, destaca la optimización de la gestión de las salas disponibles en la universidad en función de los alumnos apuntados a cada uno de estos seminarios.
 
-Es un proyecto muy centrado en la automatización de procesos, guardando la seguridad que se requiere en cuantos asuntos de gestión universitaria se refiere, facilitando y agilizando las gestiones tanto a alumnos como a la propia universidad.
+Es un proyecto muy centrado en la automatización de procesos, guardando la seguridad que se requiere en cuanto asuntos de gestión universitaria se refiere, facilitando y agilizando las gestiones tanto a alumnos como a la propia universidad.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -252,10 +285,10 @@ La realización de este trabajo de fin de grado consiste en crear una Aplicació
 \label{sec:objetivos-especificos}
 
 \begin{itemize}
-  \item Automatizar el reparto de las aulas durante los días y las horas disponibles
-  \item Informar al docente o administrador de la aplicación del número de alumnos apuntados a los distintos cursos/seminarios y jornadas
-  \item Informar a los alumnos del horario de los distintos cursos/seminarios y jornadas tecnológicas
-  \item Gestionar (apuntando y borrando) a los alumnos interesados en los seminarios disponibles
+  \item Automatizar el reparto de las aulas durante los días y las horas disponibles.
+  \item Informar al docente o administrador de la aplicación del número de alumnos apuntados a los distintos cursos/seminarios y jornadas.
+  \item Informar a los alumnos del horario de los distintos cursos/seminarios y jornadas tecnológicas.
+  \item Gestionar (apuntando y borrando) a los alumnos interesados en los seminarios disponibles.
 \end{itemize}
 
 \clearpage
@@ -273,11 +306,13 @@ Entre todo el 2020 y alternando con mi trabajo a jornada completa fui desarrolla
 
 En enero de 2021 tuve la última reunión para hablar del desarrollo de la aplicación, ya estaba terminada con la integración de algunos puntos y funciones que me pedía Gregorio y fue en ese momento cuando recibí la validación por su parte y pasé a redactar la memoria.
 
-Durante la redacción de esta memoria seguí teniendo un contacto muy directo con mi tutor, subía borradores de la memoria a un repositorio y él se encargaba de leerlo, darme consejos y modificarlo si así lo veía oportuno.
+Durante la redacción de esta memoria he recibido numerosos consejos de como debía redactarla, posibles modificaciones o puntos necesarios que no podrían faltar en la memoria para que la aplicación quedara correctamente descrita.
 
-Por último con la memoria terminada, retoqué un poco el código a petición de Gregorio, como ha ido haciendo a lo largo de este TFG mostrando una participación en el muy activa y siempre estando dispuesto a colaborar.
+Por último con la memoria terminada, repasando y buscando nuevas optimizaciones de código fuí añadiendo funcionalidades nuevas a la aplicación que entendía que podían ser útiles para el administrador de la misma.
 
 Cuando estaban terminadas las dos partes principales de este TFG, la aplicación propiamente programada y la presente memoria, fue cuando decidí presentar este TFG para su defensa.
+
+Éste TFG no habría sido posible sin la ayuda y la gran participación que ha tenido Gregorio a lo largo del desarrollo del mismo, a quién le estoy tremendamente agradecido.
 
 \vspace{5mm}
 
@@ -307,7 +342,7 @@ A continuación, se detallan las tecnologías utilizadas en el desarrollo del pr
 \section{Angular} 
 \label{sec:Angular}
 Angular es un framework para aplicaciones web desarrollado en TypeScript (lenguaje del que hablaremos más adelante), de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página. Su objetivo es aumentar las aplicaciones basadas en navegador con capacidad de Modelo Vista Controlador (MVC), en un esfuerzo para hacer que el desarrollo y las pruebas sean más fáciles.
-
+\vfill
 Entre sus virtudes se destacan:
 \begin{itemize}
 \item La posibilidad de utilizar templates declarativos, aplicar inyecciones de dependencias y crear componentes reutilizables.
@@ -315,9 +350,9 @@ Entre sus virtudes se destacan:
 \item Es modular, por lo cual se basa en un core y en módulos que permiten acceder a más características cuando es necesario. Permite crear componentes, razón por la cual se destaca en la reutilización de los elementos.
 
 
-\item Ejecuta la primera vista de tu aplicación en Node.js, .NET, PHP, y otros servidores para renderizado de forma casi instantánea obteniendo solo HTML y CSS. También abre posibilidades para la optimización del SEO (Search Engine Optimization) del sitio, incluyendo configuración.
+\item Ejecuta la primera vista de tu aplicación en Node.js, .NET, PHP, y otros servidores para un renderizado de forma casi instantánea obteniendo solo HTML y CSS. También abre posibilidades para la optimización del SEO (Search Engine Optimization) del sitio, incluyendo configuración.
 
-\item Son aplicaciones que cargan rápidamente gracias al nuevo enrutador de componentes. Este ofrece una división automática de códigos para que los usuarios solo carguen el código necesario para procesar la vista que solicitan.
+\item Son aplicaciones que cargan rápidamente gracias al nuevo enrutador de componentes. Este ofrece una división automática de códigos para que los usuarios solo carguen el código necesario para procesar la vista que soliciten.
 
 \item Por último, dentro de las cosas que debemos tener en cuenta de Angular, es que nuestros proyectos deben ser compilados para traducirlos en una aplicación Web que podamos publicar. Este compilador ha sido mejorado a partir de Angular 5, permitiendo ahora compilación incremental y logrando como resultado que los re-build sean más rápidos.
 \end{itemize}
@@ -334,17 +369,17 @@ Paquete con el que mediante una única línea de código permite a nuestra aplic
 Es el paquete principal que usaremos para convertir nuestra aplicación Angular en una Aplicación de Web Progresiva (PWA), mediante el comando \textit{ng add @angular/pwa} se añadirán una serie de archivos y se modificarán otros existentes para poder realizar este cambio, dichas modificaciones son:
 
 \begin{enumerate}
-\item Se agregará el paquete \textit{@angular/service-workerpaquete} al proyecto
+\item Se agregará el paquete \textit{@angular/service-workerpaquete} al proyecto.
 
-\item Habilita la compatibilidad con la compilación del trabajador de servicios en la CLI.
+\item Habilitará la compatibilidad con la compilación del service worker en CLI.
 
-\item Importa y registra al trabajador del servicio en el módulo de la aplicación.
+\item Importará y registrará al service worker en el módulo de la aplicación.
 
-\item Actualiza el archivo \textit{index.html} incluyendo un enlace para agregar el archivo \textit{manifest.webmanifest}.
+\item Actualizará el archivo \textit{index.html} incluyendo un enlace para agregar el archivo \textit{manifest.webmanifest}.
 
-\item Instala archivos de iconos para admitir la aplicación web progresiva (PWA) instalada.
+\item Instalará archivos de iconos para admitir la aplicación web progresiva (PWA) instalada.
 
-\item Crea el archivo de configuración del service worker \textit{llamado ngsw-config.json}, que especifica los comportamientos de almacenamiento en caché y otras configuraciones.
+\item Creará el archivo de configuración del service worker \textit{llamado ngsw-config.json}, que especifica los comportamientos de almacenamiento en caché y otras configuraciones.
 \end{enumerate}
 
 
@@ -354,18 +389,18 @@ Typescript es un superconjunto de JavaScript. Una tecnología es un superconjunt
 
 	Esto permite que se pueda integrar Typescript en proyectos existentes de JavaScript sin tener que reimplementar todo el código del proyecto en Typescript. De hecho, es común que existan proyectos que introduzcan tanto Typescript como JavaScript.
 	
-	La principal característica de Typescript es el tipado estático, decimos que un lenguaje es de tipado estático cuando no es necesario definir las variables antes de su uso. Esto implica que la tipificación estática tiene que ver con la declaración explícita (o inicialización) de las variables antes de que se empleen.
+	La principal característica de Typescript es el tipado estático. Decimos que un lenguaje es de tipado estático cuando no es necesario definir las variables antes de su uso. Esto implica que la tipificación estática tiene que ver con la declaración explícita (o inicialización) de las variables antes de que se empleen.
 
 
 \section{HTML}
 \label{sec:HTML}
-HTML son las siglas de HyperText Markup Language, se trata del lenguaje estándar utilizado para la creación de páginas web. Fue creado por Tim Berners-Lee en los años ochenta. Es un lenguaje de marcas, esto quiere decir que para indicar la estructura del documento se utilizan etiquetas. Al ser un estándar, todos los navegadores leen e interpretan el lenguaje HTML y lo presentan de un modo similar.
+HTML son las siglas de "HyperText Markup Language". Se trata del lenguaje estándar utilizado para la creación de páginas web. Fue creado por Tim Berners-Lee en los años ochenta. Es un lenguaje de marcas, esto quiere decir que para indicar la estructura del documento se utilizan etiquetas. Al ser un estándar, todos los navegadores leen e interpretan el lenguaje HTML y lo presentan de un modo similar.
 
 \clearpage
 
 \section{CSS}
 \label{sec:CSS}
-CSS son las siglas de Cascading Style Sheets, es un lenguaje que permite establecer la apariencia de un documento escrito mediante un lenguaje de marcas. CSS permite asociar reglas a los elementos que aparecen en una página web, las reglas indican como debe representarse el contenido de esos elementos.
+CSS son las siglas de "Cascading Style Sheets". Es un lenguaje que permite establecer la apariencia de un documento escrito mediante un lenguaje de marcas. CSS permite asociar reglas a los elementos que aparecen en una página web, las reglas indican como debe representarse el contenido de esos elementos.
 
 \section{Bootstrap}
 \label{sec:Bootstrap}
