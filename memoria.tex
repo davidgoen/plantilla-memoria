@@ -404,7 +404,8 @@ CSS son las siglas de "Cascading Style Sheets". Es un lenguaje que permite estab
 
 \section{Bootstrap}
 \label{sec:Bootstrap}
-Bootstrap es un framework front-end que permite la construcción de páginas web adaptativas. Se trata de un software de código abierto creado en el año 2011 por Mark Otto y Jacob Thornton, empleados de Twitter.
+Bootstrap es un framework \texttt{front-end} 
+\footnote{Un framework front-end es una herramienta que se integra con nuestro proyecto web para conseguir que el desarrollo front-end (interfaz, animaciones, ...) sea más fácil, rápido y robusto; convirtiéndolo en una herramienta muy útil para desarrolladores principiantes y programadores con poco tiempo y poca experiencia en ámbitos de diseño}que permite la construcción de páginas web adaptativas. Se trata de un software de código abierto creado en el año 2011 por Mark Otto y Jacob Thornton, empleados de Twitter.
 
 	Bootstrap ha evolucionado desde ser un proyecto enteramente basado en CSS hasta incluir múltiples plugins JavaScript e iconos junto con formularios y botones. Presenta una cuadrícula de doce columnas y 940px de ancho.
 
@@ -414,38 +415,39 @@ Bootstrap es un framework front-end que permite la construcción de páginas web
 \label{sec:Node}
 	Node.js es un entorno JavaScript que nos permite ejecutar en el servidor, de manera asíncrona, con una arquitectura orientada a eventos y basado en el motor V8 de Google.
 	
-	El motor V8 de Google compila JavaScript en código máquina nativo en vez de interpretarlo en el navegador, consiguiendo así una velocidad mucho más alta, además de la alta velocidad de ejecución, Node.js dispone del Bucle de Eventos (Event Loop), que permitirá gestionar enormes cantidades de clientes de forma asíncrona. Tradicionalmente para trabajar de forma asíncrona las aplicaciones se valían de la programación basada en hilos (programming threaded applications), pero esto supone la utilización (normalmente ineficaz) de un espacio de memoria que va escalando a medida que la cantidad de clientes conectados a nuestra aplicación aumenta.
+	El motor V8 de Google compila JavaScript en código máquina nativo en vez de interpretarlo en el navegador, consiguiendo así una velocidad mucho más alta. Además de la alta velocidad de ejecución, Node.js dispone del Bucle de Eventos (Event Loop), que permitirá gestionar enormes cantidades de clientes de forma asíncrona. Tradicionalmente para trabajar de forma asíncrona, las aplicaciones se valían de la programación basada en hilos (programming threaded applications), pero esto supone la utilización (normalmente ineficaz) de un espacio de memoria que va escalando a medida que la cantidad de clientes conectados a nuestra aplicación aumenta.
 	
 	Node.js resuelve este problema cambiando la manera de realizar las conexiones con el servidor. En vez de generar un nuevo hilo E/S para cada cliente, cada conexión dispara la ejecución de un evento dentro del proceso del motor de Node. De este modo, Node permite que un solo servidor que lo ejecute pueda soportar decenas de miles de conexiones. Por lo tanto, si necesitamos gestionar grandes cantidades de conexiones no tendremos que ampliar el número de servidores.
 
-	En conclusión, es una plataforma que agiliza y facilita las conexiones cliente servidor por lo que es una tecnología que avanza muy rápidamente y cada vez está más presente en el mercado.
+	En conclusión: Es una plataforma que agiliza y facilita las conexiones cliente servidor por lo que es una tecnología que avanza muy rápidamente y cada vez está más presente en el mercado.
 
 \section{MongoDB} 
 \label{sec:MongoDB}
 
-Es una de las bases de datos noSQL y orientada a documentos que existen, esto quiere decir que en lugar de guardar los datos en registros, guarda los datos en documentos. Estos documentos son almacenados en BSON, que es una representación binaria de JSON. Una de las diferencias más importantes con respecto a las bases de datos relacionales, es que no es necesario seguir un esquema. Los documentos de una misma colección - concepto similar a una tabla de una base de datos relacional -, pueden tener esquemas diferentes.
+Es una de las bases de datos noSQL y orientada a documentos que existen. Esto quiere decir que en lugar de guardar los datos en registros, guarda los datos en documentos. Estos documentos son almacenados en BSON, que es una representación binaria de JSON. Una de las diferencias más importantes con respecto a las bases de datos relacionales, es que no es necesario seguir un esquema: Los documentos de una misma colección - concepto similar a una tabla de una base de datos relacional -, pueden tener esquemas diferentes.
 
-	Aunque se suele decir que las bases de datos NoSQL tienen un ámbito de aplicación reducido, MongoDB se puede utilizar en muchos de los proyectos que desarrollamos en la actualidad, dos puntos a tener en cuenta sobre esta base de datos son:
-	
-	No existen las transacciones: Aunque nuestra aplicación puede utilizar alguna técnica para simular las transacciones, MongoDB no tiene esta capacidad. Solo garantiza operaciones atómicas a nivel de documento.
-
-	No existen los JOINS: MongoDB esta destinado a proyectos en los que los datos no tengan que  ser estructurados en tablas y que tampoco tengamos que hacer relaciones entre ellas.
-
+	Aunque se suele decir que las bases de datos NoSQL tienen un ámbito de aplicación reducido, MongoDB se puede utilizar en muchos de los proyectos que desarrollamos en la actualidad:
+\begin{itemize}
+	\item No existen las transacciones: Aunque nuestra aplicación puede utilizar alguna técnica para simular las transacciones, MongoDB no tiene esta capacidad. Solo garantiza operaciones atómicas a nivel de documento.
+	\item No existen los JOINS: MongoDB esta destinado a proyectos en los que los datos no tengan que  ser estructurados en tablas y que tampoco tengamos que hacer relaciones entre ellas.
+\end{itemize}
 
 \section{Python} 
 \label{sec:Python}
-Python es un lenguaje de scripting desarrollado a principios de los noventa por Guido van Rossum, independiente de plataforma y orientado a objetos, preparado para realizar cualquier tipo de programa, desde aplicaciones Windows a servidores de red o incluso, páginas web. Entre sus muchas características destacamos:
+Python es un lenguaje de \texttt{scripting} 
+\footnote{Los lenguajes de scripting son un tipo específico de lenguajes informáticos que se pueden utilizar para dar instrucciones a otro software, como un navegador web, un servidor o una aplicación independiente. Muchos de los lenguajes de scripts más populares de hoy en día son lenguajes de programación, como JavaScript, PHP, Ruby, Python, y varios otros.} desarrollado a principios de los noventa por Guido van Rossum, independiente de plataforma y orientado a objetos, preparado para realizar cualquier tipo de programa: desde aplicaciones Windows a servidores de red o incluso, páginas web. Entre sus muchas características destacamos:
 
 \begin{itemize}
 \item Multiplataforma: Hay versiones disponibles de Python en muchos sistemas informáticos distintos. Originalmente se desarrolló para Unix, aunque cualquier sistema es compatible con el lenguaje siempre y cuando exista un intérprete programado para él.
 
-\item Interpretado: Quiere decir que no se debe compilar el código antes de su ejecución. En ciertos casos, cuando se ejecuta por primera vez un código, se producen unos bytecodes que se guardan en el sistema y que sirven para acelerar la compilación implícita que realiza el intérprete cada vez que se ejecuta el mismo código.
+\item Interpretado: Quiere decir que no se debe compilar el código antes de su ejecución. En ciertos casos, cuando se ejecuta por primera vez un código, se producen unos \texttt{bytecodes} 
+\footnote{El bytecode es un código intermedio más abstracto que el código máquina. Habitualmente, es tratado como un archivo binario que contiene un programa ejecutable similar a un módulo objeto, que es un archivo binario producido por el compilador cuyo contenido es el código objeto o código máquina .} que se guardan en el sistema y que sirven para acelerar la compilación implícita que realiza el intérprete cada vez que se ejecuta el mismo código.
 
 \item Interactivo: Python dispone de un intérprete por línea de comandos en el que se pueden introducir sentencias. Cada sentencia se ejecuta y produce un resultado visible, que puede ayudarnos a entender mejor el lenguaje y probar los resultados de la ejecución de porciones de código rápidamente.
 
 \item Orientado a Objetos: La programación orientada a objetos está soportada en Python y ofrece en muchos casos una manera sencilla de crear programas con componentes reutilizables.
 
-\item Gran cantidad de funciones y bibliotecas: Dispone de muchas funciones incorporadas en el propio lenguaje, para el tratamiento de strings, números, archivos, etc. Además, existen muchas bibliotecas que podemos importar en los programas para tratar temas específicos como la programación de ventanas o sistemas en red o cosas tan interesantes como crear archivos comprimidos en .zip.
+\item Gran cantidad de funciones y bibliotecas: Dispone de muchas funciones incorporadas en el propio lenguaje para el tratamiento de strings, números, archivos, etc. Además, existen muchas bibliotecas que podemos importar en los programas para tratar temas específicos como la programación de ventanas o sistemas en red o cosas tan interesantes como crear archivos comprimidos en .zip.
 
 \item Sintaxis clara: Por último, cabe destacar que Python tiene una sintaxis muy visual, gracias a una notación indentada (con márgenes) de obligado cumplimiento. Para separar las porciones de código en Python se debe tabular hacia dentro, colocando un margen al código que iría dentro de una función o un bucle. Esto ayuda a que todos los programadores adopten unas mismas notaciones y que los programas de cualquier persona tengan un aspecto muy similar.
 \end{itemize}
