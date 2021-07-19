@@ -459,7 +459,7 @@ A continuación se detalla el proyecto de Aplicación de Web Progresiva (PWA) de
 
 \section{Arquitectura general} 
 \label{sec:arquitectura}
-Este proyecto gira en torno a la arquitectura software del modelo cliente-servidor, como se detalla en la figura~\ref{fig:arquitectura}. Destacamos la parte del cliente principalmente manejada por Angular y más concretamente la PWA y por otro lado, la parte del servidor controlada en su punto central por Node.js, con una base de datos MongoDB y un par de programas desarrollados en Python que ayudarán a la automatización, optimización y organización de las salas.
+Este proyecto gira en torno a la arquitectura software del modelo \texttt{cliente-servidor} \footnote{La arquitectura cliente-servidor es un modelo de diseño de software en el que las tareas se reparten entre los proveedores de recursos o servicios, llamados servidores, y los demandantes, llamados clientes. Un cliente realiza peticiones a otro programa, el servidor, quien le da respuesta. Esta idea también se puede aplicar a programas que se ejecutan sobre una sola computadora, aunque es más ventajosa en un sistema operativo multiusuario distribuido a través de una red de computadoras.}, como se detalla en la figura~\ref{fig:arquitectura}. Destacamos la parte del cliente, principalmente manejada por Angular y más con una PWA. Por otro lado, la parte del servidor, controlada en su punto central por Node.js, dispone de una base de datos MongoDB y un par de programas desarrollados en Python que ayudarán a la automatización, optimización y organización de las salas.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=7cm, keepaspectratio]{img/arquitectura.png}
@@ -468,22 +468,26 @@ Este proyecto gira en torno a la arquitectura software del modelo cliente-servid
 
  
 \subsection{Cliente}
-	En el lado del cliente tenemos toda la parte desarrollada con Angular, mas concretamente con el paquete \textit{@angular/pwa v.0.1101.1} al tratarse de una PWA y tratar con el framework Bootstrap permite que todas las pantallas de la aplicación sean \textit{responsive}, lo que quiere decir que estas pantallas se ajustarán automáticamente a la resolución del dispositivo en el que se muestran, centrado principalmente en dispositivos móviles llegándose a asemejar a una app nativa.
+	En el lado del cliente tenemos toda la parte desarrollada con Angular, más concretamente con el paquete \textit{@angular/pwa v.0.1101.1}. Al tratarse de una PWA y tratar con el framework Bootstrap permite que todas las pantallas de la aplicación sean \texttt{responsive} \footnote{El diseño web adaptable (también diseño web adaptativo o responsivo; este último calco del inglés responsive web design), es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas}, lo que quiere decir que estas pantallas se ajustarán automáticamente a la resolución del dispositivo en el que se muestran, centrado principalmente en dispositivos móviles llegándose a asemejar a una app nativa.
 	
-	Debido al uso de la cámara del dispositivo, los server workers proporcionados por el paquete \textit{@angular/pwa v.0.1101.1} y un login inicial de usuario (usuario y claves) es de obligado cumplimiento que la página se muestre con el protocolo seguro de transferencia de hipertexto (en inglés, Hypertext Transfer Protocol Secure o HTTPS)  para garantizar que la transferencia de datos no se vera comprometida en ningún momento y será seguro, esto se consigue con un certificado de clave pública para el servidor web.
+	Debido al uso de la cámara del dispositivo, los server workers ( proporcionados por el paquete \textit{@angular/pwa v.0.1101.1}) y un login inicial de usuario (usuario y claves), es de obligado cumplimiento que la página se muestre con el protocolo seguro de transferencia de hipertexto (en inglés, Hypertext Transfer Protocol Secure o HTTPS) para garantizar que la transferencia de datos no se vera comprometida en ningún momento y sea seguro. Todo esto se consigue con un certificado de claves públicas para el servidor web.
 	
-	En las vistas del cliente diferenciamos dos variantes principales una vez que se hace login, para los usuarios que serán generalmente alumnos y para el administrador de la aplicación, este último tendrá unas vistas propias y unos privilegios por parte del servidor que no tendrá ningún otro usuario. Estos privilegios le permitirá modificar elementos de la base de datos, obtener información de todas las charlas, seminarios y de los alumnos apuntados a cada una de ellas.
+	En las vistas del cliente diferenciamos dos variantes principales una vez que se hace login: 
+	\begin{itemize}
+  \item Los usuarios que serán generalmente alumnos.
+  \item El administrador de la aplicación, este último tendrá unas vistas propias y unos privilegios por parte del servidor que no tendrá ningún otro usuario. Estos privilegios le permitirá modificar elementos de la base de datos, obtener información de todas las charlas, seminarios y de los alumnos apuntados a cada una de ellas.
+\end{itemize}
 
 	
 \subsection{Servidor}
 	En el lado del servidor se realiza el desarrollo back-end al completo, desde la recepción de peticiones HTTPS hasta el acceso a datos o la descarga de ellos en formato CSV o PDF.
-	La parte central de este servidor gira en torno a NodeJs y mas concretamente en su framework Express que nos proporciona los mecanismos para poder manejar las peticiones HTTPS (GET, POST, PUT y DELETE) de los distintos usuarios. Una vez recibida una de estas peticiones, por medio del manejador proporcionado por Express realizaremos una u otra acción, entre las principales de login, registro, getEvento entre otros, destacaremos dos:
+	La parte central de este servidor gira en torno a NodeJs y más concretamente en su framework \texttt{Express} \footnote{Express es el framework web más popular de Node, y es la librería subyacente para un gran número de otros frameworks web de Node populares. Proporciona mecanismos para: Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).}  que nos proporciona los mecanismos para poder manejar las peticiones HTTPS (GET, POST, PUT y DELETE) de los distintos usuarios. Una vez recibida una de estas peticiones, por medio del manejador proporcionado por Express realizaremos una u otra acción, entre las principales de login, registro, getEvento entre otros, destacaremos dos:
 	
 \begin{itemize}
-	\item \textbf{/getCreditoEventos}: Esta petición en concreto se encarga de recibir como parámetros strings el nombre, apellidos y el DNI del usuario, que por medio de la pestaña de \textit{certificado} y más concretamente apretando el botón \textit{``Recibir Créditos''} rellena una plantilla PDF suministrada por la URJC donde se adjudican al alumno los créditos correspondientes por asistir a una de estas charlas o seminarios que previamente se apuntó
+	\item \textbf{/getCreditoEventos}: Esta petición, en concreto, se encarga de recibir como parámetros strings: el nombre, apellidos y el DNI del usuario. Por medio de la pestaña de \textit{certificado} y más concretamente apretando el botón \textit{``Recibir Créditos''} rellena una plantilla PDF suministrada por la URJC donde se adjudican al alumno los créditos correspondientes por asistir a una de estas charlas o seminarios que previamente se apuntó.
 	
 
-	\item \textbf{/zip}: Esta petición solo es posible recibirla cuando es el administrador el que la requiere, se recibe como parámetros dos elementos, el primero el identificador del evento dentro de la base de datos y el nombre del evento. Esta petición lanzará un Python llamado createCSV.py que se encarga de crear el CSV con los datos obtenidos de la base de datos y dejarlo en una ruta específica dentro del servidor, donde más tarde se recogerá y se mandara vía HTTPS al usuario administrador.
+	\item \textbf{/zip}: Esta petición solo es posible recibirla cuando es el administrador el que la requiere, se recibe como parámetros dos elementos: Un identificador del evento dentro de la base de datos y el nombre del evento. Esta petición lanzará un script desarrollado en Python llamado createCSV.py. Este script se encargará de crear el CSV con los datos obtenidos de la base de datos y dejarlo en una ruta específica dentro del servidor, donde más tarde se recogerá y se mandara vía HTTPS al usuario administrador.
 
 Esta petición en concreto tiene dos caminos:
 \begin{itemize}
@@ -571,7 +575,7 @@ Esta petición en concreto tiene dos caminos:
 	
 
 \subsection{Plantilla documento de obtención créditos}
-	El PDF que obtiene el alumno es un documento oficial de la Universidad Rey Juan Carlos en el que se le otorga un determinado número de créditos (fijados por el responsable de los seminarios o charlas) por acudir a las los seminarios o charlas que previamente se apuntó mediante la aplicación de la que estamos tratando en este TFG. La obtención de este certificado se hará de forma automática una vez que el alumno haya acudido a un número mínimo de seminarios fijados por el responsable de las mismas. 
+	El PDF que obtiene el alumno es un documento oficial de la Universidad Rey Juan Carlos. En este documento se le otorgan un determinado número de créditos (fijados por el responsable de los seminarios o charlas) por acudir a las los seminarios o charlas que previamente se apuntó mediante la aplicación de la que estamos tratando en este TFG. La obtención de este certificado se hará de forma automática una vez que el alumno haya acudido a un número mínimo de seminarios fijados por el responsable de las mismas. 
 
 \clearpage
 
@@ -598,7 +602,7 @@ Esta petición en concreto tiene dos caminos:
 \subsection{Cliente}
 
 \subsubsection{Login}
-	La aplicación se integraŕa dentro de las aplicaciones de la Universidad Rey Juan Carlos para el uso tanto de profesores como de alumnos, es por ello por que guarda una estética distintiva de la universidad, con el uso de sus logos y colores, como podemos apreciar en la figura~\ref{fig:principalHome}:
+	La aplicación guarda una estética distintiva de la universidad, con el uso de sus logos y colores, como podemos apreciar en la figura~\ref{fig:principalHome}. Esta aplicación se integraŕa dentro de las aplicaciones de la Universidad Rey Juan Carlos para el uso tanto de profesores como de alumnos.
 	
 	\begin{figure}[h!]
   	\centering
@@ -606,7 +610,7 @@ Esta petición en concreto tiene dos caminos:
   	\caption{Página Login}\label{fig:principalHome}
 	\end{figure}
 	
-La página de \textit{login} consta de un menú de login donde el usuario ingresará sus credenciales propias de la Universidad Rey Juan Carlos. En esta página destacamos dos puntos claves de por qué esta aplicación es una PWA.
+La página de \textit{login} consta de un menú de 'login' donde el usuario ingresará sus credenciales propias de la Universidad Rey Juan Carlos. En esta página destacamos dos puntos claves de por qué esta aplicación es una PWA.
 	
 	En primer lugar, tal y como se observa en la figura~\ref{fig:principalHome} el navegador tanto en ordenador como en dispositivos móviles nos da la opción de instalar la aplicación en nuestro dispositivo, creando un acceso directo a ella como si de una aplicación nativa Android (en el caso móvil) o como una extensión Chrome (en el caso de utilizar un navegador Chrome en el ordenador) se tratase.
 
