@@ -630,7 +630,7 @@ La página de \textit{login} consta de un menú de 'login' donde el usuario ingr
 \clearpage
 
 \subsubsection{Usuario}
-	Nada más ingresar en la aplicación con el nombre de usuario y contraseña, cargará la pagina principal, destacar que durante todas las ventanas de la aplicación dispondremos de un menú, en el que estarán accesibles las 3 páginas principales de nuestra aplicación (1,2,3) y un botón para hacer \textit{logout} (4) de la misma, como observamos en la figura~\ref{fig:menu}:
+	Nada más ingresar en la aplicación con el nombre de usuario y contraseña, cargará la página principal. Durante todas las ventanas de la aplicación dispondremos de un menú, en el que estarán accesibles las 3 páginas principales de nuestra aplicación (1,2,3) y un botón para hacer \textit{logout} (4) de la misma, como observamos en la figura~\ref{fig:menu}:
 	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/menu.png}
@@ -638,7 +638,7 @@ La página de \textit{login} consta de un menú de 'login' donde el usuario ingr
 	\end{figure}
 	
 \begin{enumerate}
-  \item Página principal: En la siguiente vista dispondremos de la información sobre las charlas y seminarios a los que el alumno se inscribió, en el campo \textbf{Título} se describe el título en si de la charla o seminario, en el campo \textbf{Aula} se informa del aula dentro de la Universidad Rey Juan Carlos donde tendrá lugar la charla, y por último, el campo \textbf{Hora} que especifica la hora a la que tendrá lugar el evento.
+  \item Página principal: En la siguiente vista dispondremos de la información sobre las charlas y seminarios a los que el alumno se inscribió, en el campo \textbf{Título} se describe el título de la charla o seminario, en el campo \textbf{Aula} se informá del aula dentro de la Universidad Rey Juan Carlos donde tendrá lugar la charla, y por último, en el campo \textbf{Hora} se especifica la hora a la que tendrá lugar el evento.
   
     \begin{figure}[h!]
   	\centering
@@ -646,7 +646,10 @@ La página de \textit{login} consta de un menú de 'login' donde el usuario ingr
   	\caption{Página de inicio.}\label{fig:inicio}
 	\end{figure}
 	
-  Dentro de cada fila del evento en el que estamos apuntados y tenemos previsto ir aparecerán dos botones, ``Validar'' (1) y ``Desapuntarse'' (2). El botón validar solo estará accesible una vez el evento haya finalizado para que los alumnos que han podido asistir puedan validar mediante la aplicación que han ido a dicha charla. Una vez validado el evento y habiendo recibido la validación por parte del servidor, debajo del campo aula aparecerá un icono (3) mostrando que la validación se ha desarrollado con normalidad. En la siguiente figura~\ref{fig:inicio} podemos observar cada uno de los botones previamente indicados:
+  Dentro de cada fila del evento en el que estamos apuntados y tenemos previsto ir aparecerán dos botones: ``Validar'' (1) y ``Desapuntarse'' (2). 
+\begin{itemize}
+  \item El botón validar: Solo estará accesible una vez el evento haya finalizado, para que los alumnos que han podido asistir puedan validar mediante la aplicación que han ido a dicha charla. Una vez validado el evento y habiendo recibido la validación por parte del servidor, debajo del campo aula aparecerá un icono (3) mostrando que la validación se ha desarrollado con normalidad.
+  En la siguiente figura~\ref{fig:inicio} podemos observar cada uno de los botones previamente indicados:
 
 
 	Una vez presionemos el botón de validar ya que hemos asistido al evento en cuestión y queremos dar fe de ello, la aplicación nos llevará a la pestaña de validación, figura~\ref{fig:validarQR}
@@ -664,9 +667,12 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
   	\includegraphics[width=12cm, keepaspectratio]{img/validarQRFail.png}
   	\caption{Pestaña de validación de QR con mensaje de error}\label{fig:validarQRFail}
 	\end{figure}  
+	
+ \item El botón desapuntarse: Este botón estará accesible desde el momento en el alumno se haya apuntado al evento. Al presionarlo, el evento en cuestión desaparecerá de la lista de eventos que se muestra en esta pantalla de inicio.
+\end{itemize}
  
  \vspace{12cm}
-  \item Calendario: En la vista siguiente~\ref{fig:horario} obtenemos un calendario con las principales charlas y seminarios disponibles durante las jornadas habilitadas por la Universidad Rey Juan Carlos. 
+  \item Calendario: En la siguiente vista~\ref{fig:horario} obtenemos un calendario con las principales charlas y seminarios disponibles durante las jornadas habilitadas por la Universidad Rey Juan Carlos. 
 
 \begin{figure}[h!]
   	\centering
@@ -674,7 +680,7 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
   	\caption{Página de calendario}\label{fig:horario}
 	\end{figure}
   
-  Cada evento ocupa una posición en el calendario, así mismo cada uno de ellos actúa como un botón, en el que presionándolo nos redirige a la pagina de información del mismo, figura~\ref{fig:descripEvento}. En esta página de información es donde el alumno se podrá apuntarse, dando click en ``Apuntarse'' y expresar su intención de asistir a él, también hay una pequeña descripción del evento que estamos viendo.
+  Cada evento ocupa una posición en el calendario, así mismo cada uno de ellos actúa como un botón. Presionando cada uno de ellos nos redirige a la página de información del mismo, figura~\ref{fig:descripEvento}. En esta página de información es donde el alumno se podrá apuntar, dando click en ``Apuntarse'' y expresar su intención de asistir a él. Completando la página hay una pequeña descripción y fotografías del evento que estamos viendo.
   
   \begin{figure}[h!]
   	\centering
@@ -682,7 +688,7 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
   	\caption{Página de descripción del evento y botón de apuntarse}\label{fig:descripEvento}
 	\end{figure}
   
-  \item Certificado: Esta vista, figura~\ref{fig:recibirCred}, se compone de un botón que el alumno tendrá disponible únicamente cuando pueda tener la posibilidad de obtener los créditos que le corresponden por asistir a estos seminarios, el requisito de mínimo de asistencia para poder optar a tener el certificado de los créditos lo impondrá el profesor encargado de ello o en su defecto el administrador que se encargue del mantenimiento de la página y de dichas jornadas propuestas aquí. 
+  \item Certificado: Esta vista, figura~\ref{fig:recibirCred}, se compone de un botón que el alumno tendrá disponible únicamente cuando tenga la oportunidad de obtener los créditos que le corresponden por asistir a estos seminarios. El requisito de mínimo de asistencia para poder optar a tener el certificado de los créditos lo impondrá el profesor encargado de ello o en su defecto el administrador que se encargue del mantenimiento de la página y de dichas jornadas aquí propuestas. 
   
     \begin{figure}[h!]
   	\centering
@@ -691,7 +697,7 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
 	\end{figure}
   
   
-  Una vez el alumno tiene disponible el botón de ``Recibir Créditos'' un pop-up saldrá en pantalla sirviendo una vista previa del PDF que será el certificado que le otorgue los créditos y que el alumno obtendrá para poder justificar los mismos, como se puede observar en la figura~\ref{fig:pdfVisual}. Estará a su vez disponible un botón de descarga del PDF para poder almacenarlo en su dispositivo.
+  Una vez el alumno tiene disponible el botón de ``Recibir Créditos'' un pop-up saldrá en pantalla sirviendo una vista previa del PDF que será el certificado que le otorgue los créditos, como se puede observar en la figura~\ref{fig:pdfVisual}. Estará a su vez disponible un botón de descarga del PDF para poder almacenarlo en su dispositivo.
   
       \begin{figure}[h!]
   	\centering
@@ -702,7 +708,7 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
 \end{enumerate}
 
 \subsubsection{Administrador}
-	Una vez iniciado sesión con la cuenta del administrador o de la persona encargada de mantener y administrar la aplicación entraremos en la misma donde veremos dos pestañas claramente diferenciadas:
+	Una vez iniciado sesión con la cuenta del administrador o de la persona encargada de mantener y administrar la aplicación, veremos dos pestañas claramente diferenciadas:
 \begin{enumerate}	
 	\item Lista de Eventos: En esta pestaña representada en la figura~\ref{fig:adminListaEventos}, el administrador de la aplicación tendrá un listado completo de todos los eventos o seminarios que habrá durante la semana o los días que duren cada uno de ellos. En esta primera vista se dará la información de: Nombre del evento, aula donde se impartirá y la hora del día a la que tendrá lugar dicho evento.
 	\begin{figure}[h!]
@@ -714,7 +720,7 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
 \vspace{6cm}
 
 
-Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Descargar PDF Todos''}, presionándolo enviaremos una petición al servidor que nos contestará con un archivo comprimido en formato ZIP llamado ``Eventos.zip'' que contendrá todos los CSV de los Eventos en los que haya apuntada mas de una persona. Este CSV es del mismo formato que el CSV que se descargaría dando uno por uno a cada evento con el botón ``Generar CSV'' que explicaremos más adelante en el siguiente punto. El archivo comprimido en formato ZIP descargado quedaría de la siguiente manera:
+Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Descargar PDF Todos''}, presionándolo enviaremos una petición al servidor que nos contestará con un archivo comprimido en formato ZIP llamado ``Eventos.zip'' que contendrá todos los CSV de los Eventos en los que haya apuntada más de una persona. Este CSV es del mismo formato que el CSV que se descargaría dando uno por uno a cada evento con el botón ``Generar CSV'', que explicaremos más adelante en el siguiente punto. El archivo comprimido en formato ZIP descargado quedaría de la siguiente manera:
 	
 	\begin{figure}[h!]
   	\centering
@@ -723,7 +729,7 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
 	\end{figure}
 	
 	 
-	Haciendo click en cada una de las filas correspondientes a cada uno de los eventos entraremos en una ventana representada en la figura~\ref{fig:adminListaEventoTelefonica}, donde nos informará más detalladamente sobre el evento en cuestión, con una breve descripción del evento (1), su QR de validación correspondiente (2) y el listado de los usuarios inscritos a él, así como que usuario ha validado o no la asistencia al evento con el campo \textit{``Validado''} true o false (3). Destacamos de esta vista el botón \textit{``Generar CSV''} (4) que descargará en nuestro equipo en formato CSV el mismo listado de usuarios que estamos viendo en esta misma página.
+	Haciendo click en cada una de las filas correspondientes a cada uno de los eventos, entraremos en una ventana representada en la figura~\ref{fig:adminListaEventoTelefonica}, donde nos informará más detalladamente sobre el evento en cuestión. Con una breve descripción del evento (1), su QR de validación correspondiente (2) y el listado de los usuarios inscritos a él, así como que usuario ha validado o no la asistencia al evento con el campo \textit{``Validado''} true o false (3). Destacamos de esta vista el botón \textit{``Generar CSV''} (4) que descargará en nuestro equipo en formato CSV el mismo listado de usuarios que estamos viendo en esta misma página.
 	
 	\begin{figure}[h!]
   	\centering
@@ -732,11 +738,11 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
 	\end{figure}
 
 
-	\item Calendario Eventos: En esta pestaña, figura~\ref{fig:adminCalendario}, el administrador tendrá de forma visual la información de cuando y donde va a tener lugar un evento cualquiera, seguido del nombre del evento, entre paréntesis, hay un número correspondiente al número de alumnos apuntados a dicho evento.
+	\item Calendario Eventos: En esta pestaña, figura~\ref{fig:adminCalendario}, el administrador tendrá de forma visual la información de cuando y donde va a tener lugar un evento cualquiera. Seguido del nombre del evento, entre paréntesis, hay un número correspondiente al número de alumnos apuntados a dicho evento.
 	
-	Destacamos varias cosas en esta pestaña, en primer lugar el botón \textit{``Optimizar''}, este botón envía un mensaje al servidor que lanzará un Python de optimización para reubicar los eventos en horarios y aulas de la forma lo más óptima posible, más adelante, en el siguiente punto, cuando se explique la parte correspondiente al servidor desarrollaré más su funcionamiento. Este botón modificará la posición de todos o la gran mayoría de los eventos dentro del marco horario mostrado en esta pestaña.
+	Destacamos varias cosas en esta pestaña: En primer lugar, el botón \textit{``Optimizar''}, este botón envía un mensaje al servidor que lanzará un script de optimizacion programado en Python para reubicar los eventos en horarios y aulas de la forma más óptima posible, más adelante, en el siguiente punto, cuando se explique la parte correspondiente al servidor desarrollaré más su funcionamiento. Este botón modificará la posición de todos o la gran mayoría de los eventos dentro del marco horario mostrado en esta pestaña.
 	
-	Por otro lado, es posible modificar de forma individual un evento, para ello bastará con hacer click sobre él, toda su información se volcará en los desplegables que se muestran en la parte inferior de la imagen (1), se podrá modificar tanto el aula como las horas que estén disponibles para todos los eventos, en este caso entre las aulas 323, 321, 322 y 324 y en los horarios de 10:00 a 12:00. 
+	Por otro lado, es posible modificar de forma individual un evento, para ello bastará con hacer click sobre él- Toda su información se volcará en los desplegables que se muestran en la parte inferior de la imagen (1), se podrá modificar tanto el aula como las horas que estén disponibles para todos los eventos, en este caso entre las aulas 323, 321, 322 y 324 y en los horarios de 10:00 a 12:00. 
 	
 	Presionando el botón ``Modificar'' las modificaciones que hayamos hecho en los desplegables serán enviadas al servidor y podremos verlas en esta misma vista.
 	
@@ -772,7 +778,7 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
 
 \subsection{Servidor}
 
-	El servidor está desarrollado en un entorno de trabajo que funciona en tiempo de ejecución, de código abierto y multiplataforma, este entorno es \textit{Node}. Añade un soporte para APIs donde se incluye una comunicación HTTP entre el cliente y él mismo. Por todo esto obtenemos un gran rendimiento de la aplicación y también una gran escalabilidad. Dentro de Node el framework mas usado y que uso en este caso es \textbf{Express} cuya biblioteca se compone de un gran número de framework populares dando mecanismos para el manejo de peticiones HTTP y HTTPS (en mi caso) y mantener así una comunicación segura cliente-servidor. 
+	El servidor está desarrollado en un entorno de trabajo que funciona en tiempo de ejecución, de código abierto y multiplataforma, este entorno es \textit{Node}. Añade un soporte para APIs donde se incluye una comunicación HTTP entre el cliente y él mismo. Por todo esto obtenemos un gran rendimiento de la aplicación y también una gran escalabilidad. Dentro de Node, el framework más usado y que uso en este caso es \textbf{Express} cuya biblioteca se compone de un gran número de framework populares dando mecanismos para el manejo de peticiones HTTP y HTTPS (en mi caso) y mantener así una comunicación segura cliente-servidor. 
 	Los métodos de comunicación usados en el servidor mediante HTTPS son los típicos usados en este tipo de aplicaciones:
 	\begin{itemize}
   	\item GET: El método GET  solicita una representación de un recurso específico. Las peticiones que usan el método GET sólo deben recuperar datos.
@@ -781,16 +787,17 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
   	\item DELETE: El método DELETE borra un recurso en específico.
 	\end{itemize}
 
-Al margen ya de la parte Node del servidor, destacamos dos programas desarrollados en Python de los que el servidor hace uso cuando el cliente así lo requiere, destacamos que el único cliente o usuario que puede realizar una petición al servidor y poder lanzar así estos programas es el usuario bajo el Nick de ``admin'', en los siguientes puntos pasaremos a explicar el funcionamientos de dichos programas:
+Al margen ya de la parte Node del servidor, destacamos dos programas desarrollados en Python de los que el servidor hace uso cuando el cliente así lo requiere. Destacamos que el único cliente o usuario que puede realizar una petición al servidor y poder lanzar así estos programas es el usuario bajo el Nick de ``admin'', en los siguientes puntos pasaremos a explicar el funcionamientos de dichos programas:
 
 \begin{enumerate}
   	\item CreateCSV.py: Cuando el administrador presiona dentro de la pestaña ``Lista Eventos'' cualquier fila correspondiente a un evento, y dentro de ella el botón ``GenerarCSV'' o bien en la misma pestaña de ``Lista Eventos'' presiona el botón ``Generar PDF Todos'', el servidor dentro de la URL \textit{'/zip/:id\_evento/:nombre\_evento'} recibe la petición del cliente que quiere obtener o bien un CSV o bien un .zip con todos los CSV de los eventos dentro de él. Desde Node se lanza el Python mediante el comando ./createCSV.py -idevento (el parámetro idevento solo se pondrá en el caso en el que se quiera el CSV de un evento en concreto, para obtener el .zip de todos el parámetro se omitirá).
   	
-  	Una vez el programa en Python de createCSV.py ha sido lanzado, pasa a buscar en la base de datos mediante un select de idevento o recorriéndose todos los eventos que haya obteniendo así una lista de usuarios asociados al evento con el campo validado true o false según corresponda para cada uno de los usuarios.
+  	Una vez el programa en Python de createCSV.py ha sido lanzado, pasa a buscar en la base de datos mediante un select de idevento o recorriéndose todos los eventos que haya. Obteniendo así una lista de usuarios asociados al evento, con el campo validado true o false según corresponda para cada uno de los usuarios.
   	
-  	Cuando se obtiene esta lista y se finaliza la ejecución del select, pasamos a volcar los datos obtenidos en un fichero .CSV, cuando terminamos de rellenar el fichero, en el caso de querer uno en concreto la ejecución terminaría aquí y sería devuelto el fichero al cliente que solicitó tal acción al servidor, por otro lado, en el caso de querer todos los eventos se irá completando la acción pasada con todos los eventos en los que haya mas de una persona inscrita en él, y cuando termine pasaŕa a crear un .zip con todos estos .CSV creados. Una vez terminado, como en el caso anterior, le será devuelto al cliente un .zip como requirió con su petición inicial.
+  	Cuando se obtiene esta lista y se finaliza la ejecución del select, pasamos a volcar los datos obtenidos en un fichero .CSV. Cuando terminamos de rellenar el fichero, en el caso de querer uno en concreto la ejecución terminaría aquí y sería devuelto el fichero al cliente que solicitó tal acción al servidor, por otro lado, en el caso de querer todos los eventos, se irá completando la acción pasada con todos los eventos en los que haya más de una persona inscrita en él. Cuando termine pasaŕa a crear un .zip con todos estos .CSV creados. Una vez terminado, como en el caso anterior, le será devuelto al cliente un .zip como requirió con su petición inicial.
   	
-  	La forma en la que el servidor y el cliente están conectados para poder enviar la información en formato .CSV o en formato .ZIP es mediante un \textit{pipe stream.}
+  	La forma en la que el servidor y el cliente están conectados para poder enviar la información en formato .CSV o en formato .ZIP es mediante un \texttt{pipe stream.} 
+\footnote{Una tubería (pipeline o cauce) consiste en una cadena de streams conectados de forma tal que la salida de cada elemento de la cadena es la entrada del próximo. Permiten la comunicación y sincronización entre procesos. Es común el uso de búfer de datos entre elementos consecutivos.}
   	
   	La funcionalidad y el esquema de dicho funcionamiento quedan representadas en la figura~\ref{fig:createCSV}.
 
@@ -805,13 +812,13 @@ Al margen ya de la parte Node del servidor, destacamos dos programas desarrollad
   	
   	Este programa tiene como objetivo la optimización y reubicación de los eventos en función de los huecos libres que quedan con respecto a la gente que se ha apuntado al evento o quiere asistir y con los huecos libres que quedan en la sala. Funciona de la siguiente manera:
   	
-  	El programa, una vez se ejecuta, lee de la base de datos cada uno de los eventos que están programados que se van a llevar a cabo en los días que transcurran todos ellos, de cada evento obtiene el número de alumnos o personas que están apuntados a él, con este número calcula los huecos libres que tienen en todas las aulas disponibles, desechando los números negativos que se obtienen cuando van a asistir mas personas que huecos libres tiene la sala.
+  	El programa, una vez se ejecuta, lee de la base de datos cada uno de los eventos que están programados que se van a llevar a cabo en los días que transcurran todos ellos, de cada evento obtiene el número de alumnos o personas que están apuntados a él, con este número calcula los huecos libres que tienen en todas las aulas disponibles. Desechando los números negativos que se obtienen cuando van a asistir mas personas que huecos libres tiene la sala.
   	
   	Una vez tenemos relacionados todos los eventos con las aulas en función de los huecos libres que hay, el diccionario se ordena de menor a mayor, teniendo prioridad de posición los eventos que tengan menor número de huecos libres en una sala determinada.
   	 
   	La adjudicación del evento a una sala se va realizando de forma ascendente y ordenada hasta que el aula en cuestión complete todas las horas disponibles que tiene dentro de los días que están programados que tengan lugar estos eventos. En nuestro caso, se completara cuando en una sala se haya completado el horario de 10:00 a 12:00, cuando esto ocurre el evento no tendrá la opción de ser colocado en esa aula y pasará a ka siguiente aula donde en función del tamaño, las personas que vayan y el número de huecos disponibles sea el óptimo.
   	
-  	Si se llega a el caso en el que un evento no encuentra lugar dentro de ningún aula, este evento quedará excluido y no se le adjudicará ningún aula. El evento se mostrara fuera de la matriz de ``Calendario Eventos''  y tendrá que ser el administrador quien lo posicione a mano, dentro de un aula en concreto teniendo en cuenta la limitación de aforo mediante el botón ``Modificar'' que se encuentra en la parte inferior de la pestaña de ``Calendario Eventos'' y que ya explicamos su funcionamiento en el apartado anterior.
+  	Si se llega a el caso en el que un evento no encuentra lugar dentro de ningún aula, este evento quedará excluido y no se le adjudicará ningún aula. El evento se mostrará fuera de la matriz de ``Calendario Eventos''  y tendrá que ser el administrador quien lo posicione a mano, dentro de un aula en concreto teniendo en cuenta la limitación de aforo mediante el botón ``Modificar'' que se encuentra en la parte inferior de la pestaña de ``Calendario Eventos'' y que ya explicamos su funcionamiento en el apartado anterior.
 	\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
