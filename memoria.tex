@@ -214,7 +214,7 @@ También a todos los demás profesores que durante todos estos años han contrib
 	\end{itemize}
 
 
-	For the development of the server part, different environments and languages ​​have been used, highlighting Python, Node and MongoDB for management and storage in databases.
+	For the development of the server part, different environments and languages have been used, highlighting Python, Node and MongoDB for management and storage in databases.
 
 	With the creation of this application, an attempt is made, on the teaching side, to seek efficiency when it comes to distributing and allocating the different classrooms that are available for the different courses and seminars, on the other hand, on the side of The students seek to have an environment of easy handling and simplicity when it comes to information, signing up and obtaining the corresponding credits of said courses and seminars.
 
@@ -341,7 +341,7 @@ A continuación, se detallan las tecnologías utilizadas en el desarrollo del pr
 
 \section{Angular} 
 \label{sec:Angular}
-Angular es un framework para aplicaciones web desarrollado en TypeScript (lenguaje del que hablaremos más adelante), de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página. Su objetivo es aumentar las aplicaciones basadas en navegador con capacidad de Modelo Vista Controlador (MVC), en un esfuerzo para hacer que el desarrollo y las pruebas sean más fáciles.
+Angular~\cite{angular} es un framework para aplicaciones web desarrollado en TypeScript (lenguaje del que hablaremos más adelante), de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página. Su objetivo es aumentar las aplicaciones basadas en navegador con capacidad de Modelo Vista Controlador (MVC), en un esfuerzo para hacer que el desarrollo y las pruebas sean más fáciles.
 \vfill
 Entre sus virtudes se destacan:
 \begin{itemize}
@@ -394,13 +394,13 @@ Typescript es un superconjunto de JavaScript. Una tecnología es un superconjunt
 
 \section{HTML}
 \label{sec:HTML}
-HTML son las siglas de "HyperText Markup Language". Se trata del lenguaje estándar utilizado para la creación de páginas web. Fue creado por Tim Berners-Lee en los años ochenta. Es un lenguaje de marcas, esto quiere decir que para indicar la estructura del documento se utilizan etiquetas. Al ser un estándar, todos los navegadores leen e interpretan el lenguaje HTML y lo presentan de un modo similar.
+HTML son las siglas de ``HyperText Markup Language". Se trata del lenguaje estándar utilizado para la creación de páginas web. Fue creado por Tim Berners-Lee en los años ochenta. Es un lenguaje de marcas, esto quiere decir que para indicar la estructura del documento se utilizan etiquetas. Al ser un estándar, todos los navegadores leen e interpretan el lenguaje HTML y lo presentan de un modo similar.
 
 \clearpage
 
 \section{CSS}
 \label{sec:CSS}
-CSS son las siglas de "Cascading Style Sheets". Es un lenguaje que permite establecer la apariencia de un documento escrito mediante un lenguaje de marcas. CSS permite asociar reglas a los elementos que aparecen en una página web, las reglas indican como debe representarse el contenido de esos elementos.
+CSS son las siglas de ``Cascading Style Sheets". Es un lenguaje que permite establecer la apariencia de un documento escrito mediante un lenguaje de marcas. CSS permite asociar reglas a los elementos que aparecen en una página web, las reglas indican como debe representarse el contenido de esos elementos.
 
 \section{Bootstrap}
 \label{sec:Bootstrap}
@@ -424,7 +424,7 @@ Bootstrap es un framework \texttt{front-end}
 \section{MongoDB} 
 \label{sec:MongoDB}
 
-Es una de las bases de datos noSQL y orientada a documentos que existen. Esto quiere decir que en lugar de guardar los datos en registros, guarda los datos en documentos. Estos documentos son almacenados en BSON, que es una representación binaria de JSON. Una de las diferencias más importantes con respecto a las bases de datos relacionales, es que no es necesario seguir un esquema: Los documentos de una misma colección - concepto similar a una tabla de una base de datos relacional -, pueden tener esquemas diferentes.
+Es una de las bases de datos noSQL y orientada a documentos que existen. Esto quiere decir que en lugar de guardar los datos en registros, guarda los datos en documentos. Estos documentos son almacenados en BSON, que es una representación binaria de JSON. Una de las diferencias más importantes con respecto a las bases de datos relacionales es que no es necesario seguir un esquema: Los documentos de una misma colección - concepto similar a una tabla de una base de datos relacional -, pueden tener esquemas diferentes.
 
 	Aunque se suele decir que las bases de datos NoSQL tienen un ámbito de aplicación reducido, MongoDB se puede utilizar en muchos de los proyectos que desarrollamos en la actualidad:
 \begin{itemize}
@@ -441,7 +441,7 @@ Python es un lenguaje de \texttt{scripting}
 \item Multiplataforma: Hay versiones disponibles de Python en muchos sistemas informáticos distintos. Originalmente se desarrolló para Unix, aunque cualquier sistema es compatible con el lenguaje siempre y cuando exista un intérprete programado para él.
 
 \item Interpretado: Quiere decir que no se debe compilar el código antes de su ejecución. En ciertos casos, cuando se ejecuta por primera vez un código, se producen unos \texttt{bytecodes} 
-\footnote{El bytecode es un código intermedio más abstracto que el código máquina. Habitualmente, es tratado como un archivo binario que contiene un programa ejecutable similar a un módulo objeto, que es un archivo binario producido por el compilador cuyo contenido es el código objeto o código máquina .} que se guardan en el sistema y que sirven para acelerar la compilación implícita que realiza el intérprete cada vez que se ejecuta el mismo código.
+\footnote{El bytecode es un código intermedio más abstracto que el código máquina. Habitualmente es tratado como un archivo binario que contiene un programa ejecutable similar a un módulo objeto, que es un archivo binario producido por el compilador cuyo contenido es el código objeto o código máquina .} que se guardan en el sistema y que sirven para acelerar la compilación implícita que realiza el intérprete cada vez que se ejecuta el mismo código.
 
 \item Interactivo: Python dispone de un intérprete por línea de comandos en el que se pueden introducir sentencias. Cada sentencia se ejecuta y produce un resultado visible, que puede ayudarnos a entender mejor el lenguaje y probar los resultados de la ejecución de porciones de código rápidamente.
 
@@ -459,7 +459,7 @@ A continuación se detalla el proyecto de Aplicación de Web Progresiva (PWA) de
 
 \section{Arquitectura general} 
 \label{sec:arquitectura}
-Este proyecto gira en torno a la arquitectura software del modelo \texttt{cliente-servidor} \footnote{La arquitectura cliente-servidor es un modelo de diseño de software en el que las tareas se reparten entre los proveedores de recursos o servicios, llamados servidores, y los demandantes, llamados clientes. Un cliente realiza peticiones a otro programa, el servidor, quien le da respuesta. Esta idea también se puede aplicar a programas que se ejecutan sobre una sola computadora, aunque es más ventajosa en un sistema operativo multiusuario distribuido a través de una red de computadoras.}, como se detalla en la figura~\ref{fig:arquitectura}. Destacamos la parte del cliente, principalmente manejada por Angular y más concretamente con una PWA. Por otro lado, la parte del servidor, controlada en su punto central por Node.js, dispone de una base de datos MongoDB y un par de programas desarrollados en Python que ayudarán a la automatización, optimización y organización de las salas.
+Este proyecto gira en torno a la arquitectura software del modelo \texttt{cliente-servidor}\footnote{La arquitectura cliente-servidor es un modelo de diseño de software en el que las tareas se reparten entre los proveedores de recursos o servicios, llamados servidores, y los demandantes, llamados clientes. Un cliente realiza peticiones a otro programa, el servidor, quien le da respuesta. Esta idea también se puede aplicar a programas que se ejecutan sobre una sola computadora, aunque es más ventajosa en un sistema operativo multiusuario distribuido a través de una red de computadoras.}, como se detalla en la figura~\ref{fig:arquitectura}. Destacamos la parte del cliente, principalmente manejada por Angular y más concretamente con una PWA. Por otro lado, la parte del servidor, controlada en su punto central por Node.js, dispone de una base de datos MongoDB y un par de programas desarrollados en Python que ayudarán a la automatización, optimización y organización de las salas.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=7cm, keepaspectratio]{img/arquitectura.png}
@@ -468,7 +468,7 @@ Este proyecto gira en torno a la arquitectura software del modelo \texttt{client
 
  
 \subsection{Cliente}
-	En el lado del cliente tenemos toda la parte desarrollada con Angular, específicamente con el paquete \textit{@angular/pwa v.0.1101.1}. Al tratarse de una PWA y tratar con el framework Bootstrap permite que todas las pantallas de la aplicación sean \texttt{responsive} \footnote{El diseño web adaptable (también diseño web adaptativo o responsivo; este último calco del inglés responsive web design), es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas}, lo que quiere decir que estas pantallas se ajustarán automáticamente a la resolución del dispositivo en el que se muestran. (Centrado principalmente en dispositivos móviles llegándose a asemejar a una app nativa).
+	En el lado del cliente tenemos toda la parte desarrollada con Angular, específicamente con el paquete \textit{@angular/pwa v.0.1101.1}. Al tratarse de una PWA y tratar con el framework Bootstrap permite que todas las pantallas de la aplicación sean \texttt{responsive}\footnote{El diseño web adaptable (también diseño web adaptativo o responsivo; este último calco del inglés responsive web design) es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas}, lo que quiere decir que estas pantallas se ajustarán automáticamente a la resolución del dispositivo en el que se muestran. (Centrado principalmente en dispositivos móviles llegándose a asemejar a una app nativa).
 	
 	Debido al uso de la cámara del dispositivo, los server workers ( proporcionados por el paquete \textit{@angular/pwa v.0.1101.1}) y un login inicial de usuario (usuario y claves), es de obligado cumplimiento que la página se muestre con el protocolo seguro de transferencia de hipertexto (en inglés, Hypertext Transfer Protocol Secure o HTTPS) para garantizar que la transferencia de datos no se vera comprometida en ningún momento y sea seguro. Este tipo de comunicación segura se consigue con un certificado de claves públicas para el servidor web.
 	
@@ -481,7 +481,7 @@ Este proyecto gira en torno a la arquitectura software del modelo \texttt{client
 	
 \subsection{Servidor}
 	En el lado del servidor se realiza el desarrollo back-end al completo, desde la recepción de peticiones HTTPS hasta el acceso a datos o la descarga de ellos en formato CSV o PDF.
-	La parte central de este servidor gira en torno a NodeJs, específicamente en su framework \texttt{Express} \footnote{Express es el framework web más popular de Node, y es la librería subyacente para un gran número de otros frameworks web de Node populares. Proporciona mecanismos para: Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).}  que nos proporciona los mecanismos para poder manejar las peticiones HTTPS (GET, POST, PUT y DELETE) de los distintos usuarios. Una vez recibida una de estas peticiones, por medio del manejador proporcionado por Express realizaremos una u otra acción, entre las principales de login, registro, getEvento entre otros. Destacaremos dos:
+	La parte central de este servidor gira en torno a NodeJs, específicamente en su framework \texttt{Express}\footnote{Express es el framework web más popular de Node, y es la librería subyacente para un gran número de otros frameworks web de Node populares. Proporciona mecanismos para: Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).}  que nos proporciona los mecanismos para poder manejar las peticiones HTTPS (GET, POST, PUT y DELETE) de los distintos usuarios. Una vez recibida una de estas peticiones, por medio del manejador proporcionado por Express realizaremos una u otra acción, entre las principales de login, registro, getEvento entre otros. Destacaremos dos:
 	
 \begin{itemize}
 	\item \textbf{/getCreditoEventos}: Esta petición, en concreto, se encarga de recibir como parámetros strings: el nombre, apellidos y el DNI del usuario. Por medio de la pestaña de \textit{certificado} y más concretamente apretando el botón \textit{``Recibir Créditos''} rellena una plantilla PDF suministrada por la URJC donde se adjudican al alumno los créditos correspondientes por asistir a una de estas charlas o seminarios que previamente se apuntó.
@@ -660,7 +660,7 @@ En esta página destacamos dos puntos claves de por qué esta aplicación es una
 
 
 	Una vez presionemos el botón de validar (ya que hemos asistido al evento en cuestión y queremos dar fe de ello), la aplicación nos llevará a la pestaña de validación, figura~\ref{fig:validarQR}
-	En esta pestaña, la aplicación utilizará la cámara del dispositivo, ya sea un móvil, tablet u ordenador portátil para leer el código QR correspondiente al evento que queremos validar.
+	En esta pestaña la aplicación utilizará la cámara del dispositivo, ya sea un móvil, tablet u ordenador portátil para leer el código QR correspondiente al evento que queremos validar.
 	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=12cm, keepaspectratio]{img/validarQR.png}
@@ -760,7 +760,7 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
 	\end{figure}
 	
 
-\item Estadística: En esta pestaña, el administrador tendrá de forma rápida y visual un resumen de lo que están siendo las jornadas culturales durante el día o los días que duren los eventos.
+\item Estadística: En esta pestaña el administrador tendrá de forma rápida y visual un resumen de lo que están siendo las jornadas culturales durante el día o los días que duren los eventos.
 
 	\begin{figure}[h!]
   	\centering
@@ -877,11 +877,11 @@ Revisando dichos resultados nos damos cuenta que el programa tiene en cuenta los
 
 
 \section{Seguridad}
-Cabe destacar el uso de HTTPS, (HyperText Transfer Protocol Secure, Protocolo de transferencia de hipertexto) es un protocolo de comunicación de Internet que protege la integridad y la confidencialidad de los datos de los usuarios entre sus ordenadores y el sitio web. En este caso al usar partes vulnerables del móvil, como puede ser la cámara al leer el código QR o en el momento de autentificar al usuario, es necesario el uso de una capa más de seguridad.
+Se use el protocolo HTTPS (HyperText Transfer Protocol Secure, Protocolo de transferencia de hipertexto), que es un protocolo de comunicación de Internet que protege la integridad y la confidencialidad de los datos de los usuarios entre sus ordenadores y el sitio web. En este caso al usar partes vulnerables del móvil, como puede ser la cámara al leer el código QR o en el momento de autentificar al usuario, es necesario el uso de una capa más de seguridad.
  
  
 En el caso de la autenticación la contraseña del usuario, viaja cifrada dentro de este protocolo y dentro de la base de datos también, por si esta base de datos sufre un ataque no se vea comprometida la seguridad de los usuarios de la aplicación.
-El cifrado de la contraseña es del tipo \textit{AES192} \texttt{(Advanced Encryption Standard)} \footnote{El Advanced Encryption Standard, abreviado AES, se usa con el fin de cifrar datos y de protegerlos contra cualquier acceso ilícito. El método criptográfico emplea para este objetivo una clave de longitud variada y se denomina según la longitud de clave usada AES-128, AES-192 o AES-256.} y para validar este cifrado basta con ver la base de datos y el valor del campo ``password'' dentro de la tabla ``Usuarios'', en este caso para el usuario \textit{david} el valor del campo es: \textit{4232a5e307a998a3ef2601c7d0a4c704}, un valor esperado para este tipo de cifrados.
+El cifrado de la contraseña es del tipo \textit{AES192} \texttt{(Advanced Encryption Standard)}\footnote{El Advanced Encryption Standard, abreviado AES, se usa con el fin de cifrar datos y de protegerlos contra cualquier acceso ilícito. El método criptográfico emplea para este objetivo una clave de longitud variada y se denomina según la longitud de clave usada AES-128, AES-192 o AES-256.} y para validar este cifrado basta con ver la base de datos y el valor del campo ``password'' dentro de la tabla ``Usuarios'', en este caso para el usuario \textit{david} el valor del campo es: \textit{4232a5e307a998a3ef2601c7d0a4c704}, un valor esperado para este tipo de cifrados.
 
 
 
@@ -944,7 +944,7 @@ Con este TFG he podido aprender y adquirir conocimientos que si bien en las dist
 	
 	Automatización de todo el back de la aplicación con bibliotecas en python, con consultas a bases de datos y generador de documentos y estadísticas en función de los resultados obtenidos. En cuanto al lenguaje Python tenia una base muy sólida en el, no obstante he tenido que aprender y estudiar cada biblioteca utilizada para entender su funcionamiento y poder integrarla satisfactoriamente en este proyecto.
 	
-	En cuanto a la seguridad, es la base de la aplicación, para poder desarrollar una PWA y tener acceso a elementos del móvil, cámara en este caso, la aplicación tiene que estar respaldada con una cierta seguridad, todo esto se consigue con herramientas criptográficas de seguridad, con sus determinadas claves públicas y privadas las que te permiten obtener una aplicación web bajo HTTPS. En cuanto a este tipo de seguridad en la carrera he tenido la oportunidad de adquirir unos conocimiento básicos sobre estos conceptos, no obstante, a lo largo de este TFG me he topado con distintos errores, problemas y puntos que tenia que resolver para poder obtener una  aplicación totalmente funcional.
+	FIXME: la siguiente frase es muy compleja; reescribir. En cuanto a la seguridad, es la base de la aplicación, para poder desarrollar una PWA y tener acceso a elementos del móvil, cámara en este caso, la aplicación tiene que estar respaldada con una cierta seguridad, todo esto se consigue con herramientas criptográficas de seguridad, con sus determinadas claves públicas y privadas las que te permiten obtener una aplicación web bajo HTTPS. En cuanto a este tipo de seguridad en la carrera he tenido la oportunidad de adquirir unos conocimiento básicos sobre estos conceptos, no obstante, a lo largo de este TFG me he topado con distintos errores, problemas y puntos que tenia que resolver para poder obtener una  aplicación totalmente funcional.
 	
 En resumen, este TFG me ha dado la oportunidad de poder aprender tecnologías punteras, que me apetecían aprender y que muy seguro en un futuro me será de gran ayuda haber podido tener contacto con ellas, en mayor o menor medida.
 \end{enumerate}
