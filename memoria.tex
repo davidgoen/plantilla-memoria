@@ -459,7 +459,7 @@ A continuación se detalla el proyecto de Aplicación de Web Progresiva (PWA) de
 
 \section{Arquitectura general} 
 \label{sec:arquitectura}
-Este proyecto gira en torno a la arquitectura software del modelo \texttt{cliente-servidor} \footnote{La arquitectura cliente-servidor es un modelo de diseño de software en el que las tareas se reparten entre los proveedores de recursos o servicios, llamados servidores, y los demandantes, llamados clientes. Un cliente realiza peticiones a otro programa, el servidor, quien le da respuesta. Esta idea también se puede aplicar a programas que se ejecutan sobre una sola computadora, aunque es más ventajosa en un sistema operativo multiusuario distribuido a través de una red de computadoras.}, como se detalla en la figura~\ref{fig:arquitectura}. Destacamos la parte del cliente, principalmente manejada por Angular y más con una PWA. Por otro lado, la parte del servidor, controlada en su punto central por Node.js, dispone de una base de datos MongoDB y un par de programas desarrollados en Python que ayudarán a la automatización, optimización y organización de las salas.
+Este proyecto gira en torno a la arquitectura software del modelo \texttt{cliente-servidor} \footnote{La arquitectura cliente-servidor es un modelo de diseño de software en el que las tareas se reparten entre los proveedores de recursos o servicios, llamados servidores, y los demandantes, llamados clientes. Un cliente realiza peticiones a otro programa, el servidor, quien le da respuesta. Esta idea también se puede aplicar a programas que se ejecutan sobre una sola computadora, aunque es más ventajosa en un sistema operativo multiusuario distribuido a través de una red de computadoras.}, como se detalla en la figura~\ref{fig:arquitectura}. Destacamos la parte del cliente, principalmente manejada por Angular y más concretamente con una PWA. Por otro lado, la parte del servidor, controlada en su punto central por Node.js, dispone de una base de datos MongoDB y un par de programas desarrollados en Python que ayudarán a la automatización, optimización y organización de las salas.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=7cm, keepaspectratio]{img/arquitectura.png}
@@ -468,9 +468,9 @@ Este proyecto gira en torno a la arquitectura software del modelo \texttt{client
 
  
 \subsection{Cliente}
-	En el lado del cliente tenemos toda la parte desarrollada con Angular, más concretamente con el paquete \textit{@angular/pwa v.0.1101.1}. Al tratarse de una PWA y tratar con el framework Bootstrap permite que todas las pantallas de la aplicación sean \texttt{responsive} \footnote{El diseño web adaptable (también diseño web adaptativo o responsivo; este último calco del inglés responsive web design), es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas}, lo que quiere decir que estas pantallas se ajustarán automáticamente a la resolución del dispositivo en el que se muestran, centrado principalmente en dispositivos móviles llegándose a asemejar a una app nativa.
+	En el lado del cliente tenemos toda la parte desarrollada con Angular, específicamente con el paquete \textit{@angular/pwa v.0.1101.1}. Al tratarse de una PWA y tratar con el framework Bootstrap permite que todas las pantallas de la aplicación sean \texttt{responsive} \footnote{El diseño web adaptable (también diseño web adaptativo o responsivo; este último calco del inglés responsive web design), es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas}, lo que quiere decir que estas pantallas se ajustarán automáticamente a la resolución del dispositivo en el que se muestran. (Centrado principalmente en dispositivos móviles llegándose a asemejar a una app nativa).
 	
-	Debido al uso de la cámara del dispositivo, los server workers ( proporcionados por el paquete \textit{@angular/pwa v.0.1101.1}) y un login inicial de usuario (usuario y claves), es de obligado cumplimiento que la página se muestre con el protocolo seguro de transferencia de hipertexto (en inglés, Hypertext Transfer Protocol Secure o HTTPS) para garantizar que la transferencia de datos no se vera comprometida en ningún momento y sea seguro. Todo esto se consigue con un certificado de claves públicas para el servidor web.
+	Debido al uso de la cámara del dispositivo, los server workers ( proporcionados por el paquete \textit{@angular/pwa v.0.1101.1}) y un login inicial de usuario (usuario y claves), es de obligado cumplimiento que la página se muestre con el protocolo seguro de transferencia de hipertexto (en inglés, Hypertext Transfer Protocol Secure o HTTPS) para garantizar que la transferencia de datos no se vera comprometida en ningún momento y sea seguro. Este tipo de comunicación segura se consigue con un certificado de claves públicas para el servidor web.
 	
 	En las vistas del cliente diferenciamos dos variantes principales una vez que se hace login: 
 	\begin{itemize}
@@ -481,18 +481,18 @@ Este proyecto gira en torno a la arquitectura software del modelo \texttt{client
 	
 \subsection{Servidor}
 	En el lado del servidor se realiza el desarrollo back-end al completo, desde la recepción de peticiones HTTPS hasta el acceso a datos o la descarga de ellos en formato CSV o PDF.
-	La parte central de este servidor gira en torno a NodeJs y más concretamente en su framework \texttt{Express} \footnote{Express es el framework web más popular de Node, y es la librería subyacente para un gran número de otros frameworks web de Node populares. Proporciona mecanismos para: Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).}  que nos proporciona los mecanismos para poder manejar las peticiones HTTPS (GET, POST, PUT y DELETE) de los distintos usuarios. Una vez recibida una de estas peticiones, por medio del manejador proporcionado por Express realizaremos una u otra acción, entre las principales de login, registro, getEvento entre otros, destacaremos dos:
+	La parte central de este servidor gira en torno a NodeJs, específicamente en su framework \texttt{Express} \footnote{Express es el framework web más popular de Node, y es la librería subyacente para un gran número de otros frameworks web de Node populares. Proporciona mecanismos para: Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).}  que nos proporciona los mecanismos para poder manejar las peticiones HTTPS (GET, POST, PUT y DELETE) de los distintos usuarios. Una vez recibida una de estas peticiones, por medio del manejador proporcionado por Express realizaremos una u otra acción, entre las principales de login, registro, getEvento entre otros. Destacaremos dos:
 	
 \begin{itemize}
 	\item \textbf{/getCreditoEventos}: Esta petición, en concreto, se encarga de recibir como parámetros strings: el nombre, apellidos y el DNI del usuario. Por medio de la pestaña de \textit{certificado} y más concretamente apretando el botón \textit{``Recibir Créditos''} rellena una plantilla PDF suministrada por la URJC donde se adjudican al alumno los créditos correspondientes por asistir a una de estas charlas o seminarios que previamente se apuntó.
 	
 
-	\item \textbf{/zip}: Esta petición solo es posible recibirla cuando es el administrador el que la requiere, se recibe como parámetros dos elementos: Un identificador del evento dentro de la base de datos y el nombre del evento. Esta petición lanzará un script desarrollado en Python llamado createCSV.py. Este script se encargará de crear el CSV con los datos obtenidos de la base de datos y dejarlo en una ruta específica dentro del servidor, donde más tarde se recogerá y se mandara vía HTTPS al usuario administrador.
+	\item \textbf{/zip}: Esta petición solo es posible recibirla cuando es el administrador el que la requiere. Se recibe como parámetros dos elementos: Un identificador del evento dentro de la base de datos y el nombre del evento. Esta petición lanzará un script desarrollado en Python llamado createCSV.py. Este script se encargará de crear el CSV con los datos obtenidos de la base de datos y dejarlo en una ruta específica dentro del servidor, donde más tarde se recogerá y se mandara vía HTTPS al usuario administrador.
 
-Esta petición en concreto tiene dos caminos:
+Esta petición tiene dos caminos:
 \begin{itemize}
-	\item  Si el administrador quiere un evento en concreto, el id del evento corresponderá a su identificador dentro de la base de datos devolverá un CSV que rellenará con los datos obtenidos de la base de datos en función de ese identificador recibido. 
-	\item Si el administrador quiere obtener todos los eventos, el id del evento será 0, cuando obtenemos este identificador el servidor creara un .zip que contendrá varios CSV con los eventos en los que haya más de un alumno inscrito. Estos CSV tendrán el mismo formato y la misma información que el CSV devuelto en el caso anterior.
+	\item  Si el administrador quiere un evento en particular, el ID del evento corresponderá a su identificador dentro de la base de datos. El servidor devolverá un CSV que rellenará con los datos obtenidos de la base de datos en función de ese identificador recibido. 
+	\item Si el administrador quiere obtener todos los eventos, el id del evento será 0. Cuando obtenemos este identificador el servidor creara un .zip que contendrá varios CSV con los eventos en los que haya más de un alumno inscrito. Estos CSV tendrán el mismo formato y la misma información que el CSV devuelto en el caso anterior.
 \end{itemize}
 \end{itemize}
 
@@ -512,13 +512,13 @@ Esta petición en concreto tiene dos caminos:
   	\caption{Modelo Eventos.}\label{fig:mongoDBEventos}
 	\end{figure}
 		\begin{itemize}
-		\item Aula: Nombre correspondiente al aula donde se impartirá la charla o seminario almacenada en el Modelos de datos de \textit{Salas}
-		\item Hora: Hora correspondiente a la que se impartirá la charla o seminario, corresponderá a una hora almacenada en el Modelo de datos de \textit{Horario}
-		\item Nombre\_evento: Nombre correspondiente al Evento que se expondrá a la hora y en el aula especificado en los dos puntos anteriores
-		\item Descripción: Descripción el evento presentado
-		\item Id\_Evento: Identificador interno del evento presentado
-		\item Id\_qr\_evento: Identificador del QR correspondiente al evento presentado
-		\item Id\_usuarios: Array del mode de datos de \textit{Usuarios} donde se especifica los usuarios apuntados al evento presentado
+		\item Aula: Nombre correspondiente al aula donde se impartirá la charla o seminario almacenada en el Modelos de datos de \textit{Salas}.
+		\item Hora: Hora correspondiente a la que se impartirá la charla o seminario, corresponderá a una hora almacenada en el Modelo de datos de \textit{Horario}.
+		\item Nombre\_evento: Nombre correspondiente al Evento que se expondrá a la hora y en el aula especificado en los dos puntos anteriores.
+		\item Descripción: Descripción el evento presentado.
+		\item Id\_Evento: Identificador interno del evento presentado.
+		\item Id\_qr\_evento: Identificador del QR correspondiente al evento presentado.
+		\item Id\_usuarios: Array del mode de datos de \textit{Usuarios} donde se especifica los usuarios apuntados al evento presentado.
 		\end{itemize}
 		
 	\item Usuarios: En este Modelo de datos tendríamos almacenados JSON del con el formato que se aprecia en la figura~\ref{fig:mongoDBUsuarios}:
@@ -528,15 +528,15 @@ Esta petición en concreto tiene dos caminos:
   	\caption{Modelo Usuarios.}\label{fig:mongoDBUsuarios}
 	\end{figure}
 		\begin{itemize}
-		\item Nick: Nombre correspondiente al alumno reconocido internamente en la URJC
-		\item Password: Contraseña encriptada en AES192
-		\item Id\_usuario: Identificador interno del usuario
-		\item Logueado: Indicador true (conectado) o false(desconectado) del usuario
-		\item Nombre\_apellidos: Nombre y apellidos del Usuario
-		\item DNI: DNI del Usuario
+		\item Nick: Nombre correspondiente al alumno reconocido internamente en la URJC.
+		\item Password: Contraseña encriptada en AES192.
+		\item Id\_usuario: Identificador interno del usuario.
+		\item Logueado: Indicador true (conectado) o false(desconectado) del usuario.
+		\item Nombre\_apellidos: Nombre y apellidos del Usuariox.
+		\item DNI: DNI del Usuario.
 		\end{itemize}
 	
-	\item Salas En este Modelo de datos tendríamos almacenados JSON del con el formato que se puede apreciar en la figura~\ref{fig:mongoDBSalas}:
+	\item Salas: En este Modelo de datos tendríamos almacenados JSON del con el formato que se puede apreciar en la figura~\ref{fig:mongoDBSalas}:
 	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=10cm, keepaspectratio]{img/mongoDBSalas.png}
@@ -548,7 +548,7 @@ Esta petición en concreto tiene dos caminos:
 		\item Tam: Tamaño máximo de la sala.
 	\end{itemize}
 	
-	\item Horario: En este Modelo de datos tendríamos almacenados JSON del con el formato de la siguiente figura~\ref{fig:mongoDBHorario}:
+	\item Horario: En este Modelo de datos tendríamos almacenados JSON del con el formato de la figura~\ref{fig:mongoDBHorario}:
 	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=10cm, keepaspectratio]{img/mongoDBHorario.png}
@@ -560,7 +560,7 @@ Esta petición en concreto tiene dos caminos:
 \end{itemize}
 
 \subsection{Registros de Alumnos y Eventos}
-	Este apartado solo será visible por parte el administrador de la aplicación o del docente encargado en gestionar la semana cultural donde se impartan estas charlas y seminarios. Como vimos anteriormente, el administrador tiene la posibilidad de descargarse un archivo en formato CSV (comma-separated values, del inglés valores separados por comas) con toda la información de un Evento o de todos ellos, obteniendo un listado de los alumnos que se han apuntado a un determinado evento y que han validado su asistencia por medio de nuestra aplicación.
+	Este apartado solo será visible por parte el administrador de la aplicación o del docente encargado en gestionar la semana cultural donde se impartan estas charlas y seminarios. Como vimos anteriormente, el administrador tiene la posibilidad de descargarse un archivo en formato CSV (comma-separated values, del inglés valores separados por comas) con toda la información de un Evento o de todos ellos, obteniendo un listado de los alumnos que se han apuntado a una determinada charla y que han validado su asistencia por medio de nuestra aplicación.
 	El formato que tienen estos CSV corresponden a la figura~\ref{fig:CSVAlumnos}:
 	\begin{figure}[h!]
   	\centering
@@ -579,7 +579,7 @@ Esta petición en concreto tiene dos caminos:
 
 \clearpage
 
-	El formato que tendrá el documento para la obtención de los créditos será el indicado en la siguiente figura~\ref{fig:pdfcreditos}:
+	El formato que tendrá el documento para la obtención de los créditos será el indicado en la figura~\ref{fig:pdfcreditos}:
 	
 \begin{figure}
   \centering
@@ -588,11 +588,11 @@ Esta petición en concreto tiene dos caminos:
 \end{figure}
 
 \begin{itemize}
-		\item 1: Nombre del profesor encargado de los seminarios y charlas
+		\item 1: Nombre del profesor encargado de los seminarios y charlas.
 		\item 2: Nombre del alumno al que se le otorgarán los créditos.
-		\item 3: DNI del alumno
-		\item 4: Fechas correspondientes a los días en los que tendrán lugar las charlas o seminarios
-		\item 5: Número de créditos que obtendrá el alumno por asistir a los seminarios
+		\item 3: DNI del alumno.
+		\item 4: Fechas correspondientes a los días en los que tendrán lugar las charlas o seminarios.
+		\item 5: Número de créditos que obtendrá el alumno por asistir a los seminarios.
 		\item 6: Firma del profesor o responsable encargado de otorgar los créditos al alumno.
 		\end{itemize}
 
@@ -610,12 +610,13 @@ Esta petición en concreto tiene dos caminos:
   	\caption{Página Login}\label{fig:principalHome}
 	\end{figure}
 	
-La página de \textit{login} consta de un menú de 'login' donde el usuario ingresará sus credenciales propias de la Universidad Rey Juan Carlos. En esta página destacamos dos puntos claves de por qué esta aplicación es una PWA.
+La página de \textit{login} consta de un menú de inicio de sesión, donde el usuario ingresará sus credenciales propias de la Universidad Rey Juan Carlos. 
+En esta página destacamos dos puntos claves de por qué esta aplicación es una PWA.
 	
-	En primer lugar, tal y como se observa en la figura~\ref{fig:principalHome} el navegador tanto en ordenador como en dispositivos móviles nos da la opción de instalar la aplicación en nuestro dispositivo, creando un acceso directo a ella como si de una aplicación nativa Android (en el caso móvil) o como una extensión Chrome (en el caso de utilizar un navegador Chrome en el ordenador) se tratase.
+	En primer lugar, tal y como se observa en la figura~\ref{fig:principalHome}, el navegador tanto en ordenador como en dispositivos móviles nos da la opción de instalar la aplicación en nuestro dispositivo, creando un acceso directo a ella como si de una aplicación nativa Android (en el caso móvil) o como una extensión Chrome (en el caso de utilizar un navegador Chrome en el ordenador) se tratase.
 
 \clearpage
-	En segundo lugar, como observamos en la figura~\ref{fig:principalWorker} la aplicación dispone también de un \textit{service worker}.
+	En segundo lugar, como observamos en la figura~\ref{fig:principalWorker}, la aplicación dispone también de un \textit{service worker}.
 	
 	\begin{figure}[h!]
   	\centering
@@ -623,14 +624,15 @@ La página de \textit{login} consta de un menú de 'login' donde el usuario ingr
   	\caption{Página Login}\label{fig:principalWorker}
 	\end{figure}
 
-	Un \emph{service worker} es un script que permite interceptar y controlar los requests de la red y el almacenamiento del cache del navegador. Gracias a los \textit{service workers}, los programadores web pueden crear sitios web con una experiencia offline y utilizar la aplicación sin conexión únicamente con las páginas que previamente se hayan guardado en la caché del dispositivo.
+	Un \emph{service worker} es un script
+\footnote{En informática, un script es un término informal que se usa para designar a un programa relativamente simple. } que permite interceptar y controlar los requests de la red y el almacenamiento del cache del navegador. Gracias a los \textit{service workers}, los programadores web pueden crear sitios web con una experiencia offline y utilizar la aplicación sin conexión únicamente con las páginas que previamente se hayan guardado en la caché del dispositivo.
 	
 	Como los \textit{service workers} tienen acceso al manejo de los requests, pueden llegar a ser muy poderosos (y peligrosos), especialmente si son usados con mala intención. Esto es uno de los motivos por lo cuales usar \textit{HTTPS} es muy importante, para prevenir ataques de terceros.
 
 \clearpage
 
 \subsubsection{Usuario}
-	Nada más ingresar en la aplicación con el nombre de usuario y contraseña, cargará la página principal. Durante todas las ventanas de la aplicación dispondremos de un menú, en el que estarán accesibles las 3 páginas principales de nuestra aplicación (1,2,3) y un botón para hacer \textit{logout} (4) de la misma, como observamos en la figura~\ref{fig:menu}:
+	Nada más ingresar en la aplicación con el nombre de usuario y contraseña, se cargará la página principal. Durante todas las ventanas de la aplicación dispondremos de un menú, en el que estarán accesibles las 3 páginas principales de nuestra aplicación (1,2,3) y un botón para hacer \textit{logout} (4) de la misma, como observamos en la figura~\ref{fig:menu}:
 	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/menu.png}
@@ -638,7 +640,12 @@ La página de \textit{login} consta de un menú de 'login' donde el usuario ingr
 	\end{figure}
 	
 \begin{enumerate}
-  \item Página principal: En la siguiente vista dispondremos de la información sobre las charlas y seminarios a los que el alumno se inscribió, en el campo \textbf{Título} se describe el título de la charla o seminario, en el campo \textbf{Aula} se informá del aula dentro de la Universidad Rey Juan Carlos donde tendrá lugar la charla, y por último, en el campo \textbf{Hora} se especifica la hora a la que tendrá lugar el evento.
+  \item Página principal: En la siguiente vista dispondremos de la información sobre las charlas y seminarios a los que el alumno se inscribió.
+  \begin{itemize}
+\item En el campo \textbf{Título} se describe el título de la charla o seminario.
+\item eEn el campo \textbf{Aula} se informá del aula dentro de la Universidad Rey Juan Carlos donde tendrá lugar la charla.
+\item En el campo \textbf{Hora} se especifica la hora a la que tendrá lugar el evento.
+\end{itemize}
   
     \begin{figure}[h!]
   	\centering
@@ -648,11 +655,11 @@ La página de \textit{login} consta de un menú de 'login' donde el usuario ingr
 	
   Dentro de cada fila del evento en el que estamos apuntados y tenemos previsto ir aparecerán dos botones: ``Validar'' (1) y ``Desapuntarse'' (2). 
 \begin{itemize}
-  \item El botón validar: Solo estará accesible una vez el evento haya finalizado, para que los alumnos que han podido asistir puedan validar mediante la aplicación que han ido a dicha charla. Una vez validado el evento y habiendo recibido la validación por parte del servidor, debajo del campo aula aparecerá un icono (3) mostrando que la validación se ha desarrollado con normalidad.
+  \item El botón validar: Solo estará accesible una vez el evento haya finalizado, para que los alumnos que han podido asistir puedan validar mediante la aplicación que han ido a dicha charla. Una vez validado el evento y habiendo recibido la comprobación por parte del servidor, debajo del campo aula aparecerá un icono (3) mostrando que la validación se ha desarrollado con normalidad.
   En la siguiente figura~\ref{fig:inicio} podemos observar cada uno de los botones previamente indicados:
 
 
-	Una vez presionemos el botón de validar ya que hemos asistido al evento en cuestión y queremos dar fe de ello, la aplicación nos llevará a la pestaña de validación, figura~\ref{fig:validarQR}
+	Una vez presionemos el botón de validar (ya que hemos asistido al evento en cuestión y queremos dar fe de ello), la aplicación nos llevará a la pestaña de validación, figura~\ref{fig:validarQR}
 	En esta pestaña, la aplicación utilizará la cámara del dispositivo, ya sea un móvil, tablet u ordenador portátil para leer el código QR correspondiente al evento que queremos validar.
 	\begin{figure}[h!]
   	\centering
@@ -660,7 +667,7 @@ La página de \textit{login} consta de un menú de 'login' donde el usuario ingr
   	\caption{Pestaña de validación de QR}\label{fig:validarQR}
 	\end{figure}
 
-Para validar el evento, basta con mostrar un QR valido y la aplicación obtendrá un mensaje de aceptación por parte del servidor, si por el contrario mostramos un QR que no correspondería al QR del evento en cuestión, se nos avisará con un mensaje en la pantalla que el QR proporcionado no es válido. En este caso figura~\ref{fig:validarQRFail}, escaneamos un QR correspondiente al evento del BBVA cuando debería ser el QR del evento Telefónica.
+Para validar el evento, basta con mostrar un QR valido y la aplicación obtendrá un mensaje de aceptación por parte del servidor. Si por el contrario mostramos un QR que no correspondería al QR del evento en cuestión, se nos avisará con un mensaje en la pantalla que el QR proporcionado no es válido. Un ejemplo de este caso puede verse representado en la figura~\ref{fig:validarQRFail}, en el que escaneamos un QR correspondiente al evento del BBVA cuando debería ser el QR del evento Telefónica.
 
 	\begin{figure}[!h]
   	\centering
@@ -672,7 +679,7 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
 \end{itemize}
  
  \vspace{12cm}
-  \item Calendario: En la siguiente vista~\ref{fig:horario} obtenemos un calendario con las principales charlas y seminarios disponibles durante las jornadas habilitadas por la Universidad Rey Juan Carlos. 
+  \item Calendario: En la vista siguiente (ver figura ~\ref{fig:horario}) obtenemos un calendario con las principales charlas y seminarios disponibles durante las jornadas habilitadas por la Universidad Rey Juan Carlos. 
 
 \begin{figure}[h!]
   	\centering
@@ -680,7 +687,7 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
   	\caption{Página de calendario}\label{fig:horario}
 	\end{figure}
   
-  Cada evento ocupa una posición en el calendario, así mismo cada uno de ellos actúa como un botón. Presionando cada uno de ellos nos redirige a la página de información del mismo, figura~\ref{fig:descripEvento}. En esta página de información es donde el alumno se podrá apuntar, dando click en ``Apuntarse'' y expresar su intención de asistir a él. Completando la página hay una pequeña descripción y fotografías del evento que estamos viendo.
+  Cada evento ocupa una posición en el calendario. Así mismo cada uno de ellos actúa como un botón en el que presionándolo nos redirige a la página de información del mismo, como se muestra en la figura~\ref{fig:descripEvento}. En esta página de información es donde el alumno se podrá apuntarse (dando click en ``Apuntarse'') y expresar su intención de asistir el mismo. Completando la página hay una pequeña descripción del evento que estamos viendo.
   
   \begin{figure}[h!]
   	\centering
@@ -738,13 +745,13 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
 	\end{figure}
 
 
-	\item Calendario Eventos: En esta pestaña, figura~\ref{fig:adminCalendario}, el administrador tendrá de forma visual la información de cuando y donde va a tener lugar un evento cualquiera. Seguido del nombre del evento, entre paréntesis, hay un número correspondiente al número de alumnos apuntados a dicho evento.
+	\item Calendario Eventos: En esta pestaña, figura~\ref{fig:adminCalendario}, el administrador tendrá de forma visual la información de cuando y donde va a tener lugar un evento cualquiera. Seguido del nombre del evento. Entre paréntesis, hay un número correspondiente al número de alumnos apuntados a dicho evento.
 	
 	Destacamos varias cosas en esta pestaña: En primer lugar, el botón \textit{``Optimizar''}, este botón envía un mensaje al servidor que lanzará un script de optimizacion programado en Python para reubicar los eventos en horarios y aulas de la forma más óptima posible, más adelante, en el siguiente punto, cuando se explique la parte correspondiente al servidor desarrollaré más su funcionamiento. Este botón modificará la posición de todos o la gran mayoría de los eventos dentro del marco horario mostrado en esta pestaña.
 	
-	Por otro lado, es posible modificar de forma individual un evento, para ello bastará con hacer click sobre él- Toda su información se volcará en los desplegables que se muestran en la parte inferior de la imagen (1), se podrá modificar tanto el aula como las horas que estén disponibles para todos los eventos, en este caso entre las aulas 323, 321, 322 y 324 y en los horarios de 10:00 a 12:00. 
+	Por otro lado, es posible modificar de forma individual un evento. Para ello bastará con hacer click sobre él y toda su información se volcará en los desplegables que se muestran en la parte inferior de la imagen (1), se podrá modificar tanto el aula como las horas que estén disponibles para todos los eventos, en este caso entre las aulas 323, 321, 322 y 324 y en los horarios de 10:00 a 12:00. 
 	
-	Presionando el botón ``Modificar'' las modificaciones que hayamos hecho en los desplegables serán enviadas al servidor y podremos verlas en esta misma vista.
+	Tras presionar el botón ``Modificar'' se enviarán las actualizaciones que hayamos hecho en los desplegables serán enviadas al servidor y podremos verlas en esta misma vista.
 	
 	\begin{figure}[h!]
   	\centering
@@ -778,7 +785,7 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
 
 \subsection{Servidor}
 
-	El servidor está desarrollado en un entorno de trabajo que funciona en tiempo de ejecución, de código abierto y multiplataforma, este entorno es \textit{Node}. Añade un soporte para APIs donde se incluye una comunicación HTTP entre el cliente y él mismo. Por todo esto obtenemos un gran rendimiento de la aplicación y también una gran escalabilidad. Dentro de Node, el framework más usado y que uso en este caso es \textbf{Express} cuya biblioteca se compone de un gran número de framework populares dando mecanismos para el manejo de peticiones HTTP y HTTPS (en mi caso) y mantener así una comunicación segura cliente-servidor. 
+	El servidor está desarrollado en un entorno de trabajo que funciona en tiempo de ejecución, de código abierto y multiplataforma: este entorno es \textit{Node}. Añade un soporte para APIs donde se incluye una comunicación HTTP entre el cliente y él mismo. Por todo esto obtenemos un gran rendimiento de la aplicación y también una gran escalabilidad. Dentro de Node, el framework más usado y que uso en este caso es \textbf{Express}, cuya biblioteca se compone de un gran número de framework populares dando mecanismos para el manejo de peticiones HTTP y HTTPS (en mi caso) y mantener así una comunicación segura cliente-servidor. 
 	Los métodos de comunicación usados en el servidor mediante HTTPS son los típicos usados en este tipo de aplicaciones:
 	\begin{itemize}
   	\item GET: El método GET  solicita una representación de un recurso específico. Las peticiones que usan el método GET sólo deben recuperar datos.
@@ -787,14 +794,14 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
   	\item DELETE: El método DELETE borra un recurso en específico.
 	\end{itemize}
 
-Al margen ya de la parte Node del servidor, destacamos dos programas desarrollados en Python de los que el servidor hace uso cuando el cliente así lo requiere. Destacamos que el único cliente o usuario que puede realizar una petición al servidor y poder lanzar así estos programas es el usuario bajo el Nick de ``admin'', en los siguientes puntos pasaremos a explicar el funcionamientos de dichos programas:
+Al margen ya de la parte Node del servidor, hay dos programas desarrollados en Python de los que el servidor hace uso cuando el cliente así lo requiere. Es importante saber que el único cliente o usuario que puede realizar una petición al servidor y poder lanzar así estos programas es el usuario bajo el Nick de ``admin'', en los siguientes puntos pasaremos a explicar el funcionamientos de dichos programas:
 
 \begin{enumerate}
   	\item CreateCSV.py: Cuando el administrador presiona dentro de la pestaña ``Lista Eventos'' cualquier fila correspondiente a un evento, y dentro de ella el botón ``GenerarCSV'' o bien en la misma pestaña de ``Lista Eventos'' presiona el botón ``Generar PDF Todos'', el servidor dentro de la URL \textit{'/zip/:id\_evento/:nombre\_evento'} recibe la petición del cliente que quiere obtener o bien un CSV o bien un .zip con todos los CSV de los eventos dentro de él. Desde Node se lanza el Python mediante el comando ./createCSV.py -idevento (el parámetro idevento solo se pondrá en el caso en el que se quiera el CSV de un evento en concreto, para obtener el .zip de todos el parámetro se omitirá).
   	
-  	Una vez el programa en Python de createCSV.py ha sido lanzado, pasa a buscar en la base de datos mediante un select de idevento o recorriéndose todos los eventos que haya. Obteniendo así una lista de usuarios asociados al evento, con el campo validado true o false según corresponda para cada uno de los usuarios.
+  	Una vez el programa en Python de createCSV.py ha sido lanzado, pasa a buscar en la base de datos mediante un select de idevento o recorriéndose todos los eventos que haya. Obteniendo así, una lista de usuarios asociados al evento, con el campo validado true o false según corresponda para cada uno de los usuarios.
   	
-  	Cuando se obtiene esta lista y se finaliza la ejecución del select, pasamos a volcar los datos obtenidos en un fichero .CSV. Cuando terminamos de rellenar el fichero, en el caso de querer uno en concreto la ejecución terminaría aquí y sería devuelto el fichero al cliente que solicitó tal acción al servidor, por otro lado, en el caso de querer todos los eventos, se irá completando la acción pasada con todos los eventos en los que haya más de una persona inscrita en él. Cuando termine pasaŕa a crear un .zip con todos estos .CSV creados. Una vez terminado, como en el caso anterior, le será devuelto al cliente un .zip como requirió con su petición inicial.
+  	Cuando se obtiene esta lista y se finaliza la ejecución del select, pasamos a volcar los datos obtenidos en un fichero .CSV. Cuando terminamos de rellenar el fichero, en el caso de querer uno en concreto, la ejecución terminaría aquí y sería devuelto el fichero al cliente que solicitó tal acción al servidor. Por otro lado, en el caso de querer todos los eventos, se irá completando la acción pasada con todos los eventos en los que haya más de una persona inscrita en él. Cuando termine pasaŕa a crear un .zip con todos estos .CSV creados. Una vez terminado, como en el caso anterior, le será devuelto al cliente un .zip como requirió con su petición inicial.
   	
   	La forma en la que el servidor y el cliente están conectados para poder enviar la información en formato .CSV o en formato .ZIP es mediante un \texttt{pipe stream.} 
 \footnote{Una tubería (pipeline o cauce) consiste en una cadena de streams conectados de forma tal que la salida de cada elemento de la cadena es la entrada del próximo. Permiten la comunicación y sincronización entre procesos. Es común el uso de búfer de datos entre elementos consecutivos.}
@@ -808,17 +815,21 @@ Al margen ya de la parte Node del servidor, destacamos dos programas desarrollad
 \end{figure}  	
   	
   	
-  	\item optimizarSalas.py: El siguiente programa se ejecuta cuando el administrador dentro de la pestaña ``Calendario Eventos'' presiona el botón ``Optimizar'', este botón lanza un mensaje a la ruta \textit{'/optimizar'} dentro el endpoint donde está escuchando el servidor, que ejecuta el comando \textit{'./optimizarSalas.py'} lanzando el programa en Python. 
+  	\item optimizarSalas.py: El siguiente programa se ejecuta cuando el administrador dentro de la pestaña ``Calendario Eventos'' presiona el botón ``Optimizar''. Este botón lanza un mensaje a la ruta \textit{'/optimizar'} dentro el endpoint donde está escuchando el servidor, que ejecuta el comando \textit{'./optimizarSalas.py'} lanzando el programa en Python. 
   	
-  	Este programa tiene como objetivo la optimización y reubicación de los eventos en función de los huecos libres que quedan con respecto a la gente que se ha apuntado al evento o quiere asistir y con los huecos libres que quedan en la sala. Funciona de la siguiente manera:
+  	Este programa tiene como objetivo la optimización y reubicación de los eventos en función de los huecos libres que quedan con respecto a la gente que se ha apuntado o quiere asistur al evento, con los huecos libres que quedan en la sala. Funciona de la siguiente manera:
   	
-  	El programa, una vez se ejecuta, lee de la base de datos cada uno de los eventos que están programados que se van a llevar a cabo en los días que transcurran todos ellos, de cada evento obtiene el número de alumnos o personas que están apuntados a él, con este número calcula los huecos libres que tienen en todas las aulas disponibles. Desechando los números negativos que se obtienen cuando van a asistir mas personas que huecos libres tiene la sala.
-  	
-  	Una vez tenemos relacionados todos los eventos con las aulas en función de los huecos libres que hay, el diccionario se ordena de menor a mayor, teniendo prioridad de posición los eventos que tengan menor número de huecos libres en una sala determinada.
+  	El programa, una vez se ejecuta realiza las siguientes acciones:
+  	\begin{itemize}
+\item Lee de la base de datos cada uno de los eventos que están programados que se van a llevar a cabo en los días que transcurran todos ellos.
+\item De cada evento obtiene el número de alumnos o personas que están apuntados a él.
+\item Con este número obtenido en el paso anterior calcula los huecos libres que tienen en todas las aulas disponibles, desechando los números negativos que se obtienen cuando van a asistir mas personas que huecos libres tiene la sala
+\item Una vez tenemos relacionados todos los eventos con las aulas en función de los huecos libres que hay, el diccionario se ordena de menor a mayor, teniendo prioridad de posición los eventos que tengan menor número de huecos libres en una sala determinada.
+\end{itemize}
   	 
-  	La adjudicación del evento a una sala se va realizando de forma ascendente y ordenada hasta que el aula en cuestión complete todas las horas disponibles que tiene dentro de los días que están programados que tengan lugar estos eventos. En nuestro caso, se completara cuando en una sala se haya completado el horario de 10:00 a 12:00, cuando esto ocurre el evento no tendrá la opción de ser colocado en esa aula y pasará a ka siguiente aula donde en función del tamaño, las personas que vayan y el número de huecos disponibles sea el óptimo.
+  	La adjudicación del evento a una sala se va realizando de forma ascendente y ordenada hasta que el aula en cuestión complete todas las horas disponibles que tiene dentro de los días que están programados que tengan lugar estos eventos. En nuestro caso, se completara cuando en una sala se haya completado el horario de 10:00 a 12:00. Cuando esto ocurre el evento no tendrá la opción de ser colocado en esa aula y pasará a la siguiente aula, donde en función del tamaño, las personas que vayan y el número de huecos disponibles sea el óptimo.
   	
-  	Si se llega a el caso en el que un evento no encuentra lugar dentro de ningún aula, este evento quedará excluido y no se le adjudicará ningún aula. El evento se mostrará fuera de la matriz de ``Calendario Eventos''  y tendrá que ser el administrador quien lo posicione a mano, dentro de un aula en concreto teniendo en cuenta la limitación de aforo mediante el botón ``Modificar'' que se encuentra en la parte inferior de la pestaña de ``Calendario Eventos'' y que ya explicamos su funcionamiento en el apartado anterior.
+  	Si se llega a el caso en el que un evento no encuentra lugar dentro de ningún aula, este evento quedará excluido y no se le adjudicará ninguna sala. El evento se mostrará fuera de la matriz de ``Calendario Eventos''  y tendrá que ser el administrador quien lo posicione a mano, dentro de un aula en concreto teniendo en cuenta la limitación de aforo mediante el botón ``Modificar'' que se encuentra en la parte inferior de la pestaña de ``Calendario Eventos'' (ya explicamos su funcionamiento en el apartado anterior).
 	\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -834,7 +845,7 @@ El principal objetivo sobre el que gira este proyecto de fin de grado es el de c
 Para ver que realmente hemos conseguido que nuestra aplicación sea una PWA basta con realizar las siguientes pruebas: 
 
 \section{Server Workers}
-Nuestra aplicación contiene \textit{server workers} que son propios del paquete \textit{@angular/pwa v.0.1101.1} para ello basta con mirar en la consola de desarrolladores de Google Chrome o de cualquier navegador, ir al apartado service workers y ver que está activado y corriendo como observamos en la figura~\ref{fig:serviceWorker}
+Nuestra aplicación contiene \textit{server workers} que son propios del paquete \textit{@angular/pwa v.0.1101.1}. Para ello basta con mirar en la consola de desarrolladores de Google Chrome o de cualquier navegador, ir al apartado service workers y ver que está activado y ejecutándose como observamos en la figura~\ref{fig:serviceWorker}
 	
 	\begin{figure}[h!]
   	\centering
@@ -843,7 +854,7 @@ Nuestra aplicación contiene \textit{server workers} que son propios del paquete
 	\end{figure}
 	  
 \section{Instalación en un dispositivo móvil}
-Podemos instalar nuestra aplicación en un dispositivo móvil como si de una aplicación nativa, Android o IOS, se tratase. Para ello presionamos el botón ``Añadir a pagina de inicio'' una vez que estemos navegando con el dispositivo móvil en cuestión por nuestra aplicación.
+Podemos instalar nuestra aplicación en un dispositivo móvil como si de una aplicación nativa, Android o IOS se tratase. Para ello presionamos el botón ``Añadir a pagina de inicio'' una vez que estemos navegando con el dispositivo móvil en cuestión por nuestra aplicación.
 	Una vez hayamos aceptado y se haya instalado, nuestra aplicación PWA se verá como una aplicación nativa dentro de nuestro dispositivo móvil como podemos observar en la figura~\ref{fig:homeMovil} 
  
 	\begin{figure}[h!]
@@ -866,11 +877,11 @@ Revisando dichos resultados nos damos cuenta que el programa tiene en cuenta los
 
 
 \section{Seguridad}
-Cabe destacar el uso de HTTPS, (HyperText Transfer Protocol Secure, Protocolo de transferencia de hipertexto) es un protocolo de comunicación de Internet que protege la integridad y la confidencialidad de los datos de los usuarios entre sus ordenadores y el sitio web. En este caso al usar partes vulnerables del móvil, como puede se la cámara al leer el código QR o en el momento de autentificar al usuario, es necesario el uso de una capa más de seguridad.
+Cabe destacar el uso de HTTPS, (HyperText Transfer Protocol Secure, Protocolo de transferencia de hipertexto) es un protocolo de comunicación de Internet que protege la integridad y la confidencialidad de los datos de los usuarios entre sus ordenadores y el sitio web. En este caso al usar partes vulnerables del móvil, como puede ser la cámara al leer el código QR o en el momento de autentificar al usuario, es necesario el uso de una capa más de seguridad.
  
  
-En el caso de la autenticación la contraseña del usuario, viaja cifrada dentro de este protocolo y dentro de la base de datos permanece cifrada también por si esta base de datos sufre un ataque no se vea comprometida la seguridad de los usuarios de la aplicación.
-El cifrado de la contraseña es del tipo \textit{AES192} (Advanced Encryption Standard) y para validar este cifrado basta con ver la base de datos y el valor del campo ``password'' dentro de la tabla ``Usuarios'', en este caso para el usuario \textit{david} el valor del campo es: \textit{4232a5e307a998a3ef2601c7d0a4c704}, un valor esperado para este tipo de cifrados.
+En el caso de la autenticación la contraseña del usuario, viaja cifrada dentro de este protocolo y dentro de la base de datos también, por si esta base de datos sufre un ataque no se vea comprometida la seguridad de los usuarios de la aplicación.
+El cifrado de la contraseña es del tipo \textit{AES192} \texttt{(Advanced Encryption Standard)} \footnote{El Advanced Encryption Standard, abreviado AES, se usa con el fin de cifrar datos y de protegerlos contra cualquier acceso ilícito. El método criptográfico emplea para este objetivo una clave de longitud variada y se denomina según la longitud de clave usada AES-128, AES-192 o AES-256.} y para validar este cifrado basta con ver la base de datos y el valor del campo ``password'' dentro de la tabla ``Usuarios'', en este caso para el usuario \textit{david} el valor del campo es: \textit{4232a5e307a998a3ef2601c7d0a4c704}, un valor esperado para este tipo de cifrados.
 
 
 
