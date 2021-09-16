@@ -167,7 +167,7 @@ También a todos los demás profesores que durante todos estos años han contrib
 
 	Este proyecto consiste en el desarrollo de una Aplicación de Web Progresiva (PWA en inglés, \emph{Progressive Web Applications}) que facilite los docentes el proceso de ofrecer a los alumnos los cursos/seminarios y jornadas tecnológicas que se imparten o tienen lugar en la Universidad durante el curso académico.
 	
-	Esta aplicación y todo su desarrollo se enmarca dentro del modelo cliente-servidor, es un modelo de diseño de software en el que las tareas se reparten entre los proveedores (servidores) y los demandantes(clientes). En este caso, un cliente, nuestra PWA desarrollada en este proyecto realiza peticiones al servidor que será el encargado de toda la administración y gestión de los contenidos que contendrá dicha aplicación. Según los tipos de arquitectura de cliente-servidor este proyecto se enmarcaria dentro de la arquitectura de dos capas, esta arquitectura se utiliza para describir los sistemas cliente servidor donde el cliente solicita recursos y el servidor responde directamente a la solicitud con sus propios recursos, esto significa que el servidor no requiere de una aplicación extra para proporcionar parte del servicio.
+	Esta aplicación y todo su desarrollo se enmarca dentro del modelo cliente-servidor. Se trata de un modelo de diseño de software en el que las tareas se reparten entre los proveedores (servidores) y los demandantes (clientes). En este caso, un cliente, nuestra PWA desarrollada en este proyecto, realiza peticiones al servidor que será el encargado de toda la administración y gestión de los contenidos que contendrá dicha aplicación. Según los tipos de arquitectura de cliente-servidor este proyecto se enmarcaría dentro de la arquitectura de dos capas, esta arquitectura se utiliza para describir los sistemas cliente servidor donde el cliente solicita recursos y el servidor responde directamente a la solicitud con sus propios recursos, esto significa que el servidor no requiere de una aplicación extra para proporcionar parte del servicio.
 	
 	Este tipo de modelo presenta una serie de ventajas y desventajas, en cuanto a las ventajas:
 	\begin{itemize}
@@ -184,7 +184,7 @@ También a todos los demás profesores que durante todos estos años han contrib
 \end{itemize}
 	
 
-	Para el desarrollo de la parte servidor se han utilizado diferentes entornos y lenguajes, destacando Python, Node y MongoDB para la gestión y almacenamiento en bases de datos.
+	Para el desarrollo de la parte servidor se han utilizado diferentes entornos y lenguajes, destacando Python, Node.js y MongoDB para la gestión y almacenamiento en bases de datos.
 	
 	Con la creación de esta aplicación se intenta, por el lado docente, buscar una eficiencia a la hora de repartir y adjudicar las distintas aulas de las que se dispone para la realización de los distintos cursos y seminarios, por otro lado, por el lado de los alumnos, se busca tener un entorno de fácil manejo y simpleza a la hora de informarse, apuntarse y obtener los créditos correspondientes de dichos cursos y seminarios.
 
@@ -308,7 +308,7 @@ En enero de 2021 tuve la última reunión para hablar del desarrollo de la aplic
 
 Durante la redacción de esta memoria he recibido numerosos consejos de como debía redactarla, posibles modificaciones o puntos necesarios que no podrían faltar en la memoria para que la aplicación quedara correctamente descrita.
 
-Por último con la memoria terminada, repasando y buscando nuevas optimizaciones de código fuí añadiendo funcionalidades nuevas a la aplicación que entendía que podían ser útiles para el administrador de la misma.
+Por último con la memoria terminada, repasando y buscando nuevas optimizaciones de código fui añadiendo funcionalidades nuevas a la aplicación que entendía que podían ser útiles para el administrador de la misma.
 
 Cuando estaban terminadas las dos partes principales de este TFG, la aplicación propiamente programada y la presente memoria, fue cuando decidí presentar este TFG para su defensa.
 
@@ -385,11 +385,11 @@ Es el paquete principal que usaremos para convertir nuestra aplicación Angular 
 
 \section{Typescript}
 \label{sec:Typescript}
-Typescript~\cite{typescript}  es un superconjunto de JavaScript. Una tecnología es un superconjunto de un lenguaje de programación cuando puede ejecutar programas de la tecnología, Typescript en este caso, y del lenguaje del que es el superconjunto, JavaScript en este mismo ejemplo.
+Typescript~\cite{typescript}  es un superconjunto de JavaScript. Una tecnología es un superconjunto de un lenguaje de programación cuando puede ejecutar programas de la tecnología, TypeScript en este caso, y del lenguaje del que es el superconjunto, JavaScript en este mismo ejemplo.
 
-	Esto permite que se pueda integrar Typescript en proyectos existentes de JavaScript sin tener que reimplementar todo el código del proyecto en Typescript. De hecho, es común que existan proyectos que introduzcan tanto Typescript como JavaScript.
+	Esto permite que se pueda integrar TypeScript en proyectos existentes de JavaScript sin tener que reimplementar todo el código del proyecto en TypeScript. De hecho, es común que existan proyectos que introduzcan tanto TypeScript como JavaScript.
 	
-	La principal característica de Typescript es el tipado estático. Decimos que un lenguaje es de tipado estático cuando no es necesario definir las variables antes de su uso. Esto implica que la tipificación estática tiene que ver con la declaración explícita (o inicialización) de las variables antes de que se empleen.
+	La principal característica de TypeScript es el tipado estático. Decimos que un lenguaje es de tipado estático cuando no es necesario definir las variables antes de su uso. Esto implica que la tipificación estática tiene que ver con la declaración explícita (o inicialización) de las variables antes de que se empleen.
 
 
 \section{HTML}
@@ -405,26 +405,26 @@ CSS~\cite{CSS3} son las siglas de ``Cascading Style Sheets". Es un lenguaje que 
 \section{Bootstrap}
 \label{sec:Bootstrap}
 Bootstrap~\cite{bootstrap} es un framework \texttt{front-end} 
-\footnote{Un framework front-end es una herramienta que se integra con nuestro proyecto web para conseguir que el desarrollo front-end (interfaz, animaciones, ...) sea más fácil, rápido y robusto; convirtiéndolo en una herramienta muy útil para desarrolladores principiantes y programadores con poco tiempo y poca experiencia en ámbitos de diseño}que permite la construcción de páginas web adaptativas. Se trata de un software de código abierto creado en el año 2011 por Mark Otto y Jacob Thornton, empleados de Twitter.
+\footnote{Un framework front-end es una herramienta que se integra con nuestro proyecto web para conseguir que el desarrollo front-end (interfaz, animaciones, entre otros) sea más fácil, rápido y robusto; convirtiéndolo en una herramienta muy útil para desarrolladores principiantes y programadores con poco tiempo y poca experiencia en ámbitos de diseño}que permite la construcción de páginas web adaptativas. Se trata de un software de código abierto creado en el año 2011 por Mark Otto y Jacob Thornton, empleados de Twitter.
 
 	Bootstrap ha evolucionado desde ser un proyecto enteramente basado en CSS hasta incluir múltiples plugins JavaScript e iconos junto con formularios y botones. Presenta una cuadrícula de doce columnas y 940px de ancho.
 
 	La creación de páginas web mediante Bootstrap se simplifica al disponer de elementos pre-definidos fácilmente incluibles en cualquier página web, tales como menús desplegables, botones, iconos, ventanas emergentes, etc.
 
-\section{Node} 
+\section{Node.js} 
 \label{sec:Node}
 	Node.js~\cite{node}  es un entorno JavaScript que nos permite ejecutar en el servidor, de manera asíncrona, con una arquitectura orientada a eventos y basado en el motor V8 de Google.
 	
 	El motor V8 de Google compila JavaScript en código máquina nativo en vez de interpretarlo en el navegador, consiguiendo así una velocidad mucho más alta. Además de la alta velocidad de ejecución, Node.js dispone del Bucle de Eventos (Event Loop), que permitirá gestionar enormes cantidades de clientes de forma asíncrona. Tradicionalmente para trabajar de forma asíncrona, las aplicaciones se valían de la programación basada en hilos (programming threaded applications), pero esto supone la utilización (normalmente ineficaz) de un espacio de memoria que va escalando a medida que la cantidad de clientes conectados a nuestra aplicación aumenta.
 	
-	Node.js resuelve este problema cambiando la manera de realizar las conexiones con el servidor. En vez de generar un nuevo hilo E/S para cada cliente, cada conexión dispara la ejecución de un evento dentro del proceso del motor de Node. De este modo, Node permite que un solo servidor que lo ejecute pueda soportar decenas de miles de conexiones. Por lo tanto, si necesitamos gestionar grandes cantidades de conexiones no tendremos que ampliar el número de servidores.
+	Node.js resuelve este problema cambiando la manera de realizar las conexiones con el servidor. En vez de generar un nuevo hilo E/S para cada cliente, cada conexión dispara la ejecución de un evento dentro del proceso del motor de Node. De este modo, Node.js permite que un solo servidor que lo ejecute pueda soportar decenas de miles de conexiones. Por lo tanto, si necesitamos gestionar grandes cantidades de conexiones no tendremos que ampliar el número de servidores.
 
 	En conclusión: Es una plataforma que agiliza y facilita las conexiones cliente servidor por lo que es una tecnología que avanza muy rápidamente y cada vez está más presente en el mercado.
 
 \section{MongoDB} 
 \label{sec:MongoDB}
 
-Es una de las bases de datos noSQL y orientada a documentos que existen. Esto quiere decir que en lugar de guardar los datos en registros, guarda los datos en documentos. Estos documentos son almacenados en BSON, que es una representación binaria de JSON. Una de las diferencias más importantes con respecto a las bases de datos relacionales es que no es necesario seguir un esquema: Los documentos de una misma colección - concepto similar a una tabla de una base de datos relacional -, pueden tener esquemas diferentes.
+Es una de las bases de datos NoSQL y orientada a documentos que existen. Esto quiere decir que en lugar de guardar los datos en registros, guarda los datos en documentos. Estos documentos son almacenados en BSON, que es una representación binaria de JSON. Una de las diferencias más importantes con respecto a las bases de datos relacionales es que no es necesario seguir un esquema; los documentos de una misma colección --concepto similar a una tabla de una base de datos relacional-- pueden tener esquemas diferentes.
 
 	Aunque se suele decir que las bases de datos NoSQL tienen un ámbito de aplicación reducido, MongoDB~\cite{mongodb} se puede utilizar en muchos de los proyectos que desarrollamos en la actualidad:
 \begin{itemize}
@@ -455,7 +455,7 @@ Python~\cite{Python}  es un lenguaje de \texttt{scripting}
 
 \chapter{Diseño e implementación}
 
-A continuación se detalla el proyecto de Aplicación de Web Progresiva (PWA) del que trata este trabajo de fin de grado
+A continuación se detalla el proyecto de Aplicación de Web Progresiva (PWA) del que trata este trabajo de fin de grado.
 
 \section{Arquitectura general} 
 \label{sec:arquitectura}
@@ -468,7 +468,7 @@ Este proyecto gira en torno a la arquitectura software del modelo \texttt{client
 
  
 \subsection{Cliente}
-	En el lado del cliente tenemos toda la parte desarrollada con Angular, específicamente con el paquete \textit{@angular/pwa v.0.1101.1}. Al tratarse de una PWA y tratar con el framework Bootstrap permite que todas las pantallas de la aplicación sean \texttt{responsive}\footnote{El diseño web adaptable (también diseño web adaptativo o responsivo; este último calco del inglés responsive web design) es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas}, lo que quiere decir que estas pantallas se ajustarán automáticamente a la resolución del dispositivo en el que se muestran. (Centrado principalmente en dispositivos móviles llegándose a asemejar a una app nativa).
+	En el lado del cliente tenemos toda la parte desarrollada con Angular, específicamente con el paquete \textit{@angular/pwa v.0.1101.1}. Al tratarse de una PWA y tratar con el framework Bootstrap permite que todas las pantallas de la aplicación sean \texttt{responsive}\footnote{El diseño web adaptable (también diseño web adaptativo o responsivo; este último calco del inglés responsive web design) es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas}, lo que quiere decir que estas pantallas se ajustarán automáticamente a la resolución del dispositivo en el que se muestran. Esto es, en la parte cliente nuestro diseño está centrado principalmente en dispositivos móviles, llegándose a asemejar a una app nativa.
 	
 	Debido al uso de la cámara del dispositivo, los server workers ( proporcionados por el paquete \textit{@angular/pwa v.0.1101.1}) y un login inicial de usuario (usuario y claves), es de obligado cumplimiento que la página se muestre con el protocolo seguro de transferencia de hipertexto (en inglés, Hypertext Transfer Protocol Secure o HTTPS) para garantizar que la transferencia de datos no se vera comprometida en ningún momento y sea seguro. Este tipo de comunicación segura se consigue con un certificado de claves públicas para el servidor web.
 	
@@ -480,8 +480,8 @@ Este proyecto gira en torno a la arquitectura software del modelo \texttt{client
 
 	
 \subsection{Servidor}
-	En el lado del servidor se realiza el desarrollo back-end al completo, desde la recepción de peticiones HTTPS hasta el acceso a datos o la descarga de ellos en formato CSV o PDF ~\cite{csvreader}.
-	La parte central de este servidor gira en torno a NodeJs, específicamente en su framework \texttt{Express}\footnote{Express es el framework web más popular de Node, y es la librería subyacente para un gran número de otros frameworks web de Node populares. Proporciona mecanismos para: Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).}~\cite{angular}  que nos proporciona los mecanismos para poder manejar las peticiones HTTPS (GET, POST, PUT y DELETE) de los distintos usuarios. Una vez recibida una de estas peticiones, por medio del manejador proporcionado por Express realizaremos una u otra acción, entre las principales de login, registro, getEvento entre otros. Destacaremos dos:
+	En el lado del servidor se realiza el desarrollo back-end al completo, desde la recepción de peticiones HTTPS hasta el acceso a datos o la descarga de ellos en formato CSV (comma-separated values, del inglés valores separados por comas) o PDF ~\cite{csvreader}.
+	La parte central de este servidor gira en torno a Node.js, específicamente en su framework \texttt{Express}\footnote{Express es el framework web más popular de Node.js, y es la librería subyacente para un gran número de otros frameworks web de Node.js populares. Proporciona mecanismos para: Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).}~\cite{angular}  que nos proporciona los mecanismos para poder manejar las peticiones HTTPS (GET, POST, PUT y DELETE) de los distintos usuarios. Una vez recibida una de estas peticiones, por medio del manejador proporcionado por Express realizaremos una u otra acción, entre las principales de login, registro, getEvento entre otros. Destacaremos dos:
 	
 \begin{itemize}
 	\item \textbf{/getCreditoEventos}: Esta petición, en concreto, se encarga de recibir como parámetros strings: el nombre, apellidos y el DNI del usuario. Por medio de la pestaña de \textit{certificado} y más concretamente apretando el botón \textit{``Recibir Créditos''} rellena una plantilla PDF suministrada por la URJC donde se adjudican al alumno los créditos correspondientes por asistir a una de estas charlas o seminarios que previamente se apuntó.
@@ -492,7 +492,7 @@ Este proyecto gira en torno a la arquitectura software del modelo \texttt{client
 Esta petición tiene dos caminos:
 \begin{itemize}
 	\item  Si el administrador quiere un evento en particular, el ID del evento corresponderá a su identificador dentro de la base de datos. El servidor devolverá un CSV que rellenará con los datos obtenidos de la base de datos en función de ese identificador recibido. 
-	\item Si el administrador quiere obtener todos los eventos, el id del evento será 0. Cuando obtenemos este identificador el servidor creara un .zip que contendrá varios CSV con los eventos en los que haya más de un alumno inscrito. Estos CSV tendrán el mismo formato y la misma información que el CSV devuelto en el caso anterior.
+	\item Si el administrador quiere obtener todos los eventos, el id del evento será 0. Cuando obtenemos este identificador el servidor creara un archivo comprimiod (en formato .zip) que contendrá varios CSV con los eventos en los que haya más de un alumno inscrito. Estos CSV tendrán el mismo formato y la misma información que el CSV devuelto en el caso anterior.
 \end{itemize}
 \end{itemize}
 
@@ -505,7 +505,7 @@ Esta petición tiene dos caminos:
 	Para el almacenamiento de las distintas aulas disponibles, los alumnos inscritos y los horarios de las distintas charlas y seminarios tenemos los siguientes modelos de datos almacenados en la base da datos de MongoDB:
 	
 \begin{itemize}
-	\item Eventos: En este Modelo de datos tendríamos almacenados JSON del con el formato que se puede apreciar en la figura~\ref{fig:mongoDBEventos}:
+	\item Eventos: En este modelo de datos tendríamos almacenados JSON del con el formato que se puede apreciar en la figura~\ref{fig:mongoDBEventos}.
 	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=10cm, keepaspectratio]{img/mongoDBEventos.png}
@@ -521,7 +521,7 @@ Esta petición tiene dos caminos:
 		\item Id\_usuarios: Array del mode de datos de \textit{Usuarios} donde se especifica los usuarios apuntados al evento presentado.
 		\end{itemize}
 		
-	\item Usuarios: En este Modelo de datos tendríamos almacenados JSON del con el formato que se aprecia en la figura~\ref{fig:mongoDBUsuarios}:
+	\item Usuarios: En este Modelo de datos tendríamos almacenados JSON del con el formato que se aprecia en la figura~\ref{fig:mongoDBUsuarios}.
 	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=10cm, keepaspectratio]{img/mongoDBUsuarios.png}
@@ -531,12 +531,12 @@ Esta petición tiene dos caminos:
 		\item Nick: Nombre correspondiente al alumno reconocido internamente en la URJC.
 		\item Password: Contraseña encriptada en AES192.
 		\item Id\_usuario: Identificador interno del usuario.
-		\item Logueado: Indicador true (conectado) o false(desconectado) del usuario.
+		\item Logueado: Indicador True (conectado) o False (desconectado) del usuario.
 		\item Nombre\_apellidos: Nombre y apellidos del Usuariox.
 		\item DNI: DNI del Usuario.
 		\end{itemize}
 	
-	\item Salas: En este Modelo de datos tendríamos almacenados JSON del con el formato que se puede apreciar en la figura~\ref{fig:mongoDBSalas}:
+	\item Salas: En este Modelo de datos tendríamos almacenados JSON del con el formato que se puede apreciar en la figura~\ref{fig:mongoDBSalas}.
 	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=10cm, keepaspectratio]{img/mongoDBSalas.png}
@@ -560,8 +560,8 @@ Esta petición tiene dos caminos:
 \end{itemize}
 
 \subsection{Registros de Alumnos y Eventos}
-	Este apartado solo será visible por parte el administrador de la aplicación o del docente encargado en gestionar la semana cultural donde se impartan estas charlas y seminarios. Como vimos anteriormente, el administrador tiene la posibilidad de descargarse un archivo en formato CSV (comma-separated values, del inglés valores separados por comas) con toda la información de un Evento o de todos ellos, obteniendo un listado de los alumnos que se han apuntado a una determinada charla y que han validado su asistencia por medio de nuestra aplicación.
-	El formato que tienen estos CSV corresponden a la figura~\ref{fig:CSVAlumnos}:
+	Este apartado solo será visible por parte el administrador de la aplicación o del docente encargado en gestionar la semana cultural donde se impartan estas charlas y seminarios. Como vimos anteriormente, el administrador tiene la posibilidad de descargarse un archivo en formato CSV con toda la información de un Evento o de todos ellos, obteniendo un listado de los alumnos que se han apuntado a una determinada charla y que han validado su asistencia por medio de nuestra aplicación.
+	El formato que tienen estos CSV corresponden a la figura~\ref{fig:CSVAlumnos}.
 	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=10cm, keepaspectratio]{img/CSVAlumnos.png}
@@ -579,7 +579,7 @@ Esta petición tiene dos caminos:
 
 \clearpage
 
-	El formato que tendrá el documento para la obtención de los créditos será el indicado en la figura~\ref{fig:pdfcreditos}:
+	El formato que tendrá el documento para la obtención de los créditos será el indicado en la figura~\ref{fig:pdfcreditos}.
 	
 \begin{figure}
   \centering
@@ -587,14 +587,14 @@ Esta petición tiene dos caminos:
   \caption{Plantilla PDF créditos.}\label{fig:pdfcreditos}
 \end{figure}
 
-\begin{itemize}
-		\item 1: Nombre del profesor encargado de los seminarios y charlas.
-		\item 2: Nombre del alumno al que se le otorgarán los créditos.
-		\item 3: DNI del alumno.
-		\item 4: Fechas correspondientes a los días en los que tendrán lugar las charlas o seminarios.
-		\item 5: Número de créditos que obtendrá el alumno por asistir a los seminarios.
-		\item 6: Firma del profesor o responsable encargado de otorgar los créditos al alumno.
-		\end{itemize}
+\begin{enumerate}
+		\item Nombre del profesor encargado de los seminarios y charlas.
+		\item Nombre del alumno al que se le otorgarán los créditos.
+		\item DNI del alumno.
+		\item Fechas correspondientes a los días en los que tendrán lugar las charlas o seminarios.
+		\item Número de créditos que obtendrá el alumno por asistir a los seminarios.
+		\item Firma del profesor o responsable encargado de otorgar los créditos al alumno.
+\end{enumerate}
 
 
 \section{Diseño e implementación por funcionalidad } 
@@ -624,8 +624,7 @@ En esta página destacamos dos puntos claves de por qué esta aplicación es una
   	\caption{Página Login}\label{fig:principalWorker}
 	\end{figure}
 
-	Un \emph{service worker} es un script
-\footnote{En informática, un script es un término informal que se usa para designar a un programa relativamente simple. } que permite interceptar y controlar los requests de la red y el almacenamiento del cache del navegador. Gracias a los \textit{service workers}, los programadores web pueden crear sitios web con una experiencia offline y utilizar la aplicación sin conexión únicamente con las páginas que previamente se hayan guardado en la caché del dispositivo.
+	Un \emph{service worker} es un script que permite interceptar y controlar los requests de la red y el almacenamiento del cache del navegador. Gracias a los \textit{service workers}, los programadores web pueden crear sitios web con una experiencia offline y utilizar la aplicación sin conexión únicamente con las páginas que previamente se hayan guardado en la caché del dispositivo.
 	
 	Como los \textit{service workers} tienen acceso al manejo de los requests, pueden llegar a ser muy poderosos (y peligrosos), especialmente si son usados con mala intención. Esto es uno de los motivos por lo cuales usar \textit{HTTPS} es muy importante, para prevenir ataques de terceros.
 
@@ -643,7 +642,7 @@ En esta página destacamos dos puntos claves de por qué esta aplicación es una
   \item Página principal: En la siguiente vista dispondremos de la información sobre las charlas y seminarios a los que el alumno se inscribió.
   \begin{itemize}
 \item En el campo \textbf{Título} se describe el título de la charla o seminario.
-\item eEn el campo \textbf{Aula} se informá del aula dentro de la Universidad Rey Juan Carlos donde tendrá lugar la charla.
+\item En el campo \textbf{Aula} se informa del aula dentro de la Universidad Rey Juan Carlos donde tendrá lugar la charla.
 \item En el campo \textbf{Hora} se especifica la hora a la que tendrá lugar el evento.
 \end{itemize}
   
@@ -659,7 +658,7 @@ En esta página destacamos dos puntos claves de por qué esta aplicación es una
   En la siguiente figura~\ref{fig:inicio} podemos observar cada uno de los botones previamente indicados:
 
 
-	Una vez presionemos el botón de validar (ya que hemos asistido al evento en cuestión y queremos dar fe de ello), la aplicación nos llevará a la pestaña de validación, figura~\ref{fig:validarQR}
+	Una vez presionemos el botón de validar (ya que hemos asistido al evento en cuestión y queremos dar fe de ello), la aplicación nos llevará a la pestaña de validación, figura~\ref{fig:validarQR}.
 	En esta pestaña la aplicación utilizará la cámara del dispositivo, ya sea un móvil, tablet u ordenador portátil para leer el código QR correspondiente al evento que queremos validar.
 	\begin{figure}[h!]
   	\centering
@@ -679,7 +678,7 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
 \end{itemize}
  
  \vspace{12cm}
-  \item Calendario: En la vista siguiente (ver figura ~\ref{fig:horario}) obtenemos un calendario con las principales charlas y seminarios disponibles durante las jornadas habilitadas por la Universidad Rey Juan Carlos. 
+  \item Calendario: En la vista siguiente (ver figura~\ref{fig:horario}) obtenemos un calendario con las principales charlas y seminarios disponibles durante las jornadas habilitadas por la Universidad Rey Juan Carlos. 
 
 \begin{figure}[h!]
   	\centering
@@ -687,7 +686,7 @@ Para validar el evento, basta con mostrar un QR valido y la aplicación obtendr�
   	\caption{Página de calendario}\label{fig:horario}
 	\end{figure}
   
-  Cada evento ocupa una posición en el calendario. Así mismo cada uno de ellos actúa como un botón en el que presionándolo nos redirige a la página de información del mismo, como se muestra en la figura~\ref{fig:descripEvento}. En esta página de información es donde el alumno se podrá apuntarse (dando click en ``Apuntarse'') y expresar su intención de asistir el mismo. Completando la página hay una pequeña descripción del evento que estamos viendo.
+  Cada evento ocupa una posición en el calendario. Así mismo cada uno de ellos actúa como un botón en el que presionándolo nos redirige a la página de información del mismo, como se muestra en la figura~\ref{fig:descripEvento}. En esta página de información es donde el alumno se podrá apuntarse (dando \emph{click} en ``Apuntarse'') y expresar su intención de asistir el mismo. Completando la página hay una pequeña descripción del evento que estamos viendo.
   
   \begin{figure}[h!]
   	\centering
@@ -736,7 +735,7 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
 	\end{figure}
 	
 	 
-	Haciendo click en cada una de las filas correspondientes a cada uno de los eventos, entraremos en una ventana representada en la figura~\ref{fig:adminListaEventoTelefonica}, donde nos informará más detalladamente sobre el evento en cuestión. Con una breve descripción del evento (1), su QR de validación correspondiente (2) y el listado de los usuarios inscritos a él, así como que usuario ha validado o no la asistencia al evento con el campo \textit{``Validado''} true o false (3). Destacamos de esta vista el botón \textit{``Generar CSV''} (4) que descargará en nuestro equipo en formato CSV el mismo listado de usuarios que estamos viendo en esta misma página.
+	Haciendo click en cada una de las filas correspondientes a cada uno de los eventos, entraremos en una ventana representada en la figura~\ref{fig:adminListaEventoTelefonica}, donde nos informará más detalladamente sobre el evento en cuestión. Con una breve descripción del evento (1), su QR de validación correspondiente (2) y el listado de los usuarios inscritos a él, así como que usuario ha validado o no la asistencia al evento con el campo \textit{``Validado''} True o False (3). Destacamos de esta vista el botón \textit{``Generar CSV''} (4) que descargará en nuestro equipo en formato CSV el mismo listado de usuarios que estamos viendo en esta misma página.
 	
 	\begin{figure}[h!]
   	\centering
@@ -747,9 +746,9 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
 
 	\item Calendario Eventos: En esta pestaña, figura~\ref{fig:adminCalendario}, el administrador tendrá de forma visual la información de cuando y donde va a tener lugar un evento cualquiera. Seguido del nombre del evento. Entre paréntesis, hay un número correspondiente al número de alumnos apuntados a dicho evento.
 	
-	Destacamos varias cosas en esta pestaña: En primer lugar, el botón \textit{``Optimizar''}, este botón envía un mensaje al servidor que lanzará un script de optimizacion programado en Python para reubicar los eventos en horarios y aulas de la forma más óptima posible, más adelante, en el siguiente punto, cuando se explique la parte correspondiente al servidor desarrollaré más su funcionamiento. Este botón modificará la posición de todos o la gran mayoría de los eventos dentro del marco horario mostrado en esta pestaña.
+	Destacamos varias cosas en esta pestaña: En primer lugar, el botón \textit{``Optimizar''}. Este botón envía un mensaje al servidor que lanzará un script\footnote{En informática, un script es un término informal que se usa para designar a un programa relativamente simple.} de optimización programado en Python para reubicar los eventos en horarios y aulas de la forma más óptima posible, más adelante, en el siguiente punto, cuando se explique la parte correspondiente al servidor desarrollaré más su funcionamiento. Este botón modificará la posición de todos o la gran mayoría de los eventos dentro del marco horario mostrado en esta pestaña.
 	
-	Por otro lado, es posible modificar de forma individual un evento. Para ello bastará con hacer click sobre él y toda su información se volcará en los desplegables que se muestran en la parte inferior de la imagen (1), se podrá modificar tanto el aula como las horas que estén disponibles para todos los eventos, en este caso entre las aulas 323, 321, 322 y 324 y en los horarios de 10:00 a 12:00. 
+	Por otro lado, es posible modificar de forma individual un evento. Para ello bastará con hacer click sobre él y toda su información se volcará en los desplegables que se muestran en la parte inferior de la Figura~\ref{fig:adminCalendario}, se podrá modificar tanto el aula como las horas que estén disponibles para todos los eventos, en este caso entre las aulas 323, 321, 322 y 324 y en los horarios de 10:00 a 12:00. 
 	
 	Tras presionar el botón ``Modificar'' se enviarán las actualizaciones que hayamos hecho en los desplegables serán enviadas al servidor y podremos verlas en esta misma vista.
 	
@@ -778,14 +777,14 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
   			\item El nombre de las diferentes charlas propuestas y el número de alumnos que han asistido a ellas
 		\end{itemize}
 		
-	Esta información es muy valiosa a la hora de sacar una estadística completa de lo que están siendo las jornadas culturales a tiempo real y permiten mostrar el interés que están provocando en los alumnos de la universidad.
+	Esta información es muy valiosa a la hora de sacar una estadística completa de lo que están siendo las jornadas culturales en tiempo real y permiten mostrar el interés que están provocando en los alumnos de la universidad.
 
   
 \end{enumerate}
 
 \subsection{Servidor}
 
-	El servidor está desarrollado en un entorno de trabajo que funciona en tiempo de ejecución, de código abierto y multiplataforma: este entorno es \textit{Node}. Añade un soporte para APIs donde se incluye una comunicación HTTP entre el cliente y él mismo. Por todo esto obtenemos un gran rendimiento de la aplicación y también una gran escalabilidad. Dentro de Node, el framework más usado y que uso en este caso es \textbf{Express}, cuya biblioteca se compone de un gran número de framework populares dando mecanismos para el manejo de peticiones HTTP y HTTPS (en mi caso) y mantener así una comunicación segura cliente-servidor. 
+	El servidor está desarrollado en un entorno de trabajo que funciona en tiempo de ejecución, de código abierto y multiplataforma: este entorno es \textit{Node.js}. Añade un soporte para APIs donde se incluye una comunicación HTTP entre el cliente y él mismo. Por todo esto obtenemos un gran rendimiento de la aplicación y también una gran escalabilidad. Dentro de Node.js, el framework más usado y que uso en este caso es \textbf{Express}, cuya biblioteca se compone de un gran número de framework populares dando mecanismos para el manejo de peticiones HTTP y HTTPS (en mi caso) y mantener así una comunicación segura cliente-servidor. 
 	Los métodos de comunicación usados en el servidor mediante HTTPS son los típicos usados en este tipo de aplicaciones:
 	\begin{itemize}
   	\item GET: El método GET  solicita una representación de un recurso específico. Las peticiones que usan el método GET sólo deben recuperar datos.
@@ -794,17 +793,17 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
   	\item DELETE: El método DELETE borra un recurso en específico.
 	\end{itemize}
 
-Al margen ya de la parte Node del servidor, hay dos programas desarrollados en Python de los que el servidor hace uso cuando el cliente así lo requiere. Es importante saber que el único cliente o usuario que puede realizar una petición al servidor y poder lanzar así estos programas es el usuario bajo el Nick de ``admin'', en los siguientes puntos pasaremos a explicar el funcionamientos de dichos programas:
+Al margen ya de la parte Node.js del servidor, hay dos programas desarrollados en Python de los que el servidor hace uso cuando el cliente así lo requiere. Es importante saber que el único cliente o usuario que puede realizar una petición al servidor y poder lanzar así estos programas es el usuario bajo el nick de ``admin'', en los siguientes puntos pasaremos a explicar el funcionamientos de dichos programas:
 
 \begin{enumerate}
-  	\item CreateCSV.py: Cuando el administrador presiona dentro de la pestaña ``Lista Eventos'' cualquier fila correspondiente a un evento, y dentro de ella el botón ``GenerarCSV'' o bien en la misma pestaña de ``Lista Eventos'' presiona el botón ``Generar PDF Todos'', el servidor dentro de la URL \textit{'/zip/:id\_evento/:nombre\_evento'} recibe la petición del cliente que quiere obtener o bien un CSV o bien un .zip con todos los CSV de los eventos dentro de él. Desde Node se lanza el Python mediante el comando ./createCSV.py -idevento (el parámetro idevento solo se pondrá en el caso en el que se quiera el CSV de un evento en concreto, para obtener el .zip de todos el parámetro se omitirá).
+  	\item CreateCSV.py: Cuando el administrador presiona dentro de la pestaña ``Lista Eventos'' cualquier fila correspondiente a un evento, y dentro de ella el botón ``GenerarCSV'' o bien en la misma pestaña de ``Lista Eventos'' presiona el botón ``Generar PDF Todos'', el servidor dentro de la URL \textit{'/zip/:id\_evento/:nombre\_evento'} recibe la petición del cliente que quiere obtener o bien un CSV o bien un .zip con todos los CSV de los eventos dentro de él. Desde Node.js se lanza Python mediante el comando ./createCSV.py -idevento (el parámetro idevento solo se pondrá en el caso en el que se quiera el CSV de un evento en concreto, para obtener el .zip de todos el parámetro se omitirá).
   	
-  	Una vez el programa en Python de createCSV.py ha sido lanzado, pasa a buscar en la base de datos mediante un select de idevento o recorriéndose todos los eventos que haya. Obteniendo así, una lista de usuarios asociados al evento, con el campo validado true o false según corresponda para cada uno de los usuarios.
+  	Una vez el programa en Python de createCSV.py ha sido lanzado, pasa a buscar en la base de datos mediante un SELECT de idevento o recorriéndose todos los eventos que haya. Obteniendo así, una lista de usuarios asociados al evento, con el campo validado True o False según corresponda para cada uno de los usuarios.
   	
-  	Cuando se obtiene esta lista y se finaliza la ejecución del select, pasamos a volcar los datos obtenidos en un fichero .CSV. Cuando terminamos de rellenar el fichero, en el caso de querer uno en concreto, la ejecución terminaría aquí y sería devuelto el fichero al cliente que solicitó tal acción al servidor. Por otro lado, en el caso de querer todos los eventos, se irá completando la acción pasada con todos los eventos en los que haya más de una persona inscrita en él. Cuando termine pasaŕa a crear un .zip con todos estos .CSV creados. Una vez terminado, como en el caso anterior, le será devuelto al cliente un .zip como requirió con su petición inicial.
+  	Cuando se obtiene esta lista y se finaliza la ejecución del SELECT, pasamos a volcar los datos obtenidos en un fichero .CSV. Cuando terminamos de rellenar el fichero, en el caso de querer uno en concreto, la ejecución terminaría aquí y sería devuelto el fichero al cliente que solicitó tal acción al servidor. Por otro lado, en el caso de querer todos los eventos, se irá completando la acción pasada con todos los eventos en los que haya más de una persona inscrita en él. Cuando termine pasaŕa a crear un .zip con todos estos .CSV creados. Una vez terminado, como en el caso anterior, le será devuelto al cliente un .zip como requirió con su petición inicial.
   	
   	La forma en la que el servidor y el cliente están conectados para poder enviar la información en formato .CSV o en formato .ZIP es mediante un \texttt{pipe stream.} 
-\footnote{Una tubería (pipeline o cauce) consiste en una cadena de streams conectados de forma tal que la salida de cada elemento de la cadena es la entrada del próximo. Permiten la comunicación y sincronización entre procesos. Es común el uso de búfer de datos entre elementos consecutivos.}
+\footnote{Una tubería (pipeline o cauce) consiste en una cadena de streams conectados de forma tal que la salida de cada elemento de la cadena es la entrada del próximo. Permiten la comunicación y sincronización entre procesos. Es común el uso de buffer de datos entre elementos consecutivos.}
   	
   	La funcionalidad y el esquema de dicho funcionamiento quedan representadas en la figura~\ref{fig:createCSV}.
 
@@ -817,7 +816,7 @@ Al margen ya de la parte Node del servidor, hay dos programas desarrollados en P
   	
   	\item optimizarSalas.py: El siguiente programa se ejecuta cuando el administrador dentro de la pestaña ``Calendario Eventos'' presiona el botón ``Optimizar''. Este botón lanza un mensaje a la ruta \textit{'/optimizar'} dentro el endpoint donde está escuchando el servidor, que ejecuta el comando \textit{'./optimizarSalas.py'} lanzando el programa en Python. 
   	
-  	Este programa tiene como objetivo la optimización y reubicación de los eventos en función de los huecos libres que quedan con respecto a la gente que se ha apuntado o quiere asistur al evento, con los huecos libres que quedan en la sala. Funciona de la siguiente manera:
+  	Este programa tiene como objetivo la optimización y reubicación de los eventos en función de los huecos libres que quedan con respecto a la gente que se ha apuntado o quiere asistir al evento, con los huecos libres que quedan en la sala. Funciona de la siguiente manera:
   	
   	El programa, una vez se ejecuta realiza las siguientes acciones:
   	\begin{itemize}
@@ -845,7 +844,7 @@ El principal objetivo sobre el que gira este proyecto de fin de grado es el de c
 Para ver que realmente hemos conseguido que nuestra aplicación sea una PWA basta con realizar las siguientes pruebas: 
 
 \section{Server Workers}
-Nuestra aplicación contiene \textit{server workers} que son propios del paquete \textit{@angular/pwa v.0.1101.1}. Para ello basta con mirar en la consola de desarrolladores de Google Chrome o de cualquier navegador, ir al apartado service workers y ver que está activado y ejecutándose como observamos en la figura~\ref{fig:serviceWorker}
+Nuestra aplicación contiene \textit{server workers} que son propios del paquete \textit{@angular/pwa v.0.1101.1}. Para ello basta con mirar en la consola de desarrolladores de Google Chrome o de cualquier navegador, ir al apartado service workers y ver que está activado y ejecutándose como observamos en la figura~\ref{fig:serviceWorker}.
 	
 	\begin{figure}[h!]
   	\centering
@@ -855,7 +854,7 @@ Nuestra aplicación contiene \textit{server workers} que son propios del paquete
 	  
 \section{Instalación en un dispositivo móvil}
 Podemos instalar nuestra aplicación en un dispositivo móvil como si de una aplicación nativa, Android o IOS se tratase. Para ello presionamos el botón ``Añadir a pagina de inicio'' una vez que estemos navegando con el dispositivo móvil en cuestión por nuestra aplicación.
-	Una vez hayamos aceptado y se haya instalado, nuestra aplicación PWA se verá como una aplicación nativa dentro de nuestro dispositivo móvil como podemos observar en la figura~\ref{fig:homeMovil} 
+	Una vez hayamos aceptado y se haya instalado, nuestra aplicación PWA se verá como una aplicación nativa dentro de nuestro dispositivo móvil como podemos observar en la figura~\ref{fig:homeMovil}.
  
 	\begin{figure}[h!]
   	\centering
@@ -865,12 +864,12 @@ Podemos instalar nuestra aplicación en un dispositivo móvil como si de una apl
 	\end{figure} 
  
 \section{Optimización}
-En cuanto a la parte del servidor, un punto importante a tener en cuenta sobre la validación del proyecto y el buen funcionamiento de este es que el Python encargado de optimizar las salas en función al número de alumnos apuntados y al número de huecos disponibles funcione correctamente. Para ello podemos lanzar manualmente el propio Python encargado de ello con el comando \textit{python optimizarSalas.py} obtendríamos un resultado como vemos a continuación en la figura~\ref{fig:terminalOptimizar}:
+En cuanto a la parte del servidor, un punto importante a tener en cuenta sobre la validación del proyecto y el buen funcionamiento de este es que Python el encargado de optimizar las salas en función al número de alumnos apuntados y al número de huecos disponibles funcione correctamente. Para ello podemos lanzar manualmente el propio Python encargado de ello con el comando \textit{python optimizarSalas.py} obtendríamos un resultado como vemos a continuación en la figura~\ref{fig:terminalOptimizar}.
  
  \begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/terminalOptimizar.png}
-  	\caption{Salida tras ejecutar python optimizarSalas.py}\label{fig:terminalOptimizar}
+  	\caption{Salida tras ejecutar Python optimizarSalas.py}\label{fig:terminalOptimizar}
 	\end{figure}
  
 Revisando dichos resultados nos damos cuenta que el programa tiene en cuenta los huecos libres de las aulas, el tamaño de la misma y los usuarios inscritos optimizando su distribución.
@@ -898,7 +897,7 @@ El presente proyecto pretendía ofrecer una herramienta de gestión y administra
 La aplicación desarrollada en este proyecto pretende abordar y resolver los objetivos descritos en el punto 2, donde hemos obtenido los siguientes resultados:
 
 \begin{itemize}
-  \item Hemos conseguido, mediante un script desarrollado en python, automatizar el proceso de reparto de las clases/horas para las distintas charlas y seminarios en función de los alumnos que se apuntaron a ellas. Este era un objetivo primordial cuando se abordó este TFG, ya que con la automatización de este proceso le quitamos mucha carga de trabajo al encargado de tal función, en este caso un docente de la universidad.
+  \item Hemos conseguido, mediante un script desarrollado en Python, automatizar el proceso de reparto de las clases/horas para las distintas charlas y seminarios en función de los alumnos que se apuntaron a ellas. Este era un objetivo primordial cuando se abordó este TFG, ya que con la automatización de este proceso le quitamos mucha carga de trabajo al encargado de tal función, en este caso un docente de la universidad.
   
   \item La aplicación está capacitada para crear informes, mediante archivos CSV, sobre los alumnos que se han apuntado y han asistido a cada una de las charlas, estos informes serán muy valiosos tanto para la universidad como para las propias empresas que impartirán estas charlas para así poder enfocarlas en una determinada dirección logrando así llamar más la atención de los alumnos y conseguir levantar un interés mayor en ellos.
    
@@ -925,7 +924,7 @@ En cuanto a conocimientos y habilidades obtenidas durante todo el Grado de Ingen
 \begin{enumerate}
   \item Todo lo relacionado con Web (HTML, CSS y JavaScript) en la Asignatura de \textit{Aplicaciones Telemáticas} con los profesores Jesús M. González Barahona y Gregorio Robles Martínez.
   \item Seguridad Web con la asignatura \textit{Seguridad en redes de Ordenadores} con el profesor Enrique Soriano.
-  \item Parte back con el lenguaje de programación Python en la asignatura de \textit{Laboratorio de Administración y Gestión de Redes y Sistemas} con el profesor Miguel Ortuño
+  \item Parte back con el lenguaje de programación Python en la asignatura de \textit{Laboratorio de Administración y Gestión de Redes y Sistemas} con el profesor Miguel Ortuño.
   \item Por último destacaría todo mi paso general por la carrera ya que de una u otra manera he ido adquiriendo conceptos, conocimientos, habilidades y el manejo de distintas herramientas en todas las asignaturas en mayor o menor medida.
 \end{enumerate}
 
@@ -936,13 +935,13 @@ En cuanto a conocimientos y habilidades obtenidas durante todo el Grado de Ingen
 Con este TFG he podido aprender y adquirir conocimientos que si bien en las distintas asignaturas de la universidad he podido tener la primera toma de contacto, aquí he podido desarrollarlos a unos puntos claramente diferenciados:
 
 \begin{enumerate}
-  \item Desarrollo Web: Es quizás el punto más importante de todos, la aplicación aún siendo híbrida y teniendo la capacidad de ser instalada en un dispositivo móvil, en esencia, es una aplicación Web desarrollada en Angular que por medio de un módulo le permite ser una aplicación híbrida. Ésta tecnología en desarrollo web no llegamos a impartirla del todo en la universidad, por lo que por medio de este TFG he teniendo que aprender a manejarla de principio a fin, con todo lo que ello conlleva.
+  \item Desarrollo Web: Se trata quizás del punto más importante de todos. La aplicación aún siendo híbrida y teniendo la capacidad de ser instalada en un dispositivo móvil, en esencia, es una aplicación Web desarrollada en Angular que por medio de un módulo le permite ser una aplicación híbrida. Ésta tecnología en desarrollo web no llegamos a impartirla del todo en la universidad, por lo que por medio de este TFG he teniendo que aprender a manejarla de principio a fin, con todo lo que ello conlleva.
   
   \item PWA: Al inicio de este proyecto, cuando tuve la primera reunión con Gregorio, no tenia demasiado conocimientos sobre las aplicaciones híbridas, Gregorio insistió mucho en que la aplicación tendría que poder instalarse en cualquier dispositivo móvil, fue ahí cuando descubrí este tipo de aplicaciones y todos los requisitos que deben cumplir las aplicaciones Angular para poder ser una aplicación de este tipo.
   
 	\item Módulos Angular, SSL y automatización: Para poder tener una aplicación funcional, de fácil manejo y con un hilo de ejecución automatizado ha sido necesario entender el manejo de estos tres puntos principales. En cuanto a los módulos de angular he tenido que investigar, aprender e integrar en la aplicación módulos como el lector de QR y generador de QR, unos módulos que tienen gran proyección de futuro y en los que su uso en el futuro será mas que necesario.
 	
-	Automatización de todo el back de la aplicación con bibliotecas en python, con consultas a bases de datos y generador de documentos y estadísticas en función de los resultados obtenidos. En cuanto al lenguaje Python tenia una base muy sólida en el, no obstante he tenido que aprender y estudiar cada biblioteca utilizada para entender su funcionamiento y poder integrarla satisfactoriamente en este proyecto.
+	Automatización de todo el back de la aplicación con bibliotecas en Python, con consultas a bases de datos y generador de documentos y estadísticas en función de los resultados obtenidos. En cuanto al lenguaje Python tenia una base muy sólida en el, no obstante he tenido que aprender y estudiar cada biblioteca utilizada para entender su funcionamiento y poder integrarla satisfactoriamente en este proyecto.
 	
 	FIXME: la siguiente frase es muy compleja; reescribir. En cuanto a la seguridad, es la base de la aplicación, para poder desarrollar una PWA y tener acceso a elementos del móvil, cámara en este caso, la aplicación tiene que estar respaldada con una cierta seguridad, todo esto se consigue con herramientas criptográficas de seguridad, con sus determinadas claves públicas y privadas las que te permiten obtener una aplicación web bajo HTTPS. En cuanto a este tipo de seguridad en la carrera he tenido la oportunidad de adquirir unos conocimiento básicos sobre estos conceptos, no obstante, a lo largo de este TFG me he topado con distintos errores, problemas y puntos que tenia que resolver para poder obtener una  aplicación totalmente funcional.
 	
@@ -989,7 +988,7 @@ http-server -p 8080 -c-1 ~/dist/TFGDavid
 	node app.js
 	\end{verbatim}
 
-En el caso de querer lanzar el python de optimizarSalas o createCSV
+En el caso de querer lanzar el programa Python de optimizarSalas o createCSV
 	\begin{verbatim}
 	python optimizarSalas.py o python createCSV.py
 	\end{verbatim}
