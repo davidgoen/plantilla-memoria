@@ -165,28 +165,29 @@ También a todos los demás profesores que durante todos estos años han contrib
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
-	Este proyecto consiste en el desarrollo de una Aplicación de Web Progresiva (PWA en inglés, \emph{Progressive Web Applications}) que facilite los docentes el proceso de ofrecer a los alumnos los cursos/seminarios y jornadas tecnológicas que se imparten o tienen lugar en la Universidad durante el curso académico.
+	Este proyecto consiste en el desarrollo de una Aplicación de Web Progresiva (PWA en inglés, \emph{Progressive Web Applications}) que facilite a los docentes el proceso de ofrecer a los alumnos los cursos/seminarios y jornadas tecnológicas que se imparten o tienen lugar en la Universidad durante el curso académico.
+
+	Con la creación de esta aplicación se intenta, por el lado docente, buscar una eficiencia a la hora de repartir y adjudicar las distintas aulas de las que se dispone para la realización de los distintos cursos y seminarios, por otro lado, por el lado de los alumnos, se busca tener un entorno de fácil manejo y simpleza a la hora de informarse, apuntarse y obtener los créditos correspondientes de dichos cursos y seminarios.
 	
 	Esta aplicación y todo su desarrollo se enmarca dentro del modelo cliente-servidor. Se trata de un modelo de diseño de software en el que las tareas se reparten entre los proveedores (servidores) y los demandantes (clientes). En este caso, un cliente, nuestra PWA desarrollada en este proyecto, realiza peticiones al servidor que será el encargado de toda la administración y gestión de los contenidos que contendrá dicha aplicación. Según los tipos de arquitectura de cliente-servidor este proyecto se enmarcaría dentro de la arquitectura de dos capas, esta arquitectura se utiliza para describir los sistemas cliente servidor donde el cliente solicita recursos y el servidor responde directamente a la solicitud con sus propios recursos, esto significa que el servidor no requiere de una aplicación extra para proporcionar parte del servicio.
 	
-	Este tipo de modelo presenta una serie de ventajas y desventajas, en cuanto a las ventajas:
-	\begin{itemize}
-  \item Administración centrada en el servidor. Los clientes tienen poca trascendencia en el esquema y sus necesidades de administración son menores.
-  \item Centralización de los recursos. Los recursos comunes a todos los usuarios se administran en el servidor. Así se evitan situaciones como la redundancia o inconsistencia de información en las bases de datos.
-  \item Mejora de la seguridad. Al disponer de un mecanismo central de autenticación, las posibilidades de acceso indebido se reducen considerablemente.
-  \item Escalabilidad de la instalación. Se pueden añadir o suprimir clientes sin que el funcionamiento de la red se vea afectado.
-\end{itemize}
-
-	Y por otro lado los siguientes inconvenientes:
-	\begin{itemize}
-  \item Coste elevado. Tanto la instalación como el mantenimiento son más elevados debido al perfil muy técnico del lado servidor.
-  \item Dependencia del servidor. Toda la red está construida al rededor del servidor y si éste deja de funcionar o lo hace con un rendimiento inadecuado, afectará a toda la infraestructura.
-\end{itemize}
+%	Este tipo de modelo presenta una serie de ventajas y desventajas, en cuanto a las ventajas:
+%	\begin{itemize}
+%  \item Administración centrada en el servidor. Los clientes tienen poca trascendencia en el esquema y sus necesidades de administración son menores.
+%  \item Centralización de los recursos. Los recursos comunes a todos los usuarios se administran en el servidor. Así se evitan situaciones como la redundancia o inconsistencia %de información en las bases de datos.
+%  \item Mejora de la seguridad. Al disponer de un mecanismo central de autenticación, las posibilidades de acceso indebido se reducen considerablemente.
+%  \item Escalabilidad de la instalación. Se pueden añadir o suprimir clientes sin que el funcionamiento de la red se vea afectado.
+%\end{itemize}
+%
+%	Y por otro lado los siguientes inconvenientes:
+%	\begin{itemize}
+%  \item Coste elevado. Tanto la instalación como el mantenimiento son más elevados debido al perfil muy técnico del lado servidor.
+%  \item Dependencia del servidor. Toda la red está construida al rededor del servidor y si éste deja de funcionar o lo hace con un rendimiento inadecuado, afectará a toda la infraestructura.
+%\end{itemize}
 	
 
 	Para el desarrollo de la parte servidor se han utilizado diferentes entornos y lenguajes, destacando Python, Node.js y MongoDB para la gestión y almacenamiento en bases de datos.
 	
-	Con la creación de esta aplicación se intenta, por el lado docente, buscar una eficiencia a la hora de repartir y adjudicar las distintas aulas de las que se dispone para la realización de los distintos cursos y seminarios, por otro lado, por el lado de los alumnos, se busca tener un entorno de fácil manejo y simpleza a la hora de informarse, apuntarse y obtener los créditos correspondientes de dichos cursos y seminarios.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen en inglés
@@ -197,26 +198,28 @@ También a todos los demás profesores que durante todos estos años han contrib
 
 	This project consists of the development of a Progressive Web Application (PWA in English, \ emph {Progressive Web Applications}) that facilitates teachers the process of offering students courses / seminars and technological conferences that are taught or take place in the University during the academic year.
 
+	With the creation of this application, an attempt is made, on the teaching side, to seek efficiency when it comes to distributing and allocating the different classrooms that are available for the different courses and seminars, on the other hand, on the side of The students seek to have an environment of easy handling and simplicity when it comes to information, signing up and obtaining the corresponding credits of said courses and seminars.
+
+
 	This application and all its development is framed within the client-server model, it is a software design model in which the tasks are shared between the providers (servers) and the applicants (clients). In this case, a client, our PWA developed in this project, makes requests to the server that will be in charge of all the administration and management of the content that said application will contain. According to the types of client-server architecture, this project would be framed within a two-tier architecture, this architecture is used to describe client-server systems where the client requests resources and the server responds directly to the request with its own resources, this it means that the server does not require an extra application to provide part of the service.
 	
-	This type of model has a number of advantages and disadvantages, in terms of advantages:
-	\begin{itemize}
-  	\item Server-centric administration. Clients are of little consequence in the scheme and their management needs are less.
-  	\item Centralization of resources. The resources common to all users are managed on the server. In this way, situations such as redundancy or inconsistency of information in the databases are avoided.
-  	\item Improved security. By having a central authentication mechanism, the chances of improper access are greatly reduced.
-  	\item Scalability of the installation. Clients can be added or deleted without affecting the operation of the network.
-	\end{itemize}
-	
-	And on the other hand the following drawbacks:
-	\begin{itemize}
-  	\item High cost. Both installation and maintenance are higher due to the highly technical profile on the server side.
-  	\item Server dependency. The entire network is built around the server and if it stops working or does so with inadequate performance, it will affect the entire infrastructure.
-	\end{itemize}
+%	This type of model has a number of advantages and disadvantages, in terms of advantages:
+%	\begin{itemize}
+ % 	\item Server-centric administration. Clients are of little consequence in the scheme and their management needs are less.
+  %	\item Centralization of resources. The resources common to all users are managed on the server. In this way, situations such as redundancy or inconsistency of information in the databases are avoided.
+  	%\item Improved security. By having a central authentication mechanism, the chances of improper access are greatly reduced.
+%  	\item Scalability of the installation. Clients can be added or deleted without affecting the operation of the network.
+%	\end{itemize}
+%	
+%	And on the other hand the following drawbacks:
+%	\begin{itemize}
+ % 	\item High cost. Both installation and maintenance are higher due to the highly technical profile on the server side.
+%  	\item Server dependency. The entire network is built around the server and if it stops working or does so with inadequate performance, it will affect the entire infrastructure.
+%	\end{itemize}
 
 
 	For the development of the server part, different environments and languages have been used, highlighting Python, Node and MongoDB for management and storage in databases.
 
-	With the creation of this application, an attempt is made, on the teaching side, to seek efficiency when it comes to distributing and allocating the different classrooms that are available for the different courses and seminars, on the other hand, on the side of The students seek to have an environment of easy handling and simplicity when it comes to information, signing up and obtaining the corresponding credits of said courses and seminars.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -250,7 +253,7 @@ También a todos los demás profesores que durante todos estos años han contrib
 \label{sec:intro} % etiqueta para poder referenciar luego en el texto con~\ref{sec:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
 
-En el presente trabajo consta la realización de una aplicación web progresiva (PWA) que ayudará y facilitara a los docentes el proceso de ofrecer a los alumnos los cursos/seminarios y jornadas tecnológicas que se impartirán en la Universidad durante el curso.
+Este trabajo consiste en la creación de una aplicación web progresiva (PWA) que ayudará y facilitará a los docentes el proceso de ofrecer a los alumnos los cursos/seminarios y jornadas tecnológicas que se imparten en la Universidad durante el curso.
 
 
 \section{Contexto}
@@ -259,11 +262,11 @@ La herramienta propuesta en este TFG nace de la necesidad por parte de la Univer
 
 Está principalmente orientada hacia los alumnos, que son en definitiva las personas que más uso harán de la misma. En cuanto a la parte web, supondrá una herramienta de fácil manejo donde ver estos horarios, apuntarse a ellos y obtener los créditos correspondientes por acudir a cada uno de ellos.
 
-Por parte de la Universidad, y más concretamente del administrador o encargado de las charlas, agilizará y le quitará gran carga de trabajo, facilitando la gestión y adjudicación de los certificados que se entregarán a los usuarios finales de las mismas.
+En cuanto a la universidad, y más concretamente del administrador o encargado de las charlas, agilizará y le quitará gran carga de trabajo, facilitando la gestión y adjudicación de los certificados que se entregarán a los usuarios finales de las mismas.
 
-La motivación para realizar este proyecto es introducir, más si cabe, las nuevas tecnologías y la agilidad que éstas nos proporcionan dentro del entorno universitario, en su parte backend, destaca la optimización de la gestión de las salas disponibles en la universidad en función de los alumnos apuntados a cada uno de estos seminarios.
+La motivación para realizar este proyecto es introducir las nuevas tecnologías y la agilidad que éstas nos proporcionan dentro del entorno universitario. En su parte backend destaca la optimización de la gestión de las salas disponibles en la universidad en función de los alumnos apuntados a cada uno de estos seminarios.
 
-Es un proyecto muy centrado en la automatización de procesos, guardando la seguridad que se requiere en cuanto asuntos de gestión universitaria se refiere, facilitando y agilizando las gestiones tanto a alumnos como a la propia universidad.
+Es un proyecto muy centrado en la automatización de procesos, aunque teniendo en cuenta la seguridad que se requiere en cuanto asuntos de gestión universitaria se refiere, facilitando y agilizando las gestiones tanto a alumnos como a la propia universidad.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -278,7 +281,7 @@ Es un proyecto muy centrado en la automatización de procesos, guardando la segu
 \section{Objetivo general} % título de sección (se muestra)
 \label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)
 
-La realización de este trabajo de fin de grado consiste en crear una Aplicación Web Progresiva o PWA que proporcionara a alumnos y a docentes una herramienta de fácil manejo con la que estar informado y gestionar los distintos cursos/seminarios y jornadas tecnológicas que se impartirán en la Universidad durante el curso.
+La realización de este trabajo de fin de grado consiste en crear una Aplicación Web Progresiva o PWA que proporcione a alumnos y a docentes una herramienta de fácil manejo con la que estar informado y gestionar los distintos cursos/seminarios y jornadas tecnológicas que se impartirán en la universidad durante el curso.
 
 
 \section{Objetivos específicos}
@@ -296,27 +299,27 @@ La realización de este trabajo de fin de grado consiste en crear una Aplicació
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
 
-Antes incluso de saber la temática del TFG o sobre que iba a tratar, tenía claro las tecnologías que quería usar. En esos momentos estaba adentrándome en el mundo front con Angular y el desarrollo de aplicaciones Web.
+Antes incluso de saber la temática del TFG o sobre qué iba a tratar, tenía claro las tecnologías que quería usar. En esos momentos estaba adentrándome en el mundo \emph{front} con Angular y en el desarrollo de aplicaciones Web.
 
-La primera toma de contacto con Gregorio fue a través del correo de la URJC, en el que por medio del mismo comenté mi preferencia a hacer el TFG con él, allá por febrero del 2020. En la primera reunión Gregorio me propuso varios temas sobre los que podía enfocar mi TFG, todos sobre desarrollo Web pero con un requisito claro, debería funcionar y estar optimizados para utilizarlos en dispositivos móviles.
+La primera toma de contacto con Gregorio fue a través del correo de la URJC, allá por febrero de 2020. En la primera reunión Gregorio me propuso varios temas sobre los que podía enfocar mi TFG, todos sobre desarrollo Web pero con un requisito claro, debería funcionar y estar optimizados para utilizarlos en dispositivos móviles.
 
-Después de esa reunión pase los siguientes días investigando sobre que tipo de aplicación debería tratar, y fue ahí cuando decidí hacer una aplicación de web progresiva (PWA), habría leído sobre ellas, las conocía un poco y vi que era una gran oportunidad de aprender y desarrollar algo nuevo para mí. En la siguiente reunión del mismo mes de febrero presenté esta tecnología a Gregorio y fue cuando empezó el desarrollo de la misma.
+Después de esa reunión pasé los siguientes días investigando sobre que tipo de aplicación debería tratar, y fue ahí cuando decidí hacer una aplicación de web progresiva (PWA), ya que había leído sobre ellas, las conocía un poco y vi que era una gran oportunidad de aprender y desarrollar algo nuevo para mí. En la siguiente reunión del mismo mes de febrero presenté esta tecnología a Gregorio y fue cuando empezó el desarrollo del trabajo.
 
-Entre todo el 2020 y alternando con mi trabajo a jornada completa fui desarrollando el proyecto, teniendo durante este tiempo tres reuniones vía Skype con Gregorio para mostrar los avances de la aplicación, preguntar algunas dudas y recibir consejos de por donde podría enfocar el desarrollo.
+En 2020, alternando con mi trabajo a jornada completa, fui desarrollando el proyecto y teniendo durante este tiempo tres reuniones vía Skype con Gregorio para mostrar los avances de la aplicación, preguntar algunas dudas y recibir consejos de por dónde podría enfocar el desarrollo.
 
-En enero de 2021 tuve la última reunión para hablar del desarrollo de la aplicación, ya estaba terminada con la integración de algunos puntos y funciones que me pedía Gregorio y fue en ese momento cuando recibí la validación por su parte y pasé a redactar la memoria.
+En enero de 2021 tuve la última reunión para hablar del desarrollo de la aplicación; ya estaba terminada con la integración de algunos puntos y funciones que me pedía Gregorio y fue en ese momento cuando recibí la validación por su parte y pasé a redactar la memoria.
 
-Durante la redacción de esta memoria he recibido numerosos consejos de como debía redactarla, posibles modificaciones o puntos necesarios que no podrían faltar en la memoria para que la aplicación quedara correctamente descrita.
+Durante la redacción de esta memoria he recibido numerosos consejos de cómo debía redactarla, posibles modificaciones o puntos necesarios que no podrían faltar en la memoria para que la aplicación quedara correctamente descrita.
 
-Por último con la memoria terminada, repasando y buscando nuevas optimizaciones de código fui añadiendo funcionalidades nuevas a la aplicación que entendía que podían ser útiles para el administrador de la misma.
+Por último, con la memoria terminada, repasando y buscando nuevas optimizaciones de código fui añadiendo funcionalidades nuevas a la aplicación que entendía que podían ser útiles para el administrador de la misma.
 
 Cuando estaban terminadas las dos partes principales de este TFG, la aplicación propiamente programada y la presente memoria, fue cuando decidí presentar este TFG para su defensa.
 
-Éste TFG no habría sido posible sin la ayuda y la gran participación que ha tenido Gregorio a lo largo del desarrollo del mismo, a quién le estoy tremendamente agradecido.
+Este TFG no habría sido posible sin la ayuda y la gran participación que ha tenido Gregorio a lo largo del desarrollo del mismo, a quién le estoy tremendamente agradecido.
 
 \vspace{5mm}
 
-A continuación, muestro de forma gráfica el diagrama temporal destacando los puntos que anteriormente he desarrollado a lo largo de los meses con respecto a la realización de este TFG.
+A continuación, en la Figura~\ref{fig:diagrama} muestro de forma gráfica el diagrama temporal destacando los puntos que anteriormente he desarrollado a lo largo de los meses con respecto a la realización de este TFG.
 
 \begin{figure}[h!]
   \centering
@@ -335,7 +338,7 @@ A continuación, muestro de forma gráfica el diagrama temporal destacando los p
 \chapter{Estado del arte}
 \label{chap:estado}
 
-A continuación, se detallan las tecnologías utilizadas en el desarrollo del proyecto.
+En este capítulo se detallan las tecnologías utilizadas en el desarrollo del proyecto.
 
 
 
@@ -361,12 +364,12 @@ A continuación destacamos dos paquetes npm~\cite{NPM}  que son importantes y so
 
 \subsection{@zxing/ngx-scanner v.3.0.0}
 \label{subsec:@zxing/ngx-scanner}
-Paquete con el que mediante una única línea de código permite a nuestra aplicación angular (PWA) activar la cámara de nuestro dispositivo, pudiendo leer códigos QR o Códigos de barras simples obteniendo información de los mismos.
+@zxing/ngx-scanner v.3.0.0 es un paquete con el que, mediante una única línea de código, se puede activar la cámara de nuestro dispositivo, pudiendo leer códigos QR o Códigos de barras simples obteniendo información de los mismos.
 	En este proyecto daremos uso a este paquete a la hora de validar nuestra presencia en cualquiera de las charlas o seminarios en los que estemos inscritos y así poder certificar que hemos asistido a ellos para más tarde poder pedir el certificado con los créditos correspondientes.~\cite{ngx-scanner} 
 
 \subsection{@angular/pwa v.0.1101.1}
 \label{subsec:@angular/pwa}
-Es el paquete principal que usaremos para convertir nuestra aplicación Angular en una Aplicación de Web Progresiva (PWA)~\cite{pwa}, mediante el comando \textit{ng add @angular/pwa} se añadirán una serie de archivos y se modificarán otros existentes para poder realizar este cambio, dichas modificaciones son:
+@angular/pwa v.0.1101.1 es el paquete principal que usaremos para convertir nuestra aplicación Angular en una Aplicación de Web Progresiva (PWA)~\cite{pwa}, mediante el comando \textit{ng add @angular/pwa} se añadirán una serie de archivos y se modificarán otros existentes para poder realizar este cambio, dichas modificaciones son:
 
 \begin{enumerate}
 \item Se agregará el paquete \textit{@angular/service-workerpaquete} al proyecto.
@@ -385,7 +388,7 @@ Es el paquete principal que usaremos para convertir nuestra aplicación Angular 
 
 \section{Typescript}
 \label{sec:Typescript}
-Typescript~\cite{typescript}  es un superconjunto de JavaScript. Una tecnología es un superconjunto de un lenguaje de programación cuando puede ejecutar programas de la tecnología, TypeScript en este caso, y del lenguaje del que es el superconjunto, JavaScript en este mismo ejemplo.
+Typescript~\cite{typescript} es un superconjunto de JavaScript. Una tecnología es un superconjunto de un lenguaje de programación cuando puede ejecutar programas de la tecnología, TypeScript en este caso, y del lenguaje del que es el superconjunto, JavaScript en este mismo ejemplo.
 
 	Esto permite que se pueda integrar TypeScript en proyectos existentes de JavaScript sin tener que reimplementar todo el código del proyecto en TypeScript. De hecho, es común que existan proyectos que introduzcan tanto TypeScript como JavaScript.
 	
@@ -404,27 +407,26 @@ CSS~\cite{CSS3} son las siglas de ``Cascading Style Sheets". Es un lenguaje que 
 
 \section{Bootstrap}
 \label{sec:Bootstrap}
-Bootstrap~\cite{bootstrap} es un framework \texttt{front-end} 
-\footnote{Un framework front-end es una herramienta que se integra con nuestro proyecto web para conseguir que el desarrollo front-end (interfaz, animaciones, entre otros) sea más fácil, rápido y robusto; convirtiéndolo en una herramienta muy útil para desarrolladores principiantes y programadores con poco tiempo y poca experiencia en ámbitos de diseño}que permite la construcción de páginas web adaptativas. Se trata de un software de código abierto creado en el año 2011 por Mark Otto y Jacob Thornton, empleados de Twitter.
+Bootstrap~\cite{bootstrap} es un framework \texttt{front-end}\footnote{Un framework front-end es una herramienta que se integra con nuestro proyecto web para conseguir que el desarrollo front-end (interfaz, animaciones, entre otros) sea más fácil, rápido y robusto; convirtiéndolo en una herramienta muy útil para desarrolladores principiantes y programadores con poco tiempo y poca experiencia en ámbitos de diseño}que permite la construcción de páginas web adaptativas. Se trata de un software de código abierto creado en el año 2011 por Mark Otto y Jacob Thornton, empleados de Twitter.
 
 	Bootstrap ha evolucionado desde ser un proyecto enteramente basado en CSS hasta incluir múltiples plugins JavaScript e iconos junto con formularios y botones. Presenta una cuadrícula de doce columnas y 940px de ancho.
 
-	La creación de páginas web mediante Bootstrap se simplifica al disponer de elementos pre-definidos fácilmente incluibles en cualquier página web, tales como menús desplegables, botones, iconos, ventanas emergentes, etc.
+	La creación de páginas web mediante Bootstrap se simplifica al disponer de elementos pre-definidos fácilmente incluibles en cualquier página web, tales como menús desplegables, botones, iconos, ventanas emergentes, entre otros.
 
 \section{Node.js} 
 \label{sec:Node}
-	Node.js~\cite{node}  es un entorno JavaScript que nos permite ejecutar en el servidor, de manera asíncrona, con una arquitectura orientada a eventos y basado en el motor V8 de Google.
+	Node.js~\cite{node} es un entorno JavaScript que nos permite ejecutar en el servidor, de manera asíncrona, con una arquitectura orientada a eventos y basado en el motor V8 de Google.
 	
 	El motor V8 de Google compila JavaScript en código máquina nativo en vez de interpretarlo en el navegador, consiguiendo así una velocidad mucho más alta. Además de la alta velocidad de ejecución, Node.js dispone del Bucle de Eventos (Event Loop), que permitirá gestionar enormes cantidades de clientes de forma asíncrona. Tradicionalmente para trabajar de forma asíncrona, las aplicaciones se valían de la programación basada en hilos (programming threaded applications), pero esto supone la utilización (normalmente ineficaz) de un espacio de memoria que va escalando a medida que la cantidad de clientes conectados a nuestra aplicación aumenta.
 	
 	Node.js resuelve este problema cambiando la manera de realizar las conexiones con el servidor. En vez de generar un nuevo hilo E/S para cada cliente, cada conexión dispara la ejecución de un evento dentro del proceso del motor de Node. De este modo, Node.js permite que un solo servidor que lo ejecute pueda soportar decenas de miles de conexiones. Por lo tanto, si necesitamos gestionar grandes cantidades de conexiones no tendremos que ampliar el número de servidores.
 
-	En conclusión: Es una plataforma que agiliza y facilita las conexiones cliente servidor por lo que es una tecnología que avanza muy rápidamente y cada vez está más presente en el mercado.
+	En definitiva, Node.js, es una plataforma que agiliza y facilita las conexiones cliente servidor por lo que es una tecnología que avanza muy rápidamente y cada vez está más presente en el mercado.
 
 \section{MongoDB} 
 \label{sec:MongoDB}
 
-Es una de las bases de datos NoSQL y orientada a documentos que existen. Esto quiere decir que en lugar de guardar los datos en registros, guarda los datos en documentos. Estos documentos son almacenados en BSON, que es una representación binaria de JSON. Una de las diferencias más importantes con respecto a las bases de datos relacionales es que no es necesario seguir un esquema; los documentos de una misma colección --concepto similar a una tabla de una base de datos relacional-- pueden tener esquemas diferentes.
+MongoDB es una de las bases de datos NoSQL y orientada a documentos que existen. Esto quiere decir que en lugar de guardar los datos en registros, guarda los datos en documentos. Estos documentos son almacenados en BSON, que es una representación binaria de JSON. Una de las diferencias más importantes con respecto a las bases de datos relacionales es que no es necesario seguir un esquema; los documentos de una misma colección --concepto similar a una tabla de una base de datos relacional-- pueden tener esquemas diferentes.
 
 	Aunque se suele decir que las bases de datos NoSQL tienen un ámbito de aplicación reducido, MongoDB~\cite{mongodb} se puede utilizar en muchos de los proyectos que desarrollamos en la actualidad:
 \begin{itemize}
@@ -434,20 +436,18 @@ Es una de las bases de datos NoSQL y orientada a documentos que existen. Esto qu
 
 \section{Python} 
 \label{sec:Python}
-Python~\cite{Python}  es un lenguaje de \texttt{scripting} 
-\footnote{Los lenguajes de scripting son un tipo específico de lenguajes informáticos que se pueden utilizar para dar instrucciones a otro software, como un navegador web, un servidor o una aplicación independiente. Muchos de los lenguajes de scripts más populares de hoy en día son lenguajes de programación, como JavaScript, PHP, Ruby, Python, y varios otros.} desarrollado a principios de los noventa por Guido van Rossum, independiente de plataforma y orientado a objetos, preparado para realizar cualquier tipo de programa: desde aplicaciones Windows a servidores de red o incluso, páginas web. Entre sus muchas características destacamos:
+Python~\cite{Python}  es un lenguaje de \texttt{scripting}\footnote{Los lenguajes de scripting son un tipo específico de lenguajes informáticos que se pueden utilizar para dar instrucciones a otro software, como un navegador web, un servidor o una aplicación independiente. Muchos de los lenguajes de scripts más populares de hoy en día son lenguajes de programación, como JavaScript, PHP, Ruby, Python, y varios otros.} desarrollado a principios de los noventa por Guido van Rossum, independiente de plataforma y orientado a objetos, preparado para realizar cualquier tipo de programa: desde aplicaciones Windows a servidores de red o incluso, páginas web. Entre sus muchas características destacamos:
 
 \begin{itemize}
 \item Multiplataforma: Hay versiones disponibles de Python en muchos sistemas informáticos distintos. Originalmente se desarrolló para Unix, aunque cualquier sistema es compatible con el lenguaje siempre y cuando exista un intérprete programado para él.
 
-\item Interpretado: Quiere decir que no se debe compilar el código antes de su ejecución. En ciertos casos, cuando se ejecuta por primera vez un código, se producen unos \texttt{bytecodes} 
-\footnote{El bytecode es un código intermedio más abstracto que el código máquina. Habitualmente es tratado como un archivo binario que contiene un programa ejecutable similar a un módulo objeto, que es un archivo binario producido por el compilador cuyo contenido es el código objeto o código máquina .} que se guardan en el sistema y que sirven para acelerar la compilación implícita que realiza el intérprete cada vez que se ejecuta el mismo código.
+\item Interpretado: Quiere decir que no se debe compilar el código antes de su ejecución. En ciertos casos, cuando se ejecuta por primera vez un código, se producen unos \texttt{bytecodes}\footnote{El \emph{bytecode} es un código intermedio más abstracto que el código máquina. Habitualmente es tratado como un archivo binario que contiene un programa ejecutable similar a un módulo objeto, que es un archivo binario producido por el compilador cuyo contenido es el código objeto o código máquina .} que se guardan en el sistema y que sirven para acelerar la compilación implícita que realiza el intérprete cada vez que se ejecuta el mismo código.
 
 \item Interactivo: Python dispone de un intérprete por línea de comandos en el que se pueden introducir sentencias. Cada sentencia se ejecuta y produce un resultado visible, que puede ayudarnos a entender mejor el lenguaje y probar los resultados de la ejecución de porciones de código rápidamente.
 
 \item Orientado a Objetos: La programación orientada a objetos está soportada en Python y ofrece en muchos casos una manera sencilla de crear programas con componentes reutilizables.
 
-\item Gran cantidad de funciones y bibliotecas: Dispone de muchas funciones incorporadas en el propio lenguaje para el tratamiento de strings, números, archivos, etc. Además, existen muchas bibliotecas que podemos importar en los programas para tratar temas específicos como la programación de ventanas o sistemas en red o cosas tan interesantes como crear archivos comprimidos en .zip.
+\item Gran cantidad de funciones y bibliotecas: Dispone de muchas funciones incorporadas en el propio lenguaje para el tratamiento de strings, números, archivos, etc. Además, existen muchas bibliotecas que podemos importar en los programas para tratar temas específicos como la programación de ventanas o sistemas en red o cosas tan interesantes como crear archivos comprimidos en \emph{zip}.
 
 \item Sintaxis clara: Por último, cabe destacar que Python tiene una sintaxis muy visual, gracias a una notación indentada (con márgenes) de obligado cumplimiento. Para separar las porciones de código en Python se debe tabular hacia dentro, colocando un margen al código que iría dentro de una función o un bucle. Esto ayuda a que todos los programadores adopten unas mismas notaciones y que los programas de cualquier persona tengan un aspecto muy similar.
 \end{itemize}
@@ -487,7 +487,7 @@ Este proyecto gira en torno a la arquitectura software del modelo \texttt{client
 	\item \textbf{/getCreditoEventos}: Esta petición, en concreto, se encarga de recibir como parámetros strings: el nombre, apellidos y el DNI del usuario. Por medio de la pestaña de \textit{certificado} y más concretamente apretando el botón \textit{``Recibir Créditos''} rellena una plantilla PDF suministrada por la URJC donde se adjudican al alumno los créditos correspondientes por asistir a una de estas charlas o seminarios que previamente se apuntó.
 	
 
-	\item \textbf{/zip}: Esta petición solo es posible recibirla cuando es el administrador el que la requiere. Se recibe como parámetros dos elementos: Un identificador del evento dentro de la base de datos y el nombre del evento. Esta petición lanzará un script desarrollado en Python llamado createCSV.py. Este script se encargará de crear el CSV con los datos obtenidos de la base de datos y dejarlo en una ruta específica dentro del servidor, donde más tarde se recogerá y se mandara vía HTTPS al usuario administrador.
+	\item \textbf{/zip}: Esta petición solo es posible recibirla cuando es el administrador el que la requiere. Se reciben como parámetros dos elementos: Un identificador del evento dentro de la base de datos y el nombre del evento. Esta petición lanzará un script desarrollado en Python llamado createCSV.py. Este script se encargará de crear el CSV con los datos obtenidos de la base de datos y dejarlo en una ruta específica dentro del servidor, donde más tarde se recogerá y se mandara vía HTTPS al usuario administrador.
 
 Esta petición tiene dos caminos:
 \begin{itemize}
@@ -496,7 +496,6 @@ Esta petición tiene dos caminos:
 \end{itemize}
 \end{itemize}
 
-\clearpage
 
 \section{Modelo de datos} 
 \label{sec:modelo de datos}
@@ -559,7 +558,7 @@ Esta petición tiene dos caminos:
 	\end{itemize}
 \end{itemize}
 
-\subsection{Registros de Alumnos y Eventos}
+\subsection{Registros de Alumnos y de Eventos}
 	Este apartado solo será visible por parte el administrador de la aplicación o del docente encargado en gestionar la semana cultural donde se impartan estas charlas y seminarios. Como vimos anteriormente, el administrador tiene la posibilidad de descargarse un archivo en formato CSV con toda la información de un Evento o de todos ellos, obteniendo un listado de los alumnos que se han apuntado a una determinada charla y que han validado su asistencia por medio de nuestra aplicación.
 	El formato que tienen estos CSV corresponden a la figura~\ref{fig:CSVAlumnos}.
 	\begin{figure}[h!]
@@ -655,10 +654,10 @@ En esta página destacamos dos puntos claves de por qué esta aplicación es una
   Dentro de cada fila del evento en el que estamos apuntados y tenemos previsto ir aparecerán dos botones: ``Validar'' (1) y ``Desapuntarse'' (2). 
 \begin{itemize}
   \item El botón validar: Solo estará accesible una vez el evento haya finalizado, para que los alumnos que han podido asistir puedan validar mediante la aplicación que han ido a dicha charla. Una vez validado el evento y habiendo recibido la comprobación por parte del servidor, debajo del campo aula aparecerá un icono (3) mostrando que la validación se ha desarrollado con normalidad.
-  En la siguiente figura~\ref{fig:inicio} podemos observar cada uno de los botones previamente indicados:
+  En la figura~\ref{fig:inicio} podemos observar cada uno de los botones previamente indicados:
 
 
-	Una vez presionemos el botón de validar (ya que hemos asistido al evento en cuestión y queremos dar fe de ello), la aplicación nos llevará a la pestaña de validación, figura~\ref{fig:validarQR}.
+	Una vez presionemos el botón de validar (ya que hemos asistido al evento en cuestión y queremos dar fe de ello), la aplicación nos llevará a la pestaña de validación, como se puede ver en la figura~\ref{fig:validarQR}.
 	En esta pestaña la aplicación utilizará la cámara del dispositivo, ya sea un móvil, tablet u ordenador portátil para leer el código QR correspondiente al evento que queremos validar.
 	\begin{figure}[h!]
   	\centering
@@ -716,7 +715,7 @@ Para validar el evento, basta con mostrar un QR válido y la aplicación obtendr
 \subsubsection{Administrador}
 	Una vez iniciado sesión con la cuenta del administrador o de la persona encargada de mantener y administrar la aplicación, veremos dos pestañas claramente diferenciadas:
 \begin{enumerate}	
-	\item Lista de Eventos: En esta pestaña representada en la figura~\ref{fig:adminListaEventos}, el administrador de la aplicación tendrá un listado completo de todos los eventos o seminarios que habrá durante la semana o los días que duren cada uno de ellos. En esta primera vista se dará la información de: Nombre del evento, aula donde se impartirá y la hora del día a la que tendrá lugar dicho evento.
+	\item Lista de Eventos: En esta pestaña, representada en la figura~\ref{fig:adminListaEventos}, el administrador de la aplicación tendrá un listado completo de todos los eventos o seminarios que habrá durante la semana o los días que duren cada uno de ellos. En esta primera vista se dará la información de: Nombre del evento, aula donde se impartirá y la hora del día a la que tendrá lugar dicho evento.
 	\begin{figure}[h!]
   	\centering
   	\includegraphics[width=16cm, keepaspectratio]{img/adminListaEventos.png}
@@ -726,7 +725,7 @@ Para validar el evento, basta con mostrar un QR válido y la aplicación obtendr
 \vspace{6cm}
 
 
-Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Descargar PDF Todos''}, presionándolo enviaremos una petición al servidor que nos contestará con un archivo comprimido en formato ZIP llamado ``Eventos.zip'' que contendrá todos los CSV de los Eventos en los que haya apuntada más de una persona. Este CSV es del mismo formato que el CSV que se descargaría dando uno por uno a cada evento con el botón ``Generar CSV'', que explicaremos más adelante en el siguiente punto. El archivo comprimido en formato ZIP descargado quedaría de la siguiente manera:
+Destacamos en esta vista de la figura~\ref{fig:AdminEventosZip} el botón de \textit{``Descargar PDF Todos''}, ya que presionándolo enviaremos una petición al servidor que nos contestará con un archivo comprimido en formato ZIP llamado ``Eventos.zip'' que contendrá todos los CSV de los Eventos en los que haya apuntada más de una persona. Este CSV es del mismo formato que el CSV que se descargaría dando uno por uno a cada evento con el botón ``Generar CSV'', que explicaremos más adelante en el siguiente punto. El archivo comprimido en formato ZIP descargado quedaría tal y como se puede ver en la figura~\ref{fig:AdminEventosZip}.
 	
 	\begin{figure}[h!]
   	\centering
@@ -748,7 +747,7 @@ Destacamos en esta vista~\ref{fig:AdminEventosZip}, el botón de \textit{``Desca
 	
 	Destacamos varias cosas en esta pestaña: En primer lugar, el botón \textit{``Optimizar''}. Este botón envía un mensaje al servidor que lanzará un script\footnote{En informática, un script es un término informal que se usa para designar a un programa relativamente simple.} de optimización programado en Python para reubicar los eventos en horarios y aulas de la forma más óptima posible, más adelante, en el siguiente punto, cuando se explique la parte correspondiente al servidor desarrollaré más su funcionamiento. Este botón modificará la posición de todos o la gran mayoría de los eventos dentro del marco horario mostrado en esta pestaña.
 	
-	Por otro lado, es posible modificar de forma individual un evento. Para ello bastará con hacer click sobre él y toda su información se volcará en los desplegables que se muestran en la parte inferior de la Figura~\ref{fig:adminCalendario}, se podrá modificar tanto el aula como las horas que estén disponibles para todos los eventos, en este caso entre las aulas 323, 321, 322 y 324 y en los horarios de 10:00 a 12:00. 
+	Por otro lado, es posible modificar de forma individual un evento. Para ello bastará con hacer click sobre él y toda su información se volcará en los desplegables que se muestran en la parte inferior de la Figura~\ref{fig:adminCalendario}. Así, se podrá modificar tanto el aula como las horas que estén disponibles para todos los eventos, en este caso entre las aulas 323, 321, 322 y 324 y en los horarios de 10:00 a 12:00. 
 	
 	Tras presionar el botón ``Modificar'' se enviarán las actualizaciones que hayamos hecho en los desplegables serán enviadas al servidor y podremos verlas en esta misma vista.
 	
@@ -802,8 +801,7 @@ Al margen ya de la parte Node.js del servidor, hay dos programas desarrollados e
   	
   	Cuando se obtiene esta lista y se finaliza la ejecución del SELECT, pasamos a volcar los datos obtenidos en un fichero .CSV. Cuando terminamos de rellenar el fichero, en el caso de querer uno en concreto, la ejecución terminaría aquí y sería devuelto el fichero al cliente que solicitó tal acción al servidor. Por otro lado, en el caso de querer todos los eventos, se irá completando la acción pasada con todos los eventos en los que haya más de una persona inscrita en él. Cuando termine pasaŕa a crear un .zip con todos estos .CSV creados. Una vez terminado, como en el caso anterior, le será devuelto al cliente un .zip como requirió con su petición inicial.
   	
-  	La forma en la que el servidor y el cliente están conectados para poder enviar la información en formato .CSV o en formato .ZIP es mediante un \texttt{pipe stream.} 
-\footnote{Una tubería (pipeline o cauce) consiste en una cadena de streams conectados de forma tal que la salida de cada elemento de la cadena es la entrada del próximo. Permiten la comunicación y sincronización entre procesos. Es común el uso de buffer de datos entre elementos consecutivos.}
+  	La forma en la que el servidor y el cliente están conectados para poder enviar la información en formato .CSV o en formato .ZIP es mediante un \texttt{pipe stream.}\footnote{Una tubería (pipeline o cauce) consiste en una cadena de streams conectados de forma tal que la salida de cada elemento de la cadena es la entrada del próximo. Permiten la comunicación y sincronización entre procesos. Es común el uso de buffer de datos entre elementos consecutivos.}
   	
   	La funcionalidad y el esquema de dicho funcionamiento quedan representadas en la figura~\ref{fig:createCSV}.
 
@@ -882,6 +880,9 @@ Se use el protocolo HTTPS (HyperText Transfer Protocol Secure, Protocolo de tran
 En el caso de la autenticación la contraseña del usuario, viaja cifrada dentro de este protocolo y dentro de la base de datos también, por si esta base de datos sufre un ataque no se vea comprometida la seguridad de los usuarios de la aplicación.
 El cifrado de la contraseña es del tipo \textit{AES192} \texttt{(Advanced Encryption Standard)}\footnote{El Advanced Encryption Standard, abreviado AES, se usa con el fin de cifrar datos y de protegerlos contra cualquier acceso ilícito. El método criptográfico emplea para este objetivo una clave de longitud variada y se denomina según la longitud de clave usada AES-128, AES-192 o AES-256.} y para validar este cifrado basta con ver la base de datos y el valor del campo ``password'' dentro de la tabla ``Usuarios'', en este caso para el usuario \textit{david} el valor del campo es: \textit{4232a5e307a998a3ef2601c7d0a4c704}, un valor esperado para este tipo de cifrados.
 
+\section{Privacidad}
+
+FIXME: hablar de GDPR y datos sensibles. ¿Cuáles son sensibles? ¿Qué hacemos para cumplir con la GDPR?
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -894,12 +895,12 @@ El cifrado de la contraseña es del tipo \textit{AES192} \texttt{(Advanced Encry
 
 El presente proyecto pretendía ofrecer una herramienta de gestión y administración de los eventos o seminarios que se ofrecerán durante la semana cultural, una semana donde los alumnos tienen la oportunidad de interactuar con las distintas empresas del sector en el que están desarrollando su formación universitaria.
 
-La aplicación desarrollada en este proyecto pretende abordar y resolver los objetivos descritos en el punto 2, donde hemos obtenido los siguientes resultados:
+La aplicación desarrollada en este proyecto pretende abordar y resolver los objetivos descritos en el Capítulo 2, donde hemos obtenido los siguientes resultados:
 
 \begin{itemize}
   \item Hemos conseguido, mediante un script desarrollado en Python, automatizar el proceso de reparto de las clases/horas para las distintas charlas y seminarios en función de los alumnos que se apuntaron a ellas. Este era un objetivo primordial cuando se abordó este TFG, ya que con la automatización de este proceso le quitamos mucha carga de trabajo al encargado de tal función, en este caso un docente de la universidad.
   
-  \item La aplicación está capacitada para crear informes, mediante archivos CSV, sobre los alumnos que se han apuntado y han asistido a cada una de las charlas, estos informes serán muy valiosos tanto para la universidad como para las propias empresas que impartirán estas charlas para así poder enfocarlas en una determinada dirección logrando así llamar más la atención de los alumnos y conseguir levantar un interés mayor en ellos.
+  \item La aplicación está capacitada para crear informes, mediante archivos CSV, sobre los alumnos que se han apuntado y han asistido a cada una de las charlas. Estos informes serán muy valiosos tanto para la universidad como para las propias empresas que impartirán estas charlas para así poder enfocarlas en una determinada dirección logrando así llamar más la atención de los alumnos y conseguir levantar un interés mayor en ellos.
    
    \item Para los alumnos: se ha implementado una aplicación de fácil manejo, muy accesible y que permite mantener informado al alumno en todo momento del horario, tipo de charla que se impartirá y el contenido de la misma. También facilita y agiliza el proceso de verificación de la asistencia a a cada una de ellas y por consiguiente, adquirir los créditos correspondientes.
    
@@ -915,6 +916,8 @@ La aplicación desarrollada en este proyecto pretende abordar y resolver los obj
 \cleardoublepage
 \chapter{Conclusiones}
 \label{chap:conclusiones}
+
+FIXME: intro
 
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
