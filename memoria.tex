@@ -881,8 +881,29 @@ En el caso de la autenticación la contraseña del usuario, viaja cifrada dentro
 El cifrado de la contraseña es del tipo \textit{AES192} \texttt{(Advanced Encryption Standard)}\footnote{El Advanced Encryption Standard, abreviado AES, se usa con el fin de cifrar datos y de protegerlos contra cualquier acceso ilícito. El método criptográfico emplea para este objetivo una clave de longitud variada y se denomina según la longitud de clave usada AES-128, AES-192 o AES-256.} y para validar este cifrado basta con ver la base de datos y el valor del campo ``password'' dentro de la tabla ``Usuarios'', en este caso para el usuario \textit{david} el valor del campo es: \textit{4232a5e307a998a3ef2601c7d0a4c704}, un valor esperado para este tipo de cifrados.
 
 \section{Privacidad}
+El RGPD es un reglamento de la UE que representa la iniciativa más significativa de protección de datos en 20 años. El propósito es la “protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de tales datos”, p. ej. el usuario del sitio web.
+ 
+Los siguientes datos personales se consideran "sensibles" y están sujetos a condiciones de tratamiento específicas:
 
-FIXME: hablar de GDPR y datos sensibles. ¿Cuáles son sensibles? ¿Qué hacemos para cumplir con la GDPR?
+\begin{itemize}
+  \item Datos personales que revelen el origen racial o étnico.
+  \item Las opiniones políticas, las convicciones religiosas o filosóficas.
+  \item La afiliación sindical.
+  \item Datos genéticos, datos biométricos tratados únicamente para identificar un ser humano.
+  \item Datos relativos a la salud.
+  \item Datos relativos a la vida sexual u orientación sexual de una persona.
+\end{itemize}
+
+Concretamente, en la aplicación que aquí estamos exponiendo el dato más sensible que hemos recopilado sería la contraseña del usuario, en este caso la contraseña va cifrada con \textit{AES192} \texttt{(Advanced Encryption Standard)}. Una vez la aplicación sea alojada en la Web, la información que almacenemos de los usuarios estará respaldada por el propio servidor donde esté alojada la aplicación que sumará una capa más de seguridad garantizada por nuestro proveedor del host.
+
+Una parte fundamental para el cumplimiento de la normativa GDPR y que muchas páginas hacen uso de ellas son las llamadas cookies. 
+Las cookies son pequeños archivos que se dejan automáticamente en su ordenador mientras navega por la web. En sí mismas, son inofensivas porciones de texto que se almacenan localmente y se pueden ver y eliminar fácilmente.
+
+Pero las cookies pueden dar una gran visión de sus actividades y preferencias, y se pueden utilizar para identificarlo sin su consentimiento explícito.
+
+Esto representa un incumplimiento grave desde un punto de vista legal, y a medida que las tecnologías de datos se vuelven cada vez más sofisticadas, su privacidad como usuario se ve cada vez más comprometida.
+
+Aunque no todas las cookies se utilizan de manera que puedan identificar a los usuarios, la mayoría (y las más útiles para los propietarios de la web) lo hacen, y por lo tanto estarán sujetas al RGPD.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
