@@ -481,7 +481,7 @@ Este proyecto gira en torno a la arquitectura software del modelo \texttt{client
 	
 \subsection{Servidor}
 	En el lado del servidor se realiza el desarrollo back-end al completo, desde la recepción de peticiones HTTPS hasta el acceso a datos o la descarga de ellos en formato CSV (comma-separated values, del inglés valores separados por comas) o PDF ~\cite{csvreader}.
-	La parte central de este servidor gira en torno a Node.js, específicamente en su framework \texttt{Express}\footnote{Express es el framework web más popular de Node.js, y es la librería subyacente para un gran número de otros frameworks web de Node.js populares. Proporciona mecanismos para: Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).}~\cite{angular}  que nos proporciona los mecanismos para poder manejar las peticiones HTTPS (GET, POST, PUT y DELETE) de los distintos usuarios. Una vez recibida una de estas peticiones, por medio del manejador proporcionado por Express realizaremos una u otra acción, entre las principales de login, registro, getEvento entre otros. Destacaremos dos:
+	La parte central de este servidor gira en torno a Node.js, específicamente en su framework \texttt{Express}\footnote{Express es el framework web más popular de Node.js, y es la biblioteca subyacente para un gran número de otros frameworks web de Node.js populares. Proporciona mecanismos para: Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).}~\cite{angular}  que nos proporciona los mecanismos para poder manejar las peticiones HTTPS (GET, POST, PUT y DELETE) de los distintos usuarios. Una vez recibida una de estas peticiones, por medio del manejador proporcionado por Express realizaremos una u otra acción, entre las principales de login, registro, getEvento entre otros. Destacaremos dos:
 	
 \begin{itemize}
 	\item \textbf{/getCreditoEventos}: Esta petición, en concreto, se encarga de recibir como parámetros strings: el nombre, apellidos y el DNI del usuario. Por medio de la pestaña de \textit{certificado} y más concretamente apretando el botón \textit{``Recibir Créditos''} rellena una plantilla PDF suministrada por la URJC donde se adjudican al alumno los créditos correspondientes por asistir a una de estas charlas o seminarios que previamente se apuntó.
@@ -492,7 +492,7 @@ Este proyecto gira en torno a la arquitectura software del modelo \texttt{client
 Esta petición tiene dos caminos:
 \begin{itemize}
 	\item  Si el administrador quiere un evento en particular, el ID del evento corresponderá a su identificador dentro de la base de datos. El servidor devolverá un CSV que rellenará con los datos obtenidos de la base de datos en función de ese identificador recibido. 
-	\item Si el administrador quiere obtener todos los eventos, el id del evento será 0. Cuando obtenemos este identificador el servidor creara un archivo comprimiod (en formato .zip) que contendrá varios CSV con los eventos en los que haya más de un alumno inscrito. Estos CSV tendrán el mismo formato y la misma información que el CSV devuelto en el caso anterior.
+	\item Si el administrador quiere obtener todos los eventos, el id del evento será 0. Cuando obtenemos este identificador el servidor creara un archivo comprimido (en formato .zip) que contendrá varios CSV con los eventos en los que haya más de un alumno inscrito. Estos CSV tendrán el mismo formato y la misma información que el CSV devuelto en el caso anterior.
 \end{itemize}
 \end{itemize}
 
@@ -531,7 +531,7 @@ Esta petición tiene dos caminos:
 		\item Password: Contraseña encriptada en AES192.
 		\item Id\_usuario: Identificador interno del usuario.
 		\item Logueado: Indicador True (conectado) o False (desconectado) del usuario.
-		\item Nombre\_apellidos: Nombre y apellidos del Usuariox.
+		\item Nombre\_apellidos: Nombre y apellidos del Usuario.
 		\item DNI: DNI del Usuario.
 		\end{itemize}
 	
@@ -799,9 +799,9 @@ Al margen ya de la parte Node.js del servidor, hay dos programas desarrollados e
   	
   	Una vez el programa en Python de createCSV.py ha sido lanzado, pasa a buscar en la base de datos mediante un SELECT de idevento o recorriéndose todos los eventos que haya. Obteniendo así, una lista de usuarios asociados al evento, con el campo validado True o False según corresponda para cada uno de los usuarios.
   	
-  	Cuando se obtiene esta lista y se finaliza la ejecución del SELECT, pasamos a volcar los datos obtenidos en un fichero .CSV. Cuando terminamos de rellenar el fichero, en el caso de querer uno en concreto, la ejecución terminaría aquí y sería devuelto el fichero al cliente que solicitó tal acción al servidor. Por otro lado, en el caso de querer todos los eventos, se irá completando la acción pasada con todos los eventos en los que haya más de una persona inscrita en él. Cuando termine pasaŕa a crear un .zip con todos estos .CSV creados. Una vez terminado, como en el caso anterior, le será devuelto al cliente un .zip como requirió con su petición inicial.
+  	Cuando se obtiene esta lista y se finaliza la ejecución del SELECT, pasamos a volcar los datos obtenidos en un fichero CSV. Cuando terminamos de rellenar el fichero, en el caso de querer uno en concreto, la ejecución terminaría aquí y sería devuelto el fichero al cliente que solicitó tal acción al servidor. Por otro lado, en el caso de querer todos los eventos, se irá completando la acción pasada con todos los eventos en los que haya más de una persona inscrita en él. Cuando termine pasaŕa a crear un .zip con todos estos CSV creados. Una vez terminado, como en el caso anterior, le será devuelto al cliente un \emph{zip} como requirió con su petición inicial.
   	
-  	La forma en la que el servidor y el cliente están conectados para poder enviar la información en formato .CSV o en formato .ZIP es mediante un \texttt{pipe stream.}\footnote{Una tubería (pipeline o cauce) consiste en una cadena de streams conectados de forma tal que la salida de cada elemento de la cadena es la entrada del próximo. Permiten la comunicación y sincronización entre procesos. Es común el uso de buffer de datos entre elementos consecutivos.}
+  	La forma en la que el servidor y el cliente están conectados para poder enviar la información en formato CSV o en formato .ZIP es mediante un \texttt{pipe stream.}\footnote{Una tubería (pipeline o cauce) consiste en una cadena de streams conectados de forma tal que la salida de cada elemento de la cadena es la entrada del próximo. Permiten la comunicación y sincronización entre procesos. Es común el uso de buffer de datos entre elementos consecutivos.}
   	
   	La funcionalidad y el esquema de dicho funcionamiento quedan representadas en la figura~\ref{fig:createCSV}.
 
@@ -881,9 +881,9 @@ En el caso de la autenticación la contraseña del usuario, viaja cifrada dentro
 El cifrado de la contraseña es del tipo \textit{AES192} \texttt{(Advanced Encryption Standard)}\footnote{El Advanced Encryption Standard, abreviado AES, se usa con el fin de cifrar datos y de protegerlos contra cualquier acceso ilícito. El método criptográfico emplea para este objetivo una clave de longitud variada y se denomina según la longitud de clave usada AES-128, AES-192 o AES-256.} y para validar este cifrado basta con ver la base de datos y el valor del campo ``password'' dentro de la tabla ``Usuarios'', en este caso para el usuario \textit{david} el valor del campo es: \textit{4232a5e307a998a3ef2601c7d0a4c704}, un valor esperado para este tipo de cifrados.
 
 \section{Privacidad}
-El RGPD es un reglamento de la UE que representa la iniciativa más significativa de protección de datos en 20 años. El propósito es la “protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de tales datos”, p. ej. el usuario del sitio web.
+El RGPD (Reglamento General de Protección de Datos, GDPR por sus siglas en inglés) es un reglamento de la UE que representa la iniciativa más significativa de protección de datos en 20 años. El propósito es la “protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de tales datos”, p. ej., el usuario del sitio web.
  
-Los siguientes datos personales se consideran "sensibles" y están sujetos a condiciones de tratamiento específicas:
+Los siguientes datos personales se consideran ``sensibles" y están sujetos a condiciones de tratamiento específicas:
 
 \begin{itemize}
   \item Datos personales que revelen el origen racial o étnico.
@@ -938,7 +938,7 @@ La aplicación desarrollada en este proyecto pretende abordar y resolver los obj
 \chapter{Conclusiones}
 \label{chap:conclusiones}
 
-En esta sección se repasan los conocimientos obtenidos durante la carrera que hemos aplicado en el presente proyecto, los pros y los contras de desarrollar una aplicacion híbrida frente a una nativa apoyándonos en librerías y módulos facilitados por Angular, enfocando todo el proyecto a las PWAs en su mayoría. Se cierra esta sección con algunas ideas con el fin de ampliar y mejorar este desarrollo para poder llegar a integrarlo en las herramientas internas que tiene universidad.
+En esta sección se repasan los conocimientos obtenidos durante la carrera que hemos aplicado en el presente proyecto, los pros y los contras de desarrollar una aplicación híbrida frente a una nativa apoyándonos en bibliotecas y módulos facilitados por Angular, enfocando todo el proyecto a las PWAs en su mayoría. Se cierra esta sección con algunas ideas con el fin de ampliar y mejorar este desarrollo para poder llegar a integrarlo en las herramientas internas que tiene universidad.
 
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
@@ -981,7 +981,7 @@ En primer lugar, tendrá que poderse integrar en todo el funcionamiento interno 
 
 Al ser una aplicación que se usará mayoritariamente en dispositivos móviles un objetivo claro que veo es la posibilidad de mandar alertas y notificaciones a los usuarios cuando se acerque un evento en el que está apuntado o tener la posibilidad de sincronizar el calendario interno del móvil a los eventos apuntados.
 
-En cuanto al lado de la seguridad, poner un poco más difícil que el alumno pueda hacer trampas indicando que ha asistido a una charla mediante el QR pero sin haber ido a ella. Esto se podría conseguir teniendo acceso al posicionamiento GPS del dispositivo, para saber que si está leyendo el QR y está en el lugar donde esta disponible el QR para leer, el alumno habrá asistido (muy probablemente) a la charla indicada.
+En cuanto al lado de la seguridad, poner un poco más difícil que el alumno pueda hacer trampas indicando que ha asistido a una charla mediante el QR, pero sin haber ido a ella. Esto se podría conseguir teniendo acceso al posicionamiento GPS del dispositivo, para saber que si está leyendo el QR y está en el lugar donde esta disponible el QR para leer, el alumno habrá asistido (muy probablemente) a la charla indicada.
 
 
 La forma de guardar las charlas y eventos en la base de datos, a día de hoy cuando voy a crear un evento tengo que insertar manualmente el evento en la base de datos, su descripción y todo lo relacionado con él. Esto en un futuro se podría solucionar creando una aplicación web donde las distintas empresas tuvieran acceso a ella y rellenaran todos los campos que a día de hoy se tienen que insertar a mano.
